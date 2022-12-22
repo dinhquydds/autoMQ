@@ -8,7 +8,7 @@ SetTitleMatchMode, 2
 
 Name = d:\tuongtrinhRHM.exe
 
-UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/version.txt, d:\tuongtrinhRHMOnlineVer.txt
+UrlDownloadToFile, https://raw.githubusercontent.com/dinhquydds/autoMQ/main/version.txt, d:\tuongtrinhRHMOnlineVer.txt
 FileRead, currentVersion, d:\tuongtrinhRHMver.txt
 FileRead, OnlineVersion, d:\tuongtrinhRHMOnlinever.txt
 
