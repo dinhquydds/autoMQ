@@ -8,8 +8,9 @@ SetTitleMatchMode, 2
 
 Name = d:\tuongtrinhRHM.exe
 
-
-UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/update.txt, %A_Workingdir%\Update.txt
+FileRead, text, d:\tuongtrinhRHMver.txt
+MsgBox %text% here
+;UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/tuongtrinhRHMver.txt, d:\tuongtrinhRHMOnlineVer.txt
 FileRead, text, %A_Workingdir%\Update.txt
 if InStr(text, "Update") ;Change "Pinda" to a new word after you are going to push a update change your txt file to text="YourWord"
 {
