@@ -7,7 +7,7 @@ SetKeyDelay, 0
 SetTitleMatchMode, 2
 
 
-;#Include, checkupdate.ahk
+#Include, checkupdate.ahk
 #Include, danhsachnhansu.ahk
 #Include, giaodien.ahk
 #Include, function.ahk
