@@ -6,6 +6,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetKeyDelay, 0
 SetTitleMatchMode, 2
 
+
+#Include, checkupdate.ahk
 #Include, danhsachnhansu.ahk
 #Include, giaodien.ahk
 #Include, function.ahk
