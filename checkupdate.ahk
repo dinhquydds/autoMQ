@@ -8,9 +8,14 @@ SetTitleMatchMode, 2
 
 Name = d:\tuongtrinhRHM.exe
 
-UrlDownloadToFile, https://raw.githubusercontent.com/dinhquydds/autoMQ/main/version.txt, d:\tuongtrinhRHMOnlineVer.txt
+whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+whr.Open("GET", "https://raw.githubusercontent.com/dinhquydds/autoMQ/main/version.txt", true)
+whr.Send()
+; Using 'true' above and the call below allows the script to remain responsive.
+whr.WaitForResponse()
+onlineVersion := whr.ResponseText
+
 FileRead, currentVersion, d:\tuongtrinhRHMver.txt
-FileRead, OnlineVersion, d:\tuongtrinhRHMOnlinever.txt
 
 if (currentVersion = "") or (currentVersion < onlineVersion)
 {
