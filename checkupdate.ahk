@@ -16,7 +16,7 @@ whr.WaitForResponse()
 onlineVersion := whr.ResponseText
 
 FileRead, currentVersion, d:\tuongtrinhRHMver.txt
-MsgBox %currentVersion% %onlineVersion%
+
 
 if (currentVersion = "") or (currentVersion < onlineVersion)
 {
