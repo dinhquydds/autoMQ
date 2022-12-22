@@ -10,7 +10,7 @@ Name = d:\tuongtrinhRHM.exe
 
 UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/version.txt, d:\tuongtrinhRHMOnlineVer.txt
 FileRead, currentVersion, d:\tuongtrinhRHMver.txt
-FileRead, OnlineVersion, d:\tuongtrinhRHMver.txt
+FileRead, OnlineVersion, d:\tuongtrinhRHMOnlinever.txt
 
 if (currentVersion = "") or (currentVersion < onlineVersion)
 {
