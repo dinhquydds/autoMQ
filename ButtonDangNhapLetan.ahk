@@ -1,5 +1,5 @@
 ﻿ButtonQuảnlýDược:
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 Gui, Submit, NoHide
 tendangnhap := thongtindangnhap(User)[1]
 matkhau := "123456"
@@ -38,14 +38,14 @@ Sleep 100
 Send {enter}
 Sleep 1000
 
-ShowTip()
+; ShowTip()
 Gui, Show
 return
 
 
 ButtonThuViệnPhí:
 Gui, Submit, NoHide
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 tendangnhap := thongtindangnhap(User)[1]
 matkhau := thongtindangnhap(User)[2]
 
@@ -226,24 +226,24 @@ WinWait, %tt%
 IfWinNotActive, %tt%,, WinActivate, %tt%
 
 Sleep, 1000
-ShowTip()
+; ShowTip()
 Gui, Show
 return
 
 
 ButtonMởXQuang:
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 moxquang()
 Sleep 1000
-ShowTip()
+; ShowTip()
 Gui, Show
 return
 
 ButtonNhậpcôngkhám:
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 mof7()
 nhapchidinh("KHA009", "100", giochidinh, ghichu)
 nhanketthuc()
 Gui, Show
-ShowTip()
+; ShowTip()
 return

@@ -1,6 +1,6 @@
 ﻿ButtonĐăngNhập:
 Gui, Submit, NoHide
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 tendangnhap := thongtindangnhap(User)[1]
 matkhau := thongtindangnhap(User)[2]
 ; Đóng cửa sổ có sẵn
@@ -24,7 +24,7 @@ WinWait, %tt%
 IfWinNotActive, %tt%,, WinActivate, %tt%
 
 Sleep 500
-ShowTip()
+; ShowTip()
 Gui, Show
 Return
 

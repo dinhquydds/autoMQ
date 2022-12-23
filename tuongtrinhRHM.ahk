@@ -19,7 +19,6 @@ FileRead, currentVersion, d:\tuongtrinhRHMver.txt
 
 if (currentVersion = "") or (currentVersion < latestVersion)
 {
-    MsgBox capnhat
     UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/main.exe, D:\tuongtrinhRHM.exe
     UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/version.txt, d:\tuongtrinhRHMVer.txt
     Sleep 500
@@ -27,7 +26,6 @@ if (currentVersion = "") or (currentVersion < latestVersion)
 }
 Else
 {
-    MsgBox giu nguyen
     Gosub, Run
 }
 

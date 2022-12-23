@@ -1,7 +1,7 @@
 ﻿^+m::
 ButtonCTMTQTCK:
 Gui, Submit, Hide
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 
 tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT
 WinWait, %tt%
@@ -19,6 +19,6 @@ nhapchidinh(xetnghiem, 100, giochidinh, ghichu)
 }
 
 Sleep 1000
-ShowTip()
+; ShowTip()
 Gui, Show
 Return

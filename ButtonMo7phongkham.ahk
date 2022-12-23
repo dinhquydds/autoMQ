@@ -1,6 +1,6 @@
 ﻿^+7::
 ButtonMở7phòngkhám:
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 
 
 corY := "011,039,040,041,042,043,120"
@@ -28,6 +28,6 @@ MouseClick, left,  35,  601
 
 
 Sleep 1000
-ShowTip()
+; ShowTip()
 Gui, Show
 return

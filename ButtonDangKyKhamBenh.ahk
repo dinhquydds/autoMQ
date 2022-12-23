@@ -1,5 +1,5 @@
 ﻿ButtonĐăngKýKhámBệnh:
-ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
+; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT
 WinWait, %tt%
 IfWinNotActive, %tt%,, WinActivate, %tt%
@@ -15,6 +15,6 @@ IfWinNotActive, %tt%,, WinActivate, %tt%
 
 Send {enter}
 Sleep 500
-ShowTip()
+; ShowTip()
 Gui, Show
 return
