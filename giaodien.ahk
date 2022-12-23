@@ -16,6 +16,8 @@ danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Lê Thiện Phú|Hoàng Tr�
 danhsachbacsi = |Cao Mạnh Cường|Hoàng Trọng Danh|Hoàng Tường Vi|Hứa Thị Loan|Lê Thiện Phú|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Mạnh Toàn|Nguyễn Thị Huyền Tâm|Nguyễn Thị Ngọc Trang|Quách Hữu Hợi|Văn Phú Minh Phước|Vũ Thị Oanh|Nguyễn Thùy Phương
 danhsachdieuduong = |Đỗ Thị Quỳnh Lan|Đỗ Thị Thu Thảo|Đỗ Thị Trâm|Đoàn Thị Ngọc Minh|Dương Thị Lý|Hồ Thị Hồng Tình|Lâm Thị Thu Trang|Lê Thị Hòa|Lê Thị Thanh Vân|Mai Mạnh Nam|Nguyễn Thái Sơn|Nguyễn Thái Thảo|Nguyễn Thị Sương|Nguyễn Thị Thắm|Nguyễn Thị Thu Hằng|Nguyễn Thị Vui|Nguyễn Văn Lực|Phạm Thị Thanh|Phạm Thị Thùy Linh|Phan Như Phương|Trần Thị Hoài Phương|Vũ Thị Luyến|Vũ Thị Ngọc Quỳnh|Y Blin Mlô|Võ Trường Như Ý|Ngô Thị Mỹ Hạnh|Nguyễn Thị Kim Cúc|Nguyễn Thị Kim Ngân|Trần Thị Lưu|Hoàng Thị Tuyết Mai
 
+FileRead, Version, Version.txt
+
 ;Đăng nhập tự động
 Gui, Add, DropDownList, x10 y10  h10 R50 Sort vUser, %danhsachUser%
 Gui, Add, Button, x+10 yp w70 h20 , Đăng Nhập
@@ -66,6 +68,9 @@ Gui, Add, UpDown, vphuttuongtrinh Range0-60
 
 Gui, Add, Text, x155 yp+30 w40 h30 , Giờ
 Gui, Add, Text, x205 yp w40 h30 , Phút
+
+Gui, Add, Text, x+250 yp w40 h30 , V.%Version%
+
 
 ; Generated using SmartGUI Creator 4.0
 Gui, Show, x1000 y300 Autosize, Tự động nhập tường trình RHM
