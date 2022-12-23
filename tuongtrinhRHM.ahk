@@ -12,12 +12,12 @@ Name = d:\tuongtrinhRHM.exe
 UrlDownloadToFile, https://raw.githubusercontent.com/dinhquydds/autoMQ/main/version.txt, d:\latestVersion.txt
 
 FileRead, latestVersion, d:\latestVersion.txt
-FileRead, currentVersion, d:\tuongtrinhRHMver.txt
+FileRead, currentVersion, d:\version.txt
 
 if (currentVersion = "") or (currentVersion < latestVersion)
 {
     UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/main.exe, D:\tuongtrinhRHM.exe
-    UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/version.txt, d:\tuongtrinhRHMVer.txt
+    UrlDownloadToFile, https://github.com/dinhquydds/autoMQ/raw/main/version.txt, d:\version.txt
     Sleep 500
     gosub, Run
 }
