@@ -42,7 +42,7 @@ if (bacsi = "") ; chua nhập bác sĩ tường trình
 }
 
 var1 = %User%,%bacsi%,%vongtrong%,%vongngoai%
-MsgBox %var1%
+
 Loop, parse, var1, `,
 {
     if (A_LoopField != "") and InStr(khongnhapten, A_LoopField) ; có thể bỏ qua tên phụ tá, vòng trong, vòng ngoài, nếu có tên kiểm tra có được nhập không 
