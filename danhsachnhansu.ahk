@@ -83,7 +83,7 @@ if (User = "Nguyễn Thị Huyền Tâm")
 if (User = "Nguyễn Thuỳ Phương")
 	return ["phuongnt", "123456", "0425"]
 if (User = "Lưu Thị Sâm")
-	return ["samlt", "123456", "0413"]
+	return ["samlt", "1", "0413"]
 if (User = "Nguyễn Thị Ngọc Trang")
 	return ["trangntn", "123456", "0315"]
 }
