@@ -500,10 +500,7 @@ Winwaitdangnhap(){
     IfWinNotActive, %tt%,, WinActivate, %tt%
 }
 
-::rang2ham::18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28{enter}38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48
-::hamtren::17 16 15 14 13 12 11 21 22 23 24 25 26 27
-::hamduoi::37 36 35 34 33 32 31 41 42 43 44 45 46 47
-::caorang2ham::Cao răng hai hàm
+
 
 
 laymabenhnhan(){
@@ -547,3 +544,11 @@ ShowTip(s:="", pos:="y0", color:="Red|00FFFF") {
   return
 }
 
+::rang2ham::18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28{enter}38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48
+::hamtren::17 16 15 14 13 12 11 21 22 23 24 25 26 27
+::hamduoi::37 36 35 34 33 32 31 41 42 43 44 45 46 47
+::caorang2ham::Cao răng hai hàm
+::dxnrk::-Do chân răng … nằm sát dây thần kinh, nên sau khi nhổ răng… có thể bị tê môi, lưỡi, cằm trong thời gian ngắn. Sau nhổ răng có thể bị sưng, đau, rỉ máu vài ngày. BN đồng ý nhổ răng ... chi phí ...
+::dxtr::-Do răng … có lỗ sâu lớn nên sau khi trám răng phải theo dõi tình trạng răng, nếu đau nhức thì phải điều trị tủy (chi phí điều trị tủy tính riêng).
+::dxrs::Răng ... cần bọc sứ, BV chỉ bảo hành răng sứ, không bảo hành chân răng
+::dxnn::-Do tình trạng giải phẫu phức tạp của ống tủy nên trong quá trình điều trị có thể thất bại trong thời gian ngắn hạn hoặc lâu dài. Trong trường hợp đó, phải nhổ bỏ và không hoàn lại chi phí điều trị tủy.

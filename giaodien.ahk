@@ -12,8 +12,8 @@ tatcaloainhorang = Răng khôn trên 500K|Răng khôn trên 1 triệu|Răng khô
 tatcaloainhorangthuthuat = Nhổ răng sữa|Nhổ răng lung lay|Nhổ chân răng
 luachonnoinha = Nội nha lần đầu|Nội nha lại|Nội nha lần đầu (gây mê)|Nội nha lại (gây mê)
 
-danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Hoàng Tường Vi|Vũ Thị Oanh|Cao Mạnh Cường|Nguyễn Thị Huyền Tâm|Nguyễn Thuỳ Phương|Lưu Thị Sâm|Nguyễn Thị Ngọc Trang
-danhsachbacsi = |Cao Mạnh Cường|Hoàng Tường Vi|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Mạnh Toàn|Nguyễn Thị Huyền Tâm|Nguyễn Thị Ngọc Trang|Vũ Thị Oanh|Nguyễn Thùy Phương
+danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Hoàng Tường Vi|Vũ Thị Oanh|Nguyễn Thị Huyền Tâm|Nguyễn Thuỳ Phương|Lưu Thị Sâm|Nguyễn Thị Ngọc Trang
+danhsachbacsi = |Hoàng Tường Vi|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Mạnh Toàn|Nguyễn Thị Huyền Tâm|Nguyễn Thị Ngọc Trang|Vũ Thị Oanh|Nguyễn Thùy Phương
 danhsachdieuduong = |Đỗ Thị Quỳnh Lan|Đỗ Thị Thu Thảo|Đỗ Thị Trâm|Đoàn Thị Ngọc Minh|Dương Thị Lý|Hồ Thị Hồng Tình|Lâm Thị Thu Trang|Lê Thị Hòa|Lê Thị Thanh Vân|Mai Mạnh Nam|Nguyễn Thái Sơn|Nguyễn Thị Sương|Nguyễn Thị Thắm|Nguyễn Thị Thu Hằng|Nguyễn Thị Vui|Nguyễn Văn Lực|Phạm Thị Thanh|Phạm Thị Thùy Linh|Trần Thị Hoài Phương|Vũ Thị Luyến|Vũ Thị Ngọc Quỳnh|Võ Trường Như Ý|Ngô Thị Mỹ Hạnh|Nguyễn Thị Kim Ngân|Trần Thị Lưu|Hoàng Thị Tuyết Mai
 
 FileRead, Version, Version.txt
@@ -46,7 +46,7 @@ Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloainoinha%A_Index%, %luach
 Gui, Add, DropDownList, x10 yp+30 Sort r50 gbacsi vbacsi, %danhsachbacsi%
 Gui, Add, DropDownList, x+10 yp Sort r50 vphuta, %danhsachdieuduong%
 Gui, Add, DropDownList, x+10 yp Sort choose25 r50 vvongtrong, %danhsachdieuduong%
-Gui, Add, DropDownList, x+10 yp Sort choose28 r50 vvongngoai, %danhsachdieuduong%
+Gui, Add, DropDownList, x+10 yp Sort choose5 r50 vvongngoai, %danhsachdieuduong%
 
 ;button
 Gui, Add, Button, x260 yp+30 w70 h40 , OK
