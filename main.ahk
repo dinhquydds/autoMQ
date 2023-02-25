@@ -17,6 +17,7 @@ SetTitleMatchMode, 2
 #Include, ButtonOK.ahk
 #Include, ButtonMo7phongkham.ahk
 #Include, ButtonMoXQuang.ahk
+#Include, dexuatdieutri.ahk
 
 
 

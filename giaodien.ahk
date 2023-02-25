@@ -69,6 +69,8 @@ Gui, Add, UpDown, vphuttuongtrinh Range0-60
 Gui, Add, Text, x155 yp+30 w40 h30 , Giờ
 Gui, Add, Text, x205 yp w40 h30 , Phút
 
+Gui, Add, DropDownList, x10 yp+10 choose1 Sort r50 vdexuatdieutri gdexuatdieutri, Chọn đề xuất điều trị|Trám răng|Nội nha|Răng sứ|Nhổ răng vĩnh viễn|Nhổ răng khôn|Nhổ răng lung lay
+
 Gui, Add, Text, x+250 yp w40 h30 , V.%Version%
 
 
@@ -83,3 +85,6 @@ ExitApp
 ButtonReset:
 Reload
 Return
+
+
+
