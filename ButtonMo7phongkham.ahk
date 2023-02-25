@@ -9,7 +9,7 @@ Loop, parse, corY, `,
 
 WinwaitMQHIS()
 Sleep 1000
-Send, {Blind}{Alt Down}{Alt Up}kp
+Send, {Blind}{Alt Down}{Alt Up}kp{Enter}
 
 tt = Chọn khoa làm việc
 WinWait, %tt%
