@@ -107,6 +107,21 @@ Switch Dichvu1 {
         GuiControl, hide, loaixoangtram1 
         GuiControl, hide, loairangsu1 
         GuiControl, hide, loairangthaolap1 
+        GuiControl, hide, loaiabutment1 
+        GuiControl, hide, chotsoi1 
+        GuiControl, show, loaiimplant1 
+        GuiControl, hide, loaicaovoi1 
+        GuiControl, hide, loainhorang1 
+        GuiControl, show, Toothlist1 
+	    GuiControl, hide, loainhorangthuthuat1
+        GuiControl, hide, loainoinha1
+    }
+
+    Case "Implant abutment": {
+        GuiControl, hide, phantrambaohiem1 
+        GuiControl, hide, loaixoangtram1 
+        GuiControl, hide, loairangsu1 
+        GuiControl, hide, loairangthaolap1 
         GuiControl, show, loaiabutment1 
         GuiControl, hide, chotsoi1 
         GuiControl, show, loaiimplant1 
@@ -328,6 +343,21 @@ Switch Dichvu2 {
     }
 
     Case "Implant": {
+        GuiControl, hide, phantrambaohiem2 
+        GuiControl, hide, loaixoangtram2 
+        GuiControl, hide, loairangsu2 
+        GuiControl, hide, loairangthaolap2 
+        GuiControl, hide, loaiabutment2 
+        GuiControl, hide, chotsoi2 
+        GuiControl, show, loaiimplant2 
+        GuiControl, hide, loaicaovoi2 
+        GuiControl, hide, loainhorang2 
+        GuiControl, show, Toothlist2 
+	    GuiControl, hide, loainhorangthuthuat2
+        GuiControl, hide, loainoinha2
+    }
+
+    Case "Implant abutment": {
         GuiControl, hide, phantrambaohiem2 
         GuiControl, hide, loaixoangtram2 
         GuiControl, hide, loairangsu2 
@@ -557,6 +587,21 @@ Switch Dichvu3 {
         GuiControl, hide, loaixoangtram3 
         GuiControl, hide, loairangsu3 
         GuiControl, hide, loairangthaolap3 
+        GuiControl, hide, loaiabutment3 
+        GuiControl, hide, chotsoi3 
+        GuiControl, show, loaiimplant3 
+        GuiControl, hide, loaicaovoi3 
+        GuiControl, hide, loainhorang3 
+        GuiControl, show, Toothlist3 
+	    GuiControl, hide, loainhorangthuthuat3
+        GuiControl, hide, loainoinha3
+    }
+
+    Case "Implant abutment": {
+        GuiControl, hide, phantrambaohiem3 
+        GuiControl, hide, loaixoangtram3 
+        GuiControl, hide, loairangsu3 
+        GuiControl, hide, loairangthaolap3 
         GuiControl, show, loaiabutment3 
         GuiControl, hide, chotsoi3 
         GuiControl, show, loaiimplant3 
@@ -778,6 +823,21 @@ Switch Dichvu4 {
     }
 
     Case "Implant": {
+        GuiControl, hide, phantrambaohiem4 
+        GuiControl, hide, loaixoangtram4 
+        GuiControl, hide, loairangsu4 
+        GuiControl, hide, loairangthaolap4 
+        GuiControl, hide, loaiabutment4 
+        GuiControl, hide, chotsoi4 
+        GuiControl, show, loaiimplant4 
+        GuiControl, hide, loaicaovoi4 
+        GuiControl, hide, loainhorang4 
+        GuiControl, show, Toothlist4 
+	    GuiControl, hide, loainhorangthuthuat4
+        GuiControl, hide, loainoinha4
+    }
+
+    Case "Implant abutment": {
         GuiControl, hide, phantrambaohiem4 
         GuiControl, hide, loaixoangtram4 
         GuiControl, hide, loairangsu4 
@@ -1007,6 +1067,21 @@ Switch Dichvu5 {
         GuiControl, hide, loaixoangtram5 
         GuiControl, hide, loairangsu5 
         GuiControl, hide, loairangthaolap5 
+        GuiControl, hide, loaiabutment5 
+        GuiControl, hide, chotsoi5 
+        GuiControl, show, loaiimplant5 
+        GuiControl, hide, loaicaovoi5 
+        GuiControl, hide, loainhorang5 
+        GuiControl, show, Toothlist5 
+	    GuiControl, hide, loainhorangthuthuat5
+        GuiControl, hide, loainoinha5
+    }
+
+    Case "Implant abutment": {
+        GuiControl, hide, phantrambaohiem5 
+        GuiControl, hide, loaixoangtram5 
+        GuiControl, hide, loairangsu5 
+        GuiControl, hide, loairangthaolap5 
         GuiControl, show, loaiabutment5 
         GuiControl, hide, chotsoi5 
         GuiControl, show, loaiimplant5 
@@ -1232,6 +1307,21 @@ Switch Dichvu6 {
         GuiControl, hide, loaixoangtram6 
         GuiControl, hide, loairangsu6 
         GuiControl, hide, loairangthaolap6 
+        GuiControl, hide, loaiabutment6 
+        GuiControl, hide, chotsoi6 
+        GuiControl, show, loaiimplant6 
+        GuiControl, hide, loaicaovoi6 
+        GuiControl, hide, loainhorang6 
+        GuiControl, show, Toothlist6 
+	    GuiControl, hide, loainhorangthuthuat6
+        GuiControl, hide, loainoinha6
+    }
+
+    Case "Implant abutment": {
+        GuiControl, hide, phantrambaohiem6 
+        GuiControl, hide, loaixoangtram6 
+        GuiControl, hide, loairangsu6 
+        GuiControl, hide, loairangthaolap6 
         GuiControl, show, loaiabutment6 
         GuiControl, hide, chotsoi6 
         GuiControl, show, loaiimplant6 
@@ -1453,6 +1543,21 @@ Switch Dichvu7 {
     }
 
     Case "Implant": {
+        GuiControl, hide, phantrambaohiem7 
+        GuiControl, hide, loaixoangtram7 
+        GuiControl, hide, loairangsu7 
+        GuiControl, hide, loairangthaolap7 
+        GuiControl, hide, loaiabutment7 
+        GuiControl, hide, chotsoi7 
+        GuiControl, show, loaiimplant7 
+        GuiControl, hide, loaicaovoi7 
+        GuiControl, hide, loainhorang7 
+        GuiControl, show, Toothlist7 
+	    GuiControl, hide, loainhorangthuthuat7
+        GuiControl, hide, loainoinha7
+    }
+
+    Case "Implant abutment": {
         GuiControl, hide, phantrambaohiem7 
         GuiControl, hide, loaixoangtram7 
         GuiControl, hide, loairangsu7 
