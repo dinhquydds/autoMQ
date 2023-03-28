@@ -7,6 +7,7 @@ IDvongtrong := listIDdieuduong[vongtrong]
 IDvongngoai := listIDdieuduong[vongngoai]
 bacsichidinh := thongtindangnhap(User)[3]
 
+
 ;lay thong tin nguoi nghi
 doc := "1azSdvq9PYTdy9ez6I63_-Q6WR-VgL6QvVupayG-X9wo"
 sht := "0"
