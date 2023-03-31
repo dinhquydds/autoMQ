@@ -47,19 +47,21 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
     ; nhap bac si chi dinh
     if (bacsichidinh != "")
     {
-    Send +{tab 11}
+    ;Send +{tab 11}
     Sleep 500
     MouseClick, L, 112, 815
-    Sleep 300
+    Sleep 500
     Send ^a
-    Sleep 100
+    Sleep 500
     Send %bacsichidinh%
-    Sleep 100
-    Send {tab 10}
+    Sleep 500
+    ;Send {tab 11}
     }
 
     Sleep 500
-    Send {tab 2}
+    ;Send {tab 2}
+    MouseClick, L, 172, 956
+    Sleep 100
     Send %ghichu%
     Sleep 100
     Send {tab 2}
