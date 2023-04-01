@@ -27,7 +27,6 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
     Winwaitchidinhdichvu()
     MouseClick, L, 260, 884
     Send, {Blind}{Alt Down}m{Alt Up}
-    
     Winwaitchidinhdichvu()
     if WinExist("MQ Solutions")
         {
@@ -35,35 +34,33 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
             Reload
         }
 
-    Sleep 100
+    Sleep 200
     Send, {Blind}{Shift Down}{Tab}{Shift Up}
     MouseClick, L, 146, 881
-    Sleep 100
+    Sleep 200
     Send %machidinh%
     Sleep 100
     Send {tab} ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
-    Sleep 100
+    Sleep 300
     Send !y
     Winwaitchidinhdichvu()
     ; nhap bac si chi dinh
     if (bacsichidinh != "")
     {
     ;Send +{tab 11}
-    Sleep 100
+    Sleep 500
     MouseClick, L, 112, 815
-    Sleep 100
+    Sleep 500
     Send ^a
-    Sleep, 100
-    Send {Delete}
-    Sleep 100
+    Sleep 500
     Send %bacsichidinh%
-    Sleep 100
+    Sleep 500
     ;Send {tab 11}
     }
 
-    Sleep 100
+    Sleep 500
     ;Send {tab 2}
-    MouseClick, L, 225, 950
+    MouseClick, L, 172, 956
     Sleep 100
     Send %ghichu%
     Sleep 100
