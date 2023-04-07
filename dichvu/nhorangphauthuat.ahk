@@ -192,7 +192,7 @@
 
         ; Nhổ răng vĩnh viễn
         if (loainhorang%A_Index% = "Nhổ răng vĩnh viễn"){
-            ICD%A_Index% := "K02"
+            ICD%A_Index% := "K02.4"
             machidinh%A_Index% := "16.203"
             mathuthuat%A_Index% := "P06281"
             ghichu%A_Index% = Răng %toothNumber%

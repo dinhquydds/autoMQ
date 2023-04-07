@@ -16,7 +16,7 @@ index := A_index ; luu index
 
 
     if (loainoinha%A_Index% = "Nội nha lần đầu"){
-        ICD%A_Index% := "K04"
+        ICD%A_Index% := "K04.0"
         Vocam%A_Index% := "03"
         noidungvocam%A_Index% = Gây tê tại chỗ
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm
@@ -142,7 +142,7 @@ index := A_index ; luu index
     } ; end nội nha lần đầu
 
     if (loainoinha%A_Index% = "Nội nha lần đầu (gây mê)"){
-        ICD%A_Index% := "K04"
+        ICD%A_Index% := "K04.0"
         Vocam%A_Index% := "03"
         noidungvocam%A_Index% = Gây tê tại chỗ
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm
@@ -268,7 +268,7 @@ index := A_index ; luu index
     } ; end nội nha lần đầu gây mê
 
     if (loainoinha%A_Index% = "Nội nha lại"){
-        ICD%A_Index% := "K04"
+        ICD%A_Index% := "K04.4"
         Vocam%A_Index% := "03"
         noidungvocam%A_Index% = Gây tê tại chỗ
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm
@@ -342,7 +342,7 @@ index := A_index ; luu index
     } ; end noi nha lại
 
     if (loainoinha%A_Index% = "Nội nha lại (gây mê)"){
-       ICD%A_Index% := "K04"
+       ICD%A_Index% := "K04.4"
         Vocam%A_Index% := "03"
         noidungvocam%A_Index% = Gây tê tại chỗ
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm

@@ -12,7 +12,10 @@
 , "Lưu Thị Sâm":"0413"
 , "Nguyễn Mạnh Toàn":"0158"
 , "Văn Phú Minh Phước":"0158"
-, "Nguyễn Thùy Phương":"0425"}
+, "Nguyễn Thùy Phương":"0425"
+, "Huỳnh Thế Nguyên":"0433"
+, "Trần Đăng Vinh":"0437"
+, "Nông Văn Pẹc":"0435"}
 
 listIDdieuduong := {"Đỗ Thị Hiền":"0414"
 , "Đỗ Thị Quỳnh Lan":"0077"
@@ -84,7 +87,12 @@ if (User = "Nguyễn Thuỳ Phương")
 	return ["phuongnt", "123456", "0425"]
 if (User = "Lưu Thị Sâm")
 	return ["samlt", "1", "0413"]
-if (User = "Nguyễn Thị Ngọc Trang")
-	return ["trangntn", "123456", "0315"]
+if (User = "Huỳnh Thế Nguyên")
+	return ["nguyenht", "123456", "0433"]
+if (User = "Trần Đăng Vinh")
+	return ["vinhtd", "123456", "0437"]
+if (User = "Nông Văn Pẹc")
+	return ["pecnv", "123456", "0435"]
+
 }
 

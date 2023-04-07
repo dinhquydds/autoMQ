@@ -8,7 +8,7 @@
 
         if (loainhorangthuthuat%A_Index% = "Nhổ răng lung lay"){
 
-            ICD%A_Index% := "K04"
+            ICD%A_Index% := "K05.3"
             machidinh%A_Index% := "16.204"
             mathuthuat%A_Index% := "T05017"
             ghichu%A_Index% = Răng %toothNumber%
@@ -20,7 +20,7 @@
 
         if (loainhorangthuthuat%A_Index% = "Nhổ chân răng"){
 
-            ICD%A_Index% := "K02"
+            ICD%A_Index% := "K02.4"
             machidinh%A_Index% := "16.205.2"
             mathuthuat%A_Index% := "T05157"
             ghichu%A_Index% = Răng %toothNumber%

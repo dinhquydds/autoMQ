@@ -6,7 +6,7 @@
         }
 
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm
-            ICD%A_Index% := "K02"
+            ICD%A_Index% := "K02.1"
             thoigianthuthuat%A_Index% := "1"
             vocam%A_Index% := "03"
             noidungtuongtrinh%A_Index% = thaocau

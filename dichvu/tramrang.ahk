@@ -5,7 +5,7 @@
             Continue
         }
 
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.1"
         Vocam%A_Index% := "00"
         ; FormatTime, giochidinh%A_index%, %time%, HH:mm
         ;Trám thường
@@ -50,7 +50,7 @@
         Random, randomtime, 8, 10
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = tramrangxoang5
-        ICD%A_Index% := "K03.2"
+        ICD%A_Index% := "K03.1"
         }
         If (loaixoangtram%A_Index% = "Trám răng sữa 250K"){
         Machidinh%A_Index% := "16.70"
@@ -58,7 +58,7 @@
         Random, randomtime, 3, 5
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = tramrangsua
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.1"
         }
         If (loaixoangtram%A_Index% = "Trám răng sữa 150K"){
         Machidinh%A_Index% := "16.236"
@@ -66,7 +66,7 @@
         Random, randomtime, 3, 5
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = tramrangsua
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.1"
         }
 
         If (loaixoangtram%A_Index% = "Che tủy Calci"){
@@ -75,7 +75,7 @@
         Random, randomtime, 8, 12
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = chetuycalci
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.5"
         }
 
         If (loaixoangtram%A_Index% = "Che tủy MTA"){
@@ -84,7 +84,7 @@
         Random, randomtime, 8, 12
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = chetuymta
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.5"
         }
         ; trám gây mê
         ;Trám thường
@@ -185,7 +185,7 @@
         Random, randomtime, 7, 10
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = tramrangsua
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.1"
         }
 
         If (loaixoangtram%A_Index% = "Trám tái tạo có chốt sợi"){
@@ -194,7 +194,7 @@
         Random, randomtime, 8, 10
         thoigianthuthuat%A_Index% := randomtime
         noidungtuongtrinh%A_Index% = tramtaitaocochotsoi
-        ICD%A_Index% := "K02"
+        ICD%A_Index% := "K02.4"
         }
 
         If (loaixoangtram%A_Index% = "Trám tái tạo không chốt sợi"){
