@@ -830,4 +830,56 @@ Send {tab} Do tình trạng giải phẫu phức tạp của ống tủy nên tr
 
 Return
 
+^+p::indexuatdieutri()
 
+
+indexuatdieutri(){
+    SetTitleMatchMode, 2
+CoordMode, Mouse, Screen
+
+tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+Sleep, 100
+
+MouseClick, L, 1327, 872
+
+Sleep, 203
+
+tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ - rp_phieudexuat_dieutri.re ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+Sleep, 500
+
+Send, {Blind}{Alt Down}{Alt Up}fp
+
+Sleep, 100
+
+tt = Print ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+Sleep, 500
+
+MouseClick, L, 904, 511
+
+Sleep, 414
+
+MouseClick, L, 1078, 747
+
+tt = Printing ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+Sleep, 1500
+
+Send, {Blind}{Enter}
+
+tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ - rp_phieudexuat_dieutri.re ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+Sleep, 1000
+}
