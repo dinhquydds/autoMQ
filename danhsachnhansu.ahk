@@ -93,6 +93,11 @@ if (User = "Trần Đăng Vinh")
 	return ["vinhtd", "123456", "0437"]
 if (User = "Nông Văn Pẹc")
 	return ["pecnv", "123456", "0435"]
-
+if (User = "Hạnh NTM")
+	return ["hanhntm", "2", "0435"]
+if (User = "Ý VTN")
+	return ["yvtn", "3", "0435"]
+if (User = "Trâm HT")
+	return ["tramht", "123456", "0435"]
 }
 

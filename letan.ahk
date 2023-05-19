@@ -11,7 +11,7 @@ SetTitleMatchMode, 2
 Gui, Font, s8
 
 
-danhsachUser = Cúc NTK|Hạnh NTM|Ngân NTK|Ý VTN
+danhsachUser = Trâm HT|Hạnh NTM|Ý VTN
 
 danhsachbacsi = Quách Hữu Hợi|Nguyễn Đình Quý|Hoàng Trọng Danh|Nguyễn Hoàng|Vũ Thị Oanh|Nguyễn Thị Ngọc Trang|Lê Thiện Phú|Hoàng Tường Vi|Cao Mạnh Cường|Nguyễn Thị Huyền Tâm
 danhsachdieuduong = Hồ Thị Nguyệt|Y Blin Mlô|Nguyễn Thị Kim Cúc|Dương Thị Lý|Lê Thị Thanh Vân|Nguyễn Thái Sơn|Nguyễn Thị Vui|Đoàn Thị Ngọc Minh|Ngô Thị Mỹ Hạnh|Trần Thị Hoài Phương|Vũ Thị Luyến|Nguyễn Thị Kim Ngân|Võ Trường Như Ý|Đỗ Thị Thu Thảo|Phạm Thị Thanh|Hồ Thị Hồng Tình

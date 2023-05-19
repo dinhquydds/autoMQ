@@ -14,7 +14,7 @@ luachonnoinha = Nội nha lần đầu|Nội nha lại|Nội nha lần đầu (g
 
 danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Hoàng Tường Vi|Nguyễn Thị Huyền Tâm|Nguyễn Thuỳ Phương|Lưu Thị Sâm|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
 danhsachbacsi = |Hoàng Tường Vi|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Thị Huyền Tâm|Nguyễn Thùy Phương|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
-danhsachdieuduong = |Đỗ Thị Quỳnh Lan|Đỗ Thị Thu Thảo|Đỗ Thị Trâm|Đoàn Thị Ngọc Minh|Dương Thị Lý|Hồ Thị Hồng Tình|Lâm Thị Thu Trang|Lê Thị Hòa|Lê Thị Thanh Vân|Mai Mạnh Nam|Nguyễn Thái Sơn|Nguyễn Thị Sương|Nguyễn Thị Thắm|Nguyễn Thị Thu Hằng|Nguyễn Thị Vui|Nguyễn Văn Lực|Phạm Thị Thanh|Phạm Thị Thùy Linh|Trần Thị Hoài Phương|Vũ Thị Luyến|Vũ Thị Ngọc Quỳnh|Võ Trường Như Ý|Ngô Thị Mỹ Hạnh|Nguyễn Thị Kim Ngân|Trần Thị Lưu|Hoàng Thị Tuyết Mai
+danhsachdieuduong = |Đỗ Thị Quỳnh Lan|Đỗ Thị Thu Thảo|Đỗ Thị Trâm|Đoàn Thị Ngọc Minh|Dương Thị Lý|Hồ Thị Hồng Tình|Lâm Thị Thu Trang|Lê Thị Hòa|Lê Thị Thanh Vân|Mai Mạnh Nam|Nguyễn Thái Sơn|Nguyễn Thị Sương|Nguyễn Thị Thắm|Nguyễn Thị Thu Hằng|Nguyễn Thị Vui|Nguyễn Văn Lực|Phạm Thị Thùy Linh|Trần Thị Hoài Phương|Vũ Thị Luyến|Vũ Thị Ngọc Quỳnh|Võ Trường Như Ý|Ngô Thị Mỹ Hạnh|Trần Thị Lưu|Hoàng Thị Tuyết Mai
 
 FileRead, Version, Version.txt
 
