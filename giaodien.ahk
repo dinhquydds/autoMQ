@@ -45,7 +45,7 @@ Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloainoinha%A_Index%, %luach
 
 Gui, Add, DropDownList, x10 yp+30 Sort r50 gbacsi vbacsi, %danhsachbacsi%
 Gui, Add, DropDownList, x+10 yp Sort r50 vphuta, %danhsachdieuduong%
-Gui, Add, DropDownList, x+10 yp Sort choose25 r50 vvongtrong, %danhsachdieuduong%
+Gui, Add, DropDownList, x+10 yp Sort choose23 r50 vvongtrong, %danhsachdieuduong%
 Gui, Add, DropDownList, x+10 yp Sort choose5 r50 vvongngoai, %danhsachdieuduong%
 
 ;button
