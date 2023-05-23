@@ -47,7 +47,18 @@
                 mathuthuatabutment%A_Index% := "T05145"
             }
         }
-; implant
+                If (loaiimplant%A_Index% = "4. ETK"){
+            Machidinhimplant%A_Index% := "16.6.1"
+            mathuthuatimplant%A_Index% := "P06117"
+            Machidinhabutment%A_Index% := "ABUT02.1"
+            mathuthuatabutment%A_Index% := "T05139"
+        
+            ; if (loaiabutment%A_Index% = "2. Abutment sứ Zirconia") { ; abutment Sứ
+            ;     Machidinhabutment%A_Index% := "ABU006"
+            ;     mathuthuatabutment%A_Index% := "T05145"
+            ; }
+        }
+; implant 4. ETK
         index := A_index ; luu index
 
         mof7()
@@ -121,7 +132,18 @@
                 mathuthuatabutment%A_Index% := "T05145"
             }
         }
-; implant
+        If (loaiimplant%A_Index% = "4. ETK"){
+            Machidinhimplant%A_Index% := "16.6.1"
+            mathuthuatimplant%A_Index% := "P06117"
+            Machidinhabutment%A_Index% := "ABUT02.1"
+            mathuthuatabutment%A_Index% := "T05579"
+        
+            ; if (loaiabutment%A_Index% = "2. Abutment sứ Zirconia") { ; abutment Sứ
+            ;     Machidinhabutment%A_Index% := "ABU006"
+            ;     mathuthuatabutment%A_Index% := "T05145"
+            ; }
+        }
+; implant T05579
         index := A_index ; luu index
 
         mof7()
