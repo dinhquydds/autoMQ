@@ -37,7 +37,7 @@ index := A_index ; luu index
                 Case 1: 
                 {
                     machidinh%A_Index% := "16.44.3"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05367"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 20 
                     thoigianthuthuat%A_Index% := randomtime
@@ -45,7 +45,7 @@ index := A_index ; luu index
                 Case 2: 
                 {
                     machidinh%A_Index% := "16.44.3.1"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05321"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 20
                     thoigianthuthuat%A_Index% := randomtime
@@ -53,7 +53,7 @@ index := A_index ; luu index
                 Case 3: 
                 {
                     machidinh%A_Index% := "16.44.3.2"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05319"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 20
                     thoigianthuthuat%A_Index% := randomtime
@@ -61,7 +61,7 @@ index := A_index ; luu index
                 Case 4: 
                 {
                     machidinh%A_Index% := "16.44.1"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05369"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -69,7 +69,7 @@ index := A_index ; luu index
                 Case 5: 
                 {
                     machidinh%A_Index% := "16.44.1.1"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05325"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -79,7 +79,7 @@ index := A_index ; luu index
                     if (phanham = "t")
                     {
                         machidinh%A_Index% := "16.44.4"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05365"
                         vocam%A_Index% := "03"
                         Random, randomtime, 20 , 45
                         thoigianthuthuat%A_Index% := randomtime
@@ -87,7 +87,7 @@ index := A_index ; luu index
                     if (phanham = "d")
                     {
                         machidinh%A_Index% := "16.44.2"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05253"
                         vocam%A_Index% := "17"
                         noidungvocam%A_Index% := "Gây tê vùng và gây tê tại chỗ"
                         Random, randomtime, 20, 45
@@ -99,7 +99,7 @@ index := A_index ; luu index
                     if (phanham = "t")
                     {
                         machidinh%A_Index% := "16.44.4.1"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05317"
                         vocam%A_Index% := "03"
                         Random, randomtime, 20 , 50
                         thoigianthuthuat%A_Index% := randomtime
@@ -107,7 +107,7 @@ index := A_index ; luu index
                     if (phanham = "d")
                     {
                         machidinh%A_Index% := "16.44.2.1"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05323"
                         vocam%A_Index% := "17"
                         noidungvocam%A_Index% := "Gây tê vùng và gây tê tại chỗ"
                         Random, randomtime, 20, 50
@@ -163,7 +163,7 @@ index := A_index ; luu index
                 Case 1: 
                 {
                     machidinh%A_Index% := "RHM8"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05367"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -171,7 +171,7 @@ index := A_index ; luu index
                 Case 2: 
                 {
                     machidinh%A_Index% := "RHM10"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05321"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -179,7 +179,7 @@ index := A_index ; luu index
                 Case 3: 
                 {
                     machidinh%A_Index% := "RHM12"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05319"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -187,7 +187,7 @@ index := A_index ; luu index
                 Case 4: 
                 {
                     machidinh%A_Index% := "RHM14"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05369"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -195,7 +195,7 @@ index := A_index ; luu index
                 Case 5: 
                 {
                     machidinh%A_Index% := "RHM16"
-                    mathuthuat%A_Index% := "P11655248"
+                    mathuthuat%A_Index% := "T05325"
                     vocam%A_Index% := "03"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
@@ -205,7 +205,7 @@ index := A_index ; luu index
                     if (phanham = "t")
                     {
                         machidinh%A_Index% := "RHM21"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05365"
                         vocam%A_Index% := "03"
                     Random, randomtime, 20, 50
                     thoigianthuthuat%A_Index% := randomtime
@@ -213,7 +213,7 @@ index := A_index ; luu index
                     if (phanham = "d")
                     {
                         machidinh%A_Index% := "RHM20"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05253"
                         vocam%A_Index% := "17"
                         noidungvocam%A_Index% := "Gây tê vùng và gây tê tại chỗ"
                     Random, randomtime, 20, 50
@@ -225,7 +225,7 @@ index := A_index ; luu index
                     if (phanham = "t")
                     {
                         machidinh%A_Index% := "RHM24"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05317"
                         vocam%A_Index% := "03"
                     Random, randomtime, 30, 50
                     thoigianthuthuat%A_Index% := randomtime
@@ -233,7 +233,7 @@ index := A_index ; luu index
                     if (phanham = "d")
                     {
                         machidinh%A_Index% := "RHM23"
-                        mathuthuat%A_Index% := "P11655248"
+                        mathuthuat%A_Index% := "T05323"
                         vocam%A_Index% := "17"
                         noidungvocam%A_Index% := "Gây tê vùng và gây tê tại chỗ"
                     Random, randomtime, 30, 50
@@ -290,49 +290,49 @@ index := A_index ; luu index
             Case 1: 
             {
                 machidinh%A_Index% := "16.61.8"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05359"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 2: 
             {
                 machidinh%A_Index% := "16.61.8.1"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05295"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 3: 
             {
                 machidinh%A_Index% := "16.61.8.2"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05297"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 4: 
             {
                 machidinh%A_Index% := "16.61.7"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05357"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 5: 
             {
                 machidinh%A_Index% := "16.61.7.1"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05299"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 6: 
             {
                 machidinh%A_Index% := "16.61.3"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05355"
                     Random, randomtime, 30, 50
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 7: 
             {
                 machidinh%A_Index% := "16.61.3.1"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05265"
                     Random, randomtime, 30, 50
                     thoigianthuthuat%A_Index% := randomtime
             }
@@ -364,42 +364,42 @@ index := A_index ; luu index
             Case 1: 
             {
                 machidinh%A_Index% := "RHM9"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05359"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 2: 
             {
                 machidinh%A_Index% := "RHM11"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05295"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 3: 
             {
                 machidinh%A_Index% := "RHM13"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05297"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 4: 
             {
                 machidinh%A_Index% := "RHM15"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05357"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 5: 
             {
                 machidinh%A_Index% := "RHM19"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05299"
                     Random, randomtime, 15, 30
                     thoigianthuthuat%A_Index% := randomtime
             }
             Case 6: 
             {
                 machidinh%A_Index% := "RHM22"
-                mathuthuat%A_Index% := "P11655248"
+                mathuthuat%A_Index% := "T05355"
                     Random, randomtime, 30, 50
                     thoigianthuthuat%A_Index% := randomtime
             }
