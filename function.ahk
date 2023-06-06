@@ -390,7 +390,7 @@ IfWinNotExist, MQRIS - [X QUANG]
         WinWait, %tt%
         IfWinNotActive, %tt%,, WinActivate, %tt%
 
-        Send, 0331
+        Send, 0360
         Sleep 100
         Send {tab}
         Sleep 500
