@@ -40,7 +40,7 @@ Switch Dichvu1 {
         GuiControl, hide, chotsoi1 
         GuiControl, hide, loaiimplant1 
         GuiControl, hide, loaicaovoi1 
-        GuiControl, show, loainhorang1 
+        GuiControl, hide, loainhorang1 
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, show, loainoinha1
@@ -185,7 +185,7 @@ Switch Dichvu1 {
         GuiControl, hide, loainhorang1 
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
-        GuiControl, hide, loainoinha1
+        GuiControl, show, loainoinha1
         GuiControl, hide, catthangluoi1
     }
 
@@ -455,7 +455,7 @@ Switch Dichvu2 {
         GuiControl, hide, loainhorang2 
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
-        GuiControl, hide, loainoinha2
+        GuiControl, show, loainoinha2
         GuiControl, hide, catthangluoi2
     }
 
