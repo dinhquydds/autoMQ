@@ -239,11 +239,4 @@ Sleep 1000
 Gui, Show
 return
 
-ButtonNhậpcôngkhám:
-; ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
-mof7()
-nhapchidinh("KHA009", "100", giochidinh, ghichu)
-nhanketthuc()
-Gui, Show
-; ShowTip()
 return

@@ -99,6 +99,7 @@ Loop, 7 {
     #Include, %A_ScriptDir%\dichvu\thaocaumao.ahk
     #Include, %A_ScriptDir%\dichvu\tramrang.ahk
     #Include, %A_ScriptDir%\dichvu\xquang.ahk
+    #Include, %A_ScriptDir%\dichvu\catthangluoi.ahk
 }
 
 khamxongchove()

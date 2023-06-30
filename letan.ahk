@@ -72,12 +72,15 @@ ExitApp
 ButtonReset: 
 Reload
 Return
+
 #Include, danhsachnhansu.ahk
 #Include, function.ahk
 #Include, ButtonDangNhap.ahk
 #Include, ButtonDangKyKhamBenh.ahk
 #Include, ButtonMo7phongkham.ahk
 #Include, ButtonDangNhapLetan.ahk
+#Include, ButtonNhapCongKham.ahk
+
 
 
 ^`::Reload

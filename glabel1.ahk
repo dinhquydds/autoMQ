@@ -14,6 +14,7 @@ Switch Dichvu1 {
         GuiControl, hide, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
 	    GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem1 
@@ -28,6 +29,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
 	    GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem1 
@@ -38,12 +40,13 @@ Switch Dichvu1 {
         GuiControl, hide, chotsoi1 
         GuiControl, hide, loaiimplant1 
         GuiControl, hide, loaicaovoi1 
-        GuiControl, hide, loainhorang1 
+        GuiControl, show, loainhorang1 
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
-	    GuiControl, show, loainoinha1
+        GuiControl, show, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
-        Case "Nhổ răng phẫu thuật": {
+    Case "Nhổ răng phẫu thuật": {
         GuiControl, show, phantrambaohiem1 
         GuiControl, hide, loaixoangtram1 
         GuiControl, hide, loairangsu1 
@@ -56,6 +59,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem1 
@@ -71,6 +75,7 @@ Switch Dichvu1 {
 	    GuiControl, show, xquang1
 	    GuiControl, show, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
         Case "Răng sứ": {
@@ -86,6 +91,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem1 
@@ -100,6 +106,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Implant": {
@@ -115,6 +122,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Implant abutment": {
@@ -130,6 +138,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Chỉnh nha": {
@@ -145,6 +154,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Tẩy trắng răng": {
@@ -160,6 +170,7 @@ Switch Dichvu1 {
         GuiControl, hide, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Nội nha lại": {
@@ -175,6 +186,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Ghép huyết tương": {
@@ -190,6 +202,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
     Case "Ghép xương": {
@@ -205,6 +218,7 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem1 
@@ -219,6 +233,22 @@ Switch Dichvu1 {
         GuiControl, show, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem1 
+        GuiControl, hide, loaixoangtram1 
+        GuiControl, hide, loairangsu1 
+        GuiControl, hide, loairangthaolap1 
+        GuiControl, hide, loaiabutment1 
+        GuiControl, hide, chotsoi1 
+        GuiControl, hide, loaiimplant1 
+        GuiControl, hide, loaicaovoi1 
+        GuiControl, hide, loainhorang1 
+        GuiControl, hide, Toothlist1 
+	    GuiControl, hide, loainhorangthuthuat1
+        GuiControl, hide, loainoinha1
+        GuiControl, show, catthangluoi1
     }
     Case "": {
         GuiControl, hide, phantrambaohiem1 
@@ -233,6 +263,7 @@ Switch Dichvu1 {
         GuiControl, hide, Toothlist1 
 	    GuiControl, hide, loainhorangthuthuat1
         GuiControl, hide, loainoinha1
+        GuiControl, hide, catthangluoi1
     }
 
 }
@@ -254,6 +285,7 @@ Switch Dichvu2 {
         GuiControl, hide, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
 	    GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem2 
@@ -268,6 +300,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
 	    GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem2 
@@ -296,6 +329,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem2 
@@ -311,6 +345,7 @@ Switch Dichvu2 {
 	    GuiControl, show, xquang2
 	    GuiControl, show, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
         Case "Răng sứ": {
@@ -326,6 +361,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem2 
@@ -340,6 +376,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Implant": {
@@ -355,6 +392,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Implant abutment": {
@@ -370,6 +408,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Chỉnh nha": {
@@ -385,6 +424,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Tẩy trắng răng": {
@@ -400,6 +440,7 @@ Switch Dichvu2 {
         GuiControl, hide, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Nội nha lại": {
@@ -415,6 +456,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Ghép huyết tương": {
@@ -430,6 +472,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
     Case "Ghép xương": {
@@ -445,6 +488,7 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem2 
@@ -459,6 +503,22 @@ Switch Dichvu2 {
         GuiControl, show, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
+    }
+        Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem2 
+        GuiControl, hide, loaixoangtram2 
+        GuiControl, hide, loairangsu2 
+        GuiControl, hide, loairangthaolap2 
+        GuiControl, hide, loaiabutment2 
+        GuiControl, hide, chotsoi2 
+        GuiControl, hide, loaiimplant2 
+        GuiControl, hide, loaicaovoi2 
+        GuiControl, hide, loainhorang2 
+        GuiControl, hide, Toothlist2 
+	    GuiControl, hide, loainhorangthuthuat2
+        GuiControl, hide, loainoinha2
+        GuiControl, show, catthangluoi2
     }
     Case "": {
         GuiControl, hide, phantrambaohiem2 
@@ -473,6 +533,7 @@ Switch Dichvu2 {
         GuiControl, hide, Toothlist2 
 	    GuiControl, hide, loainhorangthuthuat2
         GuiControl, hide, loainoinha2
+        GuiControl, hide, catthangluoi2
     }
 
 }
@@ -494,6 +555,7 @@ Switch Dichvu3 {
         GuiControl, hide, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
 	    GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem3 
@@ -508,6 +570,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
 	    GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem3 
@@ -536,6 +599,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem3 
@@ -551,6 +615,7 @@ Switch Dichvu3 {
 	    GuiControl, show, xquang3
 	    GuiControl, show, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
         Case "Răng sứ": {
@@ -566,6 +631,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem3 
@@ -580,6 +646,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Implant": {
@@ -595,6 +662,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Implant abutment": {
@@ -610,6 +678,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Chỉnh nha": {
@@ -625,6 +694,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Tẩy trắng răng": {
@@ -640,6 +710,7 @@ Switch Dichvu3 {
         GuiControl, hide, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Nội nha lại": {
@@ -655,6 +726,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Ghép huyết tương": {
@@ -670,6 +742,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
     Case "Ghép xương": {
@@ -685,6 +758,7 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem3 
@@ -699,6 +773,22 @@ Switch Dichvu3 {
         GuiControl, show, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem3 
+        GuiControl, hide, loaixoangtram3 
+        GuiControl, hide, loairangsu3 
+        GuiControl, hide, loairangthaolap3 
+        GuiControl, hide, loaiabutment3 
+        GuiControl, hide, chotsoi3 
+        GuiControl, hide, loaiimplant3 
+        GuiControl, hide, loaicaovoi3 
+        GuiControl, hide, loainhorang3 
+        GuiControl, hide, Toothlist3 
+	    GuiControl, hide, loainhorangthuthuat3
+        GuiControl, hide, loainoinha3
+        GuiControl, show, catthangluoi3
     }
     Case "": {
         GuiControl, hide, phantrambaohiem3 
@@ -713,6 +803,7 @@ Switch Dichvu3 {
         GuiControl, hide, Toothlist3 
 	    GuiControl, hide, loainhorangthuthuat3
         GuiControl, hide, loainoinha3
+        GuiControl, hide, catthangluoi3
     }
 
 }
@@ -734,6 +825,7 @@ Switch Dichvu4 {
         GuiControl, hide, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
 	    GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem4 
@@ -748,6 +840,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
 	    GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem4 
@@ -776,6 +869,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem4 
@@ -791,6 +885,7 @@ Switch Dichvu4 {
 	    GuiControl, show, xquang4
 	    GuiControl, show, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
         Case "Răng sứ": {
@@ -806,6 +901,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem4 
@@ -820,6 +916,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Implant": {
@@ -835,6 +932,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Implant abutment": {
@@ -850,6 +948,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Chỉnh nha": {
@@ -865,6 +964,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Tẩy trắng răng": {
@@ -880,6 +980,7 @@ Switch Dichvu4 {
         GuiControl, hide, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Nội nha lại": {
@@ -895,6 +996,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Ghép huyết tương": {
@@ -910,6 +1012,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
     Case "Ghép xương": {
@@ -925,6 +1028,7 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem4 
@@ -939,6 +1043,22 @@ Switch Dichvu4 {
         GuiControl, show, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem4 
+        GuiControl, hide, loaixoangtram4 
+        GuiControl, hide, loairangsu4 
+        GuiControl, hide, loairangthaolap4 
+        GuiControl, hide, loaiabutment4 
+        GuiControl, hide, chotsoi4 
+        GuiControl, hide, loaiimplant4 
+        GuiControl, hide, loaicaovoi4 
+        GuiControl, hide, loainhorang4 
+        GuiControl, hide, Toothlist4 
+	    GuiControl, hide, loainhorangthuthuat4
+        GuiControl, hide, loainoinha4
+        GuiControl, show, catthangluoi4
     }
     Case "": {
         GuiControl, hide, phantrambaohiem4 
@@ -953,6 +1073,7 @@ Switch Dichvu4 {
         GuiControl, hide, Toothlist4 
 	    GuiControl, hide, loainhorangthuthuat4
         GuiControl, hide, loainoinha4
+        GuiControl, hide, catthangluoi4
     }
 
 }
@@ -974,6 +1095,7 @@ Switch Dichvu5 {
         GuiControl, hide, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
 	    GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem5 
@@ -988,6 +1110,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
 	    GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem5 
@@ -1016,6 +1139,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem5 
@@ -1031,6 +1155,7 @@ Switch Dichvu5 {
 	    GuiControl, show, xquang5
 	    GuiControl, show, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
         Case "Răng sứ": {
@@ -1046,6 +1171,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem5 
@@ -1060,6 +1186,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Implant": {
@@ -1075,6 +1202,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Implant abutment": {
@@ -1090,6 +1218,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Chỉnh nha": {
@@ -1105,6 +1234,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Tẩy trắng răng": {
@@ -1120,6 +1250,7 @@ Switch Dichvu5 {
         GuiControl, hide, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Nội nha lại": {
@@ -1135,6 +1266,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Ghép huyết tương": {
@@ -1150,6 +1282,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
     Case "Ghép xương": {
@@ -1165,6 +1298,7 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem5 
@@ -1179,6 +1313,22 @@ Switch Dichvu5 {
         GuiControl, show, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem5 
+        GuiControl, hide, loaixoangtram5 
+        GuiControl, hide, loairangsu5 
+        GuiControl, hide, loairangthaolap5 
+        GuiControl, hide, loaiabutment5 
+        GuiControl, hide, chotsoi5 
+        GuiControl, hide, loaiimplant5 
+        GuiControl, hide, loaicaovoi5 
+        GuiControl, hide, loainhorang5 
+        GuiControl, hide, Toothlist5 
+	    GuiControl, hide, loainhorangthuthuat5
+        GuiControl, hide, loainoinha5
+        GuiControl, show, catthangluoi5
     }
     Case "": {
         GuiControl, hide, phantrambaohiem5 
@@ -1193,6 +1343,7 @@ Switch Dichvu5 {
         GuiControl, hide, Toothlist5 
 	    GuiControl, hide, loainhorangthuthuat5
         GuiControl, hide, loainoinha5
+        GuiControl, hide, catthangluoi5
     }
 
 }
@@ -1214,6 +1365,7 @@ Switch Dichvu6 {
         GuiControl, hide, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
 	    GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem6 
@@ -1228,6 +1380,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
 	    GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem6 
@@ -1256,6 +1409,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem6 
@@ -1271,6 +1425,7 @@ Switch Dichvu6 {
 	    GuiControl, show, xquang6
 	    GuiControl, show, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
         Case "Răng sứ": {
@@ -1286,6 +1441,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem6 
@@ -1300,6 +1456,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Implant": {
@@ -1315,6 +1472,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Implant abutment": {
@@ -1330,6 +1488,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Chỉnh nha": {
@@ -1345,6 +1504,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Tẩy trắng răng": {
@@ -1360,6 +1520,7 @@ Switch Dichvu6 {
         GuiControl, hide, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Nội nha lại": {
@@ -1375,6 +1536,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Ghép huyết tương": {
@@ -1390,6 +1552,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
     Case "Ghép xương": {
@@ -1405,6 +1568,7 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem6 
@@ -1419,6 +1583,22 @@ Switch Dichvu6 {
         GuiControl, show, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem6 
+        GuiControl, hide, loaixoangtram6 
+        GuiControl, hide, loairangsu6 
+        GuiControl, hide, loairangthaolap6 
+        GuiControl, hide, loaiabutment6 
+        GuiControl, hide, chotsoi6 
+        GuiControl, hide, loaiimplant6 
+        GuiControl, hide, loaicaovoi6 
+        GuiControl, hide, loainhorang6 
+        GuiControl, hide, Toothlist6 
+	    GuiControl, hide, loainhorangthuthuat6
+        GuiControl, hide, loainoinha6
+        GuiControl, show, catthangluoi6
     }
     Case "": {
         GuiControl, hide, phantrambaohiem6 
@@ -1433,6 +1613,7 @@ Switch Dichvu6 {
         GuiControl, hide, Toothlist6 
 	    GuiControl, hide, loainhorangthuthuat6
         GuiControl, hide, loainoinha6
+        GuiControl, hide, catthangluoi6
     }
 
 }
@@ -1454,6 +1635,7 @@ Switch Dichvu7 {
         GuiControl, hide, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
 	    GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
     Case "Trám răng": {
         GuiControl, show, phantrambaohiem7 
@@ -1468,6 +1650,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
 	    GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
     Case "Nội nha": {
         GuiControl, show, phantrambaohiem7 
@@ -1496,6 +1679,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
         Case "Nhổ răng thủ thuật": {
         GuiControl, show, phantrambaohiem7 
@@ -1511,6 +1695,7 @@ Switch Dichvu7 {
 	    GuiControl, show, xquang7
 	    GuiControl, show, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
         Case "Răng sứ": {
@@ -1526,6 +1711,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
         Case "Răng tháo lắp": {
         GuiControl, hide, phantrambaohiem7 
@@ -1540,6 +1726,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Implant": {
@@ -1555,6 +1742,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Implant abutment": {
@@ -1570,6 +1758,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Chỉnh nha": {
@@ -1585,6 +1774,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Tẩy trắng răng": {
@@ -1600,6 +1790,7 @@ Switch Dichvu7 {
         GuiControl, hide, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Nội nha lại": {
@@ -1615,6 +1806,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Ghép huyết tương": {
@@ -1630,6 +1822,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
     Case "Ghép xương": {
@@ -1645,6 +1838,7 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
     Case "Xquang": {
         GuiControl, hide, phantrambaohiem7 
@@ -1659,6 +1853,22 @@ Switch Dichvu7 {
         GuiControl, show, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
+    }
+    Case "Cắt thắng lưỡi": {
+        GuiControl, show, phantrambaohiem7 
+        GuiControl, hide, loaixoangtram7 
+        GuiControl, hide, loairangsu7 
+        GuiControl, hide, loairangthaolap7 
+        GuiControl, hide, loaiabutment7 
+        GuiControl, hide, chotsoi7 
+        GuiControl, hide, loaiimplant7 
+        GuiControl, hide, loaicaovoi7 
+        GuiControl, hide, loainhorang7 
+        GuiControl, hide, Toothlist7 
+	    GuiControl, hide, loainhorangthuthuat7
+        GuiControl, hide, loainoinha7
+        GuiControl, show, catthangluoi7
     }
     Case "": {
         GuiControl, hide, phantrambaohiem7 
@@ -1673,6 +1883,7 @@ Switch Dichvu7 {
         GuiControl, hide, Toothlist7 
 	    GuiControl, hide, loainhorangthuthuat7
         GuiControl, hide, loainoinha7
+        GuiControl, hide, catthangluoi7
     }
 
 }

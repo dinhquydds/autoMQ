@@ -1,5 +1,5 @@
 ﻿Gui, Font, s8
-Tatcadichvu = |Cạo vôi răng|Trám răng|Nội nha|Nhổ răng phẫu thuật|Nhổ răng thủ thuật|Răng sứ|Răng tháo lắp|Implant|Implant abutment|Chỉnh nha|Tẩy trắng răng|Ghép huyết tương|Ghép xương|Xquang|Bôi SDF|Tháo cầu|Tháo mão (chụp)
+Tatcadichvu = |Cạo vôi răng|Trám răng|Nội nha|Nhổ răng phẫu thuật|Nhổ răng thủ thuật|Răng sứ|Răng tháo lắp|Implant|Implant abutment|Chỉnh nha|Tẩy trắng răng|Ghép huyết tương|Ghép xương|Xquang|Bôi SDF|Tháo cầu|Tháo mão (chụp)|Cắt thắng lưỡi
 baohiem = 100|80|50
 tatcatramrang = Xoang 1|Xoang 2|Xoang 1+2|Xoang 3|Xoang 4|Xoang 5|Trám răng sữa 150K|Trám răng sữa 250K|Che tủy Calci|Che tủy MTA|Xoang 1 (gây mê)|Xoang 2 (gây mê)|Xoang 1+2 (gây mê)|Xoang 3 (gây mê)|Xoang 4 (gây mê)|Xoang 5 (gây mê)|Trám răng sữa (gây mê)|Xoang 1 (laser)|Xoang 2 (laser)|Xoang 1+2 (laser)|Xoang 3 (laser)|Xoang 4 (laser)|Xoang 5 (laser)|Trám tái tạo có chốt sợi|Trám tái tạo không chốt sợi
 tatcarangsu = 1. Sứ kim loại|2. Sứ Titanium|3. Sứ Zirconia|4. Sứ Ceramil Zolid|5. Sứ Emax|6. Sứ Lava 3M|7. Veneer Ivoclar 6 triệu|8. Veneer Lisi Press 8 triệu|9. Inlay/Onlay|Răng sứ Zirconia trên Implant|Răng sứ Ceramill Zolid trên Implant|Răng sứ Lava 3M trên Implant
@@ -11,6 +11,7 @@ tatcaloaicaovoi = 1. Ít (150K)|2. Trung bình (200K)|3. Nhiều (300K)
 tatcaloainhorang = Răng khôn trên 500K|Răng khôn trên 1 triệu|Răng khôn trên 1.5 triệu|Răng khôn trên 2 triệu|Nhổ răng khôn hàm trên 2.5 triệu|Răng khôn trên 3 triệu|Nhổ răng khôn hàm trên 3.5 triệu|Răng khôn dưới 500K|Răng khôn dưới 1 triệu|Răng khôn dưới 1.5 triệu|Răng khôn dưới 2 triệu|Nhổ răng khôn hàm dưới 2.5 triệu|Răng khôn dưới 3 triệu|Nhổ răng khôn hàm dưới 3.5 triệu|Nhổ răng ngầm|Nhổ răng vĩnh viễn|Nhổ răng thì 1|Nhổ răng thì 2|Nhổ răng thừa
 tatcaloainhorangthuthuat = Nhổ răng sữa|Nhổ răng lung lay|Nhổ chân răng
 luachonnoinha = Nội nha lần đầu|Nội nha lại|Nội nha lần đầu (gây mê)|Nội nha lại (gây mê)
+tatcacatthangluoi = 300K (DV)|500K|2.5M|3M
 
 danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Hoàng Tường Vi|Nguyễn Thị Huyền Tâm|Nguyễn Thuỳ Phương|Lưu Thị Sâm|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
 danhsachbacsi = |Hoàng Tường Vi|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Thị Huyền Tâm|Nguyễn Thùy Phương|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
@@ -38,6 +39,7 @@ Gui, Add, DropDownList, x140 yp w60 h10 R20 Hidden  vloaiimplant%A_Index%, %tatc
 Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloaicaovoi%A_Index%, %tatcaloaicaovoi%
 Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloainhorang%A_Index%, %tatcaloainhorang%
 Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloainhorangthuthuat%A_Index%, %tatcaloainhorangthuthuat%
+Gui, Add, DropDownList, x210 yp w140 h10 R20 Hidden vcatthangluoi%A_Index%, %tatcacatthangluoi%
 Gui, Add, Edit, x360 yp w160 h20 vToothlist%A_Index%,
 Gui, Add, DropDownList, x200 yp w140 h10 R20 Hidden vloainoinha%A_Index%, %luachonnoinha%
 

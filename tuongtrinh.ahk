@@ -1044,3 +1044,17 @@ Lưới kim loại cho nền hàm giả tháo lắp
 Clipwait
 Send ^v
 }
+
+tuongtrinhcatthangluoi(){
+Clipboard :=
+Sleep 100
+Clipboard =
+(LTrim Join`r`n
+Sát trùng vùng phẫu thuật
+Gây tê tại chỗ thắng lưỡi
+Dùng laser cắt thắng lưỡi, cầm máu
+Sau thủ thuật bệnh nhân an toàn
+)
+Clipwait
+Send ^v
+}

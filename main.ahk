@@ -21,6 +21,7 @@ SetTitleMatchMode, 2
 
 
 
+
 ^`::Reload
 ^Esc:ExitApp
 
