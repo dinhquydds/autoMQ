@@ -584,37 +584,22 @@ Clipboard =
 (LTrim Join`r`n 
 1. %noidungvocam% răng %toothNumber% bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
-3. Mở tủy
-- Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
-- Dùng mũi khoan thích hợp để mở toàn bộ trần buồng tuỷ
+3. Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
 4. Sửa soạn hệ thống ống tủy 
-- Lấy sạch tuỷ ở buồng tuỷ và ống tuỷ
-- Xác định miệng ống tuỷ và số lượng ống tuỷ bằng các dụng cụ thích hợp
-- Xác định chiều dài làm việc của các ống tuỷ
+- Lấy sạch tuỷ buồng, xác định lỗ vào ống tủy
+- Đo chiều dài làm việc bằng máy định vị chóp răng
 - Tạo hình và làm sạch ống tuỷ bằng các trâm xoay cầm tay
-+ Dùng trâm tay số 10 hoặc 15 để thăm dò ống tuỷ
-+ Sứ dụng các trâm xoay cầm tay để tạo hình và làm rộng hệ thống ống tuỷ
-+ Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
+- Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
 5. Hàn kín hệ thống ống tuỷ
-- Chọn cây lèn ngang với các kích thước phù hợp
-- Chọn cây lèn vừa khít và ngắn hơn chiều dài làm việc ống tuỷ 1-2mm
-- Chọn côn Gutta Percha chính : 
-+ Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
-+ Kiểm tra côn Gutta Percha trong ống tuỷ trên Xquang
-+ Rút côn Gutta Percha ra khỏi ống tuỷ
+- Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
 - Đặt và lèn côn Gutta Percha vào ống tuỷ :
 + Đưa xi măng trám bít vào thành ống tuỷ ở 1/3 ống tuỷ về phía cuống răng.
 + Đặt Gutta Percha chính vào ống tuỷ
-+ Lèn Gutta Percha bằng cây lèn ngang
-+ Đặt côn phụ vào khoảng trống được tạo ra bởi cây lèn, dùng cây lèn tiếp theo để lèn.
++ Lèn Gutta Percha bằng cây lèn ngang, đặt côn phụ vào khoảng trống
 + Lặp lại nhiều lần đặt và lèn Gutta đến khi cây lèn chỉ còn đi được 1/3 trên ống tuỷ.
-+ Lấy bỏ Gutta Percha thừa trong buồng tuỷ sát đến miệng ống tuỷ bằng nhiệt.
-+ Lèn 1/3 trên ống tuỷ bằng cây Plugger đã được hơ nóng
-- Đặt và lèn Gutta Percha các ống tuỷ còn lại
-- Lặp lại các bước đã đặt và lèn Gutta như trình bày ở trên lần lượt ở từng ống tuỷ còn lại
++ Lấy bỏ Gutta Percha thừa sát đến miệng ống tuỷ bằng nhiệt.
 - Kiểm tra kết quả hàn hệ thống ống tuỷ bằng xquang
-6. Hàn phục hồi thân răng
--  Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
+6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng %toothNumber% bệnh nhân đỡ đau, cho ra viện
 )
 
@@ -630,38 +615,23 @@ Clipboard =
 Bệnh nhân mê NKQ 
 1. %noidungvocam% răng %toothNumber% bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
-3. Mở tủy
-- Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
-- Dùng mũi khoan thích hợp để mở toàn bộ trần buồng tuỷ
+3. Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
 4. Sửa soạn hệ thống ống tủy 
-- Lấy sạch tuỷ ở buồng tuỷ và ống tuỷ
-- Xác định miệng ống tuỷ và số lượng ống tuỷ bằng các dụng cụ thích hợp
-- Xác định chiều dài làm việc của các ống tuỷ
+- Lấy sạch tuỷ buồng, xác định lỗ vào ống tủy
+- Đo chiều dài làm việc bằng máy định vị chóp răng
 - Tạo hình và làm sạch ống tuỷ bằng các trâm xoay cầm tay
-+ Dùng trâm tay số 10 hoặc 15 để thăm dò ống tuỷ
-+ Sứ dụng các trâm xoay cầm tay để tạo hình và làm rộng hệ thống ống tuỷ
-+ Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
+- Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
 5. Hàn kín hệ thống ống tuỷ
-- Chọn cây lèn ngang với các kích thước phù hợp
-- Chọn cây lèn vừa khít và ngắn hơn chiều dài làm việc ống tuỷ 1-2mm
-- Chọn côn Gutta Percha chính : 
-+ Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
-+ Kiểm tra côn Gutta Percha trong ống tuỷ trên Xquang
-+ Rút côn Gutta Percha ra khỏi ống tuỷ
+- Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
 - Đặt và lèn côn Gutta Percha vào ống tuỷ :
 + Đưa xi măng trám bít vào thành ống tuỷ ở 1/3 ống tuỷ về phía cuống răng.
 + Đặt Gutta Percha chính vào ống tuỷ
-+ Lèn Gutta Percha bằng cây lèn ngang
-+ Đặt côn phụ vào khoảng trống được tạo ra bởi cây lèn, dùng cây lèn tiếp theo để lèn.
++ Lèn Gutta Percha bằng cây lèn ngang, đặt côn phụ vào khoảng trống
 + Lặp lại nhiều lần đặt và lèn Gutta đến khi cây lèn chỉ còn đi được 1/3 trên ống tuỷ.
-+ Lấy bỏ Gutta Percha thừa trong buồng tuỷ sát đến miệng ống tuỷ bằng nhiệt.
-+ Lèn 1/3 trên ống tuỷ bằng cây Plugger đã được hơ nóng
-- Đặt và lèn Gutta Percha các ống tuỷ còn lại
-- Lặp lại các bước đã đặt và lèn Gutta như trình bày ở trên lần lượt ở từng ống tuỷ còn lại
++ Lấy bỏ Gutta Percha thừa sát đến miệng ống tuỷ bằng nhiệt.
 - Kiểm tra kết quả hàn hệ thống ống tuỷ bằng xquang
-6. Hàn phục hồi thân răng
--  Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
-Sau khi nội nha răng %toothNumber% bệnh nhân hồi tỉnh, đỡ đau, cho ra viện
+6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
+Sau khi nội nha răng %toothNumber% bệnh nhân đỡ đau, cho ra viện
 )
 Clipwait
 Send ^v
@@ -674,37 +644,22 @@ Clipboard =
 (LTrim Join`r`n
 1. %noidungvocam% răng %toothNumber% bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
-3. Mở tủy
-- Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
-- Dùng mũi khoan thích hợp để mở toàn bộ trần buồng tuỷ
+3. Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
 4. Sửa soạn hệ thống ống tủy 
-- Lấy sạch chất trám cũ tuỷ ở buồng tuỷ và ống tuỷ
-- Xác định miệng ống tuỷ và số lượng ống tuỷ bằng các dụng cụ thích hợp
+- Lấy sạch chất trám cũ tuỷ ở buồng tuỷ, và ống tủy
 - Xác định chiều dài làm việc của các ống tuỷ
 - Tạo hình và làm sạch ống tuỷ bằng các trâm xoay cầm tay
-+ Dùng trâm tay số 10 hoặc 15 để thăm dò ống tuỷ
-+ Sứ dụng các trâm xoay cầm tay để tạo hình và làm rộng hệ thống ống tuỷ
-+ Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
+- Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
 5. Hàn kín hệ thống ống tuỷ
-- Chọn cây lèn ngang với các kích thước phù hợp
-- Chọn cây lèn vừa khít và ngắn hơn chiều dài làm việc ống tuỷ 1-2mm
-- Chọn côn Gutta Percha chính : 
-+ Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
-+ Kiểm tra côn Gutta Percha trong ống tuỷ trên Xquang
-+ Rút côn Gutta Percha ra khỏi ống tuỷ
+- Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
 - Đặt và lèn côn Gutta Percha vào ống tuỷ :
 + Đưa xi măng trám bít vào thành ống tuỷ ở 1/3 ống tuỷ về phía cuống răng.
 + Đặt Gutta Percha chính vào ống tuỷ
-+ Lèn Gutta Percha bằng cây lèn ngang
-+ Đặt côn phụ vào khoảng trống được tạo ra bởi cây lèn, dùng cây lèn tiếp theo để lèn.
++ Lèn Gutta Percha bằng cây lèn ngang, đặt côn phụ vào khoảng trống
 + Lặp lại nhiều lần đặt và lèn Gutta đến khi cây lèn chỉ còn đi được 1/3 trên ống tuỷ.
-+ Lấy bỏ Gutta Percha thừa trong buồng tuỷ sát đến miệng ống tuỷ bằng nhiệt.
-+ Lèn 1/3 trên ống tuỷ bằng cây Plugger đã được hơ nóng
-- Đặt và lèn Gutta Percha các ống tuỷ còn lại
-- Lặp lại các bước đã đặt và lèn Gutta như trình bày ở trên lần lượt ở từng ống tuỷ còn lại
++ Lấy bỏ Gutta Percha thừa sát đến miệng ống tuỷ bằng nhiệt.
 - Kiểm tra kết quả hàn hệ thống ống tuỷ bằng xquang
-6. Hàn phục hồi thân răng
--  Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
+6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng %toothNumber% bệnh nhân đỡ đau, cho ra viện
 )
 Clipwait
@@ -719,37 +674,22 @@ Clipboard =
 Bệnh nhân mê NKQ
 1. %noidungvocam% răng %toothNumber% bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
-3. Mở tủy
-- Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
-- Dùng mũi khoan thích hợp để mở toàn bộ trần buồng tuỷ
+3. Dùng mũi khoan thích hợp mở đường vào buồng tuỷ răng %toothNumber%
 4. Sửa soạn hệ thống ống tủy 
-- Lấy sạch chất trám cũ tuỷ ở buồng tuỷ và ống tuỷ
-- Xác định miệng ống tuỷ và số lượng ống tuỷ bằng các dụng cụ thích hợp
+- Lấy sạch chất trám cũ tuỷ ở buồng tuỷ, và ống tủy
 - Xác định chiều dài làm việc của các ống tuỷ
 - Tạo hình và làm sạch ống tuỷ bằng các trâm xoay cầm tay
-+ Dùng trâm tay số 10 hoặc 15 để thăm dò ống tuỷ
-+ Sứ dụng các trâm xoay cầm tay để tạo hình và làm rộng hệ thống ống tuỷ
-+ Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
+- Bơm rửa hệ thống ống tuỷ bằng dung dịch Natri hypoclorid 2.5-5`%, nước muối sinh lí
 5. Hàn kín hệ thống ống tuỷ
-- Chọn cây lèn ngang với các kích thước phù hợp
-- Chọn cây lèn vừa khít và ngắn hơn chiều dài làm việc ống tuỷ 1-2mm
-- Chọn côn Gutta Percha chính : 
-+ Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
-+ Kiểm tra côn Gutta Percha trong ống tuỷ trên Xquang
-+ Rút côn Gutta Percha ra khỏi ống tuỷ
+- Chọn và đặt một côn Gutta Percha chuẩn phù hợp với file đã tạo hình sau cùng
 - Đặt và lèn côn Gutta Percha vào ống tuỷ :
 + Đưa xi măng trám bít vào thành ống tuỷ ở 1/3 ống tuỷ về phía cuống răng.
 + Đặt Gutta Percha chính vào ống tuỷ
-+ Lèn Gutta Percha bằng cây lèn ngang
-+ Đặt côn phụ vào khoảng trống được tạo ra bởi cây lèn, dùng cây lèn tiếp theo để lèn.
++ Lèn Gutta Percha bằng cây lèn ngang, đặt côn phụ vào khoảng trống
 + Lặp lại nhiều lần đặt và lèn Gutta đến khi cây lèn chỉ còn đi được 1/3 trên ống tuỷ.
-+ Lấy bỏ Gutta Percha thừa trong buồng tuỷ sát đến miệng ống tuỷ bằng nhiệt.
-+ Lèn 1/3 trên ống tuỷ bằng cây Plugger đã được hơ nóng
-- Đặt và lèn Gutta Percha các ống tuỷ còn lại
-- Lặp lại các bước đã đặt và lèn Gutta như trình bày ở trên lần lượt ở từng ống tuỷ còn lại
++ Lấy bỏ Gutta Percha thừa sát đến miệng ống tuỷ bằng nhiệt.
 - Kiểm tra kết quả hàn hệ thống ống tuỷ bằng xquang
-6. Hàn phục hồi thân răng
--  Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
+6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng %toothNumber% bệnh nhân hồi tỉnh, đỡ đau, cho ra viện
 )
 Clipwait
