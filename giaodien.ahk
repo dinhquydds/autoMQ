@@ -1,7 +1,7 @@
 ﻿Gui, Font, s8
 Tatcadichvu = |Cạo vôi răng|Trám răng|Nội nha|Nhổ răng phẫu thuật|Nhổ răng thủ thuật|Răng sứ|Răng tháo lắp|Implant|Implant abutment|Chỉnh nha|Tẩy trắng răng|Ghép huyết tương|Ghép xương|Xquang|Bôi SDF|Tháo cầu|Tháo mão (chụp)|Cắt thắng lưỡi
 baohiem = 100|80|50
-tatcatramrang = Xoang 1|Xoang 2|Xoang 1+2|Xoang 3|Xoang 4|Xoang 5|Trám răng sữa 150K|Trám răng sữa 250K|Che tủy Calci|Che tủy MTA|Xoang 1 (gây mê)|Xoang 2 (gây mê)|Xoang 1+2 (gây mê)|Xoang 3 (gây mê)|Xoang 4 (gây mê)|Xoang 5 (gây mê)|Trám răng sữa (gây mê)|Xoang 1 (laser)|Xoang 2 (laser)|Xoang 1+2 (laser)|Xoang 3 (laser)|Xoang 4 (laser)|Xoang 5 (laser)|Trám tái tạo có chốt sợi|Trám tái tạo không chốt sợi
+tatcatramrang = Xoang 1|Xoang 2|Xoang 1+2|Xoang 3|Xoang 4|Xoang 5|Trám răng sữa 150K|Trám răng sữa 250K|Che tủy Calci|Che tủy MTA|Xoang 1 (gây mê)|Xoang 2 (gây mê)|Xoang 1+2 (gây mê)|Xoang 3 (gây mê)|Xoang 4 (gây mê)|Xoang 5 (gây mê)|Trám răng sữa (gây mê)|Xoang 1 (laser)|Xoang 2 (laser)|Xoang 1+2 (laser)|Xoang 3 (laser)|Xoang 4 (laser)|Xoang 5 (laser)|Trám tái tạo có chốt 400K|Trám tái tạo không chốt 200K|Trám tái tạo không chốt 400K
 tatcarangsu = 1. Sứ kim loại|2. Sứ Titanium|3. Sứ Zirconia|4. Sứ Ceramil Zolid|5. Sứ Emax|6. Sứ Lava 3M|7. Veneer Ivoclar 6 triệu|8. Veneer Lisi Press 8 triệu|9. Inlay/Onlay|Răng sứ Zirconia trên Implant|Răng sứ Ceramill Zolid trên Implant|Răng sứ Lava 3M trên Implant
 tatcarangthaolap = 1. Răng Nhật|2. Răng Mỹ|3. Răng composite|Nền nhựa dẻo bán phần|Nền nhựa dẻo toàn phần|Lưới nền hàm
 tatcaabutment = 1. Abutment thường|2. Abutment sứ Zirconia

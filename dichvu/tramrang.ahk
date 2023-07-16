@@ -188,8 +188,8 @@
         ICD%A_Index% := "K02.1"
         }
 
-        If (loaixoangtram%A_Index% = "Trám tái tạo có chốt sợi"){
-        Machidinh%A_Index% := "16.77.2"
+        If (loaixoangtram%A_Index% = "Trám tái tạo có chốt 400K"){
+        Machidinh%A_Index% := "TRA002"
         Mathuthuat%A_Index% := "T05125"
         Random, randomtime, 8, 10
         thoigianthuthuat%A_Index% := randomtime
@@ -197,8 +197,17 @@
         ICD%A_Index% := "K02.4"
         }
 
-        If (loaixoangtram%A_Index% = "Trám tái tạo không chốt sợi"){
-        Machidinh%A_Index% := "16.77.1"
+        If (loaixoangtram%A_Index% = "Trám tái tạo không chốt 200K"){
+        Machidinh%A_Index% := "TRA001"
+        Mathuthuat%A_Index% := "T05127"
+        Random, randomtime, 8, 10
+        thoigianthuthuat%A_Index% := randomtime
+        noidungtuongtrinh%A_Index% = tramtaitaokhongchotsoi
+        ICD%A_Index% := "K02"
+        }
+
+        If (loaixoangtram%A_Index% = "Trám tái tạo không chốt 400K"){
+        Machidinh%A_Index% := "TRA003"
         Mathuthuat%A_Index% := "T05127"
         Random, randomtime, 8, 10
         thoigianthuthuat%A_Index% := randomtime
