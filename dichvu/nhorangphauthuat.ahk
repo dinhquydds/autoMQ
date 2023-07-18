@@ -122,7 +122,7 @@
         if (loainhorang%A_Index% = "Răng khôn dưới 1.5 triệu"){
             ICD%A_Index% := "K01"
             machidinh%A_Index% := "16.200.9"
-            mathuthuat%A_Index% := "T05015"
+            mathuthuat%A_Index% := "P05015"
             ghichu%A_Index% = Răng %toothNumber%
             Random, randomtime, 10, 20
             thoigianthuthuat%A_Index% := randomtime

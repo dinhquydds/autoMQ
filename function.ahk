@@ -411,7 +411,7 @@ IfWinNotExist, MQRIS - [X QUANG]
     tt = Chọn thông tin làm việc
     WinWait, %tt%
     IfWinNotActive, %tt%,, WinActivate, %tt%
-    Send, 0331{tab}  ; Ma bs doc xquang
+    Send, 0360{tab}  ; Ma bs doc xquang
     Sleep 500
     ControlClick, Đồng ý, ahk_exe MQRIS.exe , , Left, 1
     return
@@ -883,3 +883,74 @@ IfWinNotActive, %tt%,, WinActivate, %tt%
 
 Sleep, 1000
 }
+
+;doc phim xq
+; 12 xq
+::xqq::
+SetTitleMatchMode, 2
+CoordMode, Mouse, Screen
+
+Send, {Blind}{Shift Down}{Home}{Shift Up}
+
+Sleep, 200
+
+Send, {Blind}{Ctrl Down}x{Ctrl Up}
+
+Sleep, 200
+
+mof7()
+Winwaitchidinhdichvu()
+MouseClick, L, 260, 884
+Send, {Blind}{Alt Down}m{Alt Up}
+Winwaitchidinhdichvu()
+if WinExist("MQ Solutions")
+    {
+        Gui, Show
+        Reload
+    }
+Sleep 100
+Send, {Blind}{Shift Down}{Tab}{Shift Up}
+MouseClick, L, 146, 881
+Sleep 100
+Send 18.81
+Sleep 100
+    Send {tab} ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
+    Sleep 100
+    Send !y
+Winwaitchidinhdichvu()
+Sleep 100
+;Send {tab 2}
+MouseClick, L, 225, 950
+Sleep 100
+Send Răng%A_Space%
+Send ^v
+Sleep 100
+Send !l
+Sleep 500
+Send !y
+Return
+
+; dong tat ca cua so
+^+w::
+SetTitleMatchMode, 2
+CoordMode, Mouse, Screen
+
+tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT - [Khám bện ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+
+
+Sleep, 100
+
+Send, {Blind}{Alt Down}{Alt Up}a{Down}{Down}
+
+Sleep, 200
+
+Send, {Blind}{Enter}
+
+Sleep, 100
+
+tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
+WinWait, %tt%
+IfWinNotActive, %tt%,, WinActivate, %tt%
+Return
