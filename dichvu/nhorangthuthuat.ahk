@@ -45,6 +45,11 @@
         mof7()
         for k, toothNumber in danhsachrang%Index% {
             ghichu = Răng %toothNumber%
+            if (!isMilkToothNumber(toothNumber)) and (machidinh%index% = "16.238")
+            {
+                MsgBox Răng %toothNumber% là răng vĩnh viễn
+                Reload
+            }
             nhapchidinh(Machidinh%Index%, phantrambaohiem%Index%, giochidinh, ghichu)
         }
         nhanketthuc()
