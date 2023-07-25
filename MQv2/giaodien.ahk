@@ -1,72 +1,177 @@
-﻿#Requires AutoHotkey v2.0
-MyGui := Gui( , "Tự động tường trình RHM")
+﻿#SingleInstance Force
+MyGui := Gui(, "Tường trình tự động",)
 MyGui.SetFont("s10", "Arial")
 
-; Gui, Font, s8
-; Tatcadichvu = |Cạo vôi răng|Trám răng|Nội nha|Nhổ răng phẫu thuật|Nhổ răng thủ thuật|Răng sứ|Răng tháo lắp|Implant|Implant abutment|Chỉnh nha|Tẩy trắng răng|Ghép huyết tương|Ghép xương|Xquang|Bôi SDF|Tháo cầu|Tháo mão (chụp)|Cắt thắng lưỡi
-; baohiem = 100|80|50
-; tatcatramrang = Xoang 1|Xoang 2|Xoang 1+2|Xoang 3|Xoang 4|Xoang 5|Trám răng sữa 150K|Trám răng sữa 250K|Che tủy Calci|Che tủy MTA|Xoang 1 (gây mê)|Xoang 2 (gây mê)|Xoang 1+2 (gây mê)|Xoang 3 (gây mê)|Xoang 4 (gây mê)|Xoang 5 (gây mê)|Trám răng sữa (gây mê)|Xoang 1 (laser)|Xoang 2 (laser)|Xoang 1+2 (laser)|Xoang 3 (laser)|Xoang 4 (laser)|Xoang 5 (laser)|Trám tái tạo có chốt 400K|Trám tái tạo không chốt 200K|Trám tái tạo không chốt 400K
-; tatcarangsu = 1. Sứ kim loại|2. Sứ Titanium|3. Sứ Zirconia|4. Sứ Ceramil Zolid|5. Sứ Emax|6. Sứ Lava 3M|7. Veneer Ivoclar 6 triệu|8. Veneer Lisi Press 8 triệu|9. Inlay/Onlay|Răng sứ Zirconia trên Implant|Răng sứ Ceramill Zolid trên Implant|Răng sứ Lava 3M trên Implant
-; tatcarangthaolap = 1. Răng Nhật|2. Răng Mỹ|3. Răng composite|Nền nhựa dẻo bán phần|Nền nhựa dẻo toàn phần|Lưới nền hàm
-; tatcaabutment = 1. Abutment thường|2. Abutment sứ Zirconia
-; tatcachotsoi = Không chốt sợi|Có chốt sợi
-; tatcaimplant = 1. Dio|2. Helix|3. Strauman|4. ETK
-; tatcaloaicaovoi = 1. Ít (150K)|2. Trung bình (200K)|3. Nhiều (300K)
-; tatcaloainhorang = Răng khôn trên 500K|Răng khôn trên 1 triệu|Răng khôn trên 1.5 triệu|Răng khôn trên 2 triệu|Nhổ răng khôn hàm trên 2.5 triệu|Răng khôn trên 3 triệu|Nhổ răng khôn hàm trên 3.5 triệu|Răng khôn dưới 500K|Răng khôn dưới 1 triệu|Răng khôn dưới 1.5 triệu|Răng khôn dưới 2 triệu|Nhổ răng khôn hàm dưới 2.5 triệu|Răng khôn dưới 3 triệu|Nhổ răng khôn hàm dưới 3.5 triệu|Nhổ răng ngầm|Nhổ răng vĩnh viễn|Nhổ răng thì 1|Nhổ răng thì 2|Nhổ răng thừa
-; tatcaloainhorangthuthuat = Nhổ răng sữa|Nhổ răng lung lay|Nhổ chân răng
-; luachonnoinha = Nội nha lần đầu|Nội nha lại|Nội nha lần đầu (gây mê)|Nội nha lại (gây mê)
-; tatcacatthangluoi = 300K (DV)|500K|2.5M|3M
 
-; danhsachUser = |Nguyễn Đình Quý|Nguyễn Hoàng|Hoàng Tường Vi|Nguyễn Thị Huyền Tâm|Nguyễn Thuỳ Phương|Lưu Thị Sâm|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
-; danhsachbacsi = |Hoàng Tường Vi|Lưu Thị Sâm|Nguyễn Đình Quý|Nguyễn Hoàng|Nguyễn Thị Huyền Tâm|Nguyễn Thùy Phương|Huỳnh Thế Nguyên|Trần Đăng Vinh|Nông Văn Pẹc
-; danhsachdieuduong = |Đỗ Thị Quỳnh Lan|Đỗ Thị Thu Thảo|Đoàn Thị Ngọc Minh|Dương Thị Lý|Hồ Thị Hồng Tình|Lâm Thị Thu Trang|Lê Thị Hòa|Lê Thị Thanh Vân|Mai Mạnh Nam|Nguyễn Thái Sơn|Nguyễn Thị Sương|Nguyễn Thị Thắm|Nguyễn Thị Thu Hằng|Nguyễn Thị Vui|Nguyễn Văn Lực|Phạm Thị Thùy Linh|Vũ Thị Luyến|Vũ Thị Ngọc Quỳnh|Võ Trường Như Ý|Ngô Thị Mỹ Hạnh
+Tatcadichvu := ["Cạo vôi răng","Trám răng","Nội nha","Nhổ răng phẫu thuật","Nhổ răng thủ thuật","Răng sứ","Răng tháo lắp","Implant","Implant abutment","Chỉnh nha","Tẩy trắng răng","Ghép huyết tương","Ghép xương","Bôi SDF","Tháo cầu","Tháo mão (chụp)","Cắt thắng lưỡi"]
+baohiem := ["100","80","50"]
+tatcatramrang := ["Xoang 1","Xoang 2","Xoang 1+2","Xoang 3","Xoang 4","Xoang 5","Trám răng sữa 150K","Trám răng sữa 250K","Che tủy Calci","Che tủy MTA","Xoang 1 (gây mê)","Xoang 2 (gây mê)","Xoang 1+2 (gây mê)","Xoang 3 (gây mê)","Xoang 4 (gây mê)","Trám răng sữa (gây mê)","Xoang 1 (laser)","Xoang 2 (laser)","Xoang 1+2 (laser)","Xoang 3 (laser)","Xoang 4 (laser)","Xoang 5 (laser)","Trám tái tạo có chốt 400K","Trám tái tạo không chốt 200K","Trám tái tạo không chốt 400K"]
+tatcarangsu := ["1. Sứ kim loại","2. Sứ Titanium","3. Sứ Zirconia","4. Sứ Ceramil Zolid","5. Sứ Emax","6. Sứ Lava 3M","7. Veneer Ivoclar 6 triệu","8. Veneer Lisi Press 8 triệu","9. Inlay/Onlay","Răng sứ Zirconia trên Implant","Răng sứ Ceramill Zolid trên Implant","Răng sứ Lava 3M trên Implant"]
+tatcarangthaolap := ["1. Răng Nhật","2. Răng Mỹ","3. Răng composite","Nền nhựa dẻo bán phần","Nền nhựa dẻo toàn phần","Lưới nền hàm"]
+tatcaabutment := ["1. Abutment thường","2. Abutment sứ Zirconia"]
+tatcachotsoi := ["Không chốt sợi","Có chốt sợi"]
+tatcaimplant := ["1. Dio","2. Helix","3. Strauman","4. ETK"]
+tatcaloaicaovoi := ["1. Ít (150K)","2. Trung bình (200K)","3. Nhiều (300K)"]
+tatcaloainhorang := ["Răng khôn trên 500K","Răng khôn trên 1 triệu","Răng khôn trên 1.5 triệu","Răng khôn trên 2 triệu","Nhổ răng khôn hàm trên 2.5 triệu","Răng khôn trên 3 triệu","Nhổ răng khôn hàm trên 3.5 triệu","Răng khôn dưới 500K","Răng khôn dưới 1 triệu","Răng khôn dưới 1.5 triệu","Răng khôn dưới 2 triệu","Nhổ răng khôn hàm dưới 2.5 triệu","Răng khôn dưới 3 triệu","Nhổ răng khôn hàm dưới 3.5 triệu","Nhổ răng ngầm","Nhổ răng vĩnh viễn","Nhổ răng thì 1","Nhổ răng thì 2","Nhổ răng thừa"]
+tatcaloainhorangthuthuat := ["Nhổ răng sữa","Nhổ răng lung lay","Nhổ chân răng"]
+luachonnoinha := ["Nội nha lần đầu","Nội nha lại","Nội nha lần đầu (gây mê)","Nội nha lại (gây mê)"]
+tatcacatthangluoi := ["300K (DV)","500K","2.5M","3M"]
 
-; FileRead, Version, Version.txt
+danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV"]
+danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV"]
+danhsachdieuduong := ["Lan DTQ","Thảo DTT","Minh DTN","Lý DT","Tình HTH","Trang LTT","Hòa LT","Vân LTT","Nam MM","Sơn NT","Sương NT","Thắm NT","Hằng NTT","Vui NT","Lực NV","Linh PTT","Luyến VT","Quỳnh VTN","Ý VTN","Hạnh NTM"]
+
+Version := FileRead("Version.txt")
+
+
 
 ; ;Đăng nhập tự động
-MyGui.Add("DropDownList", "x10 y10 R50 Sort", ["b","a"])
-MyGui.Add("Button", "x+10 yp", "Đăng Nhập")
-MyGui.Add("Button", "x+10 yp", "Mở X-quang")
-MyGui.Add("Button", "x+10 yp", "CTM TQ TCK")
+User := MyGui.Add("DropDownList", "X10 Y10  h10 R50 Sort choose1", danhsachUser)
 
-MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", ["Dich vu 1", "Dich vu 2"])
-MyGui.Add("DropDownList", "x+10 yp w50 R10", [100, 80, 50])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["xoang 1", "xoang 2", "xoang 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["rang su 1", "rang su 2", "rang su 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["thao lap 1", "thao lap 2", "thao lap 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["abutment 1", "abutment 2", "abutment 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["implant 1", "implant 2", "implant 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["cao voi 1", "cao voi 2", "cao voi 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["nho rang 1", "nho rang 2", "nho rang 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["nho rang thu thuat 1", "nho rang thu thuat 2", "nho rang thu thuat 3"])
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["cat thang luoi 1", "cat thang luoi 2", "cat thang luoi 3"])
-MyGui.Add("Edit", "x450 yp w160")
-MyGui.Add("DropDownList", "x250 yp w150 R30", ["noi nha 1", "noi nha 2", "noi nha 3"])
+; MyGui.Add("DropDownList", "x10 y10 R50 Sort vUser", danhsachUser)
+MyGui.Add("Button", "x+10 yp", "Đăng Nhập").OnEvent("Click", button_dangnhap_click)
+MyGui.Add("Button", "x+10 yp", "X-quang").OnEvent("Click", button_moxquang_click)
+MyGui.Add("Button", "x+10 yp", "CTM TQ TCK").OnEvent("Click", button_ctmtqtck_click)
+MyGui.Add("Button", "x+10 yp", "Phòng khám").OnEvent("Click", button_mo7phongkham_click)
 
+; dich vu 1
+Dichvu1 := MyGui.Add("DropDownList", "x10 yp+35 R20 Sort", TatCaDichVu)
+BaoHiem1 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang1 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant1 := MyGui.Add("DropDownList", "x170 yp w50 R10 Hidden", tatcaimplant)
+CaoVoi1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat1 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat1 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist1 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha1 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
 
-MyGui.Add("DropDownList", "x10 yp+30 Sort r50 vbacsi", ["danh sach bac si"])
-MyGui.Add("DropDownList", "x+10 yp Sort r50 vphuta", ["danh sach phu ta"])
-MyGui.Add("DropDownList", "x+10 yp Sort r50 vvongtrong", ["danh sach vong trong"])
-MyGui.Add("DropDownList", "x+10 yp Sort r50 vvongngoai", ["danh sach vong ngoai"])
+; dich vu 2
+Dichvu2 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem2 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang2 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant2 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat2 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat2 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist2 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha2 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+; dich vu 3
+Dichvu3 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem3 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang3 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant3 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat3 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat3 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist3 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha3 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+; dich vu 4
+Dichvu4 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem4 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang4 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant4 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat4 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat4 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist4 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha4 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+; dich vu 5
+Dichvu5 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem5 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang5 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant5 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat5 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat5 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist5 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha5 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+; dich vu 6
+Dichvu6 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem6 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang6 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant6 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat6 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat6 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist6 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha6 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+; dich vu 7
+Dichvu7 := MyGui.Add("DropDownList", "x10 yp+30 R20 Sort", TatCaDichVu)
+BaoHiem7 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+TramRang7 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcatramrang)
+RangSu7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangsu)
+RangThaoLap7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcarangthaolap)
+Abutment7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaabutment)
+Implant7 := MyGui.Add("DropDownList", "x170 yp w50 R30 Hidden", tatcaimplant)
+CaoVoi7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcaloaicaovoi)
+NhoRangPhauThuat7 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorang)
+NhoRangThuThuat7 := MyGui.Add("DropDownList", "x230 yp w180 R30 Hidden", tatcaloainhorangthuthuat)
+CatThangLuoi7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", tatcacatthangluoi)
+Toothlist7 := MyGui.Add("Edit", "x420 yp w220") ;toothlist
+NoiNha7 := MyGui.Add("DropDownList", "x230 yp w150 R30 Hidden", luachonnoinha)
+
+bacsi := MyGui.Add("DropDownList", "x10 yp+30 Sort r50 choose2", danhsachbacsi)
+phuta := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose3", danhsachdieuduong)
+vongtrong := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose4", danhsachdieuduong)
+vongngoai := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose5", danhsachdieuduong)
+
 
 ; ;button
-MyGui.Add("Button", "x260 yp+30 w70 h30", "&OK")
-MyGui.Add("Button", "x340 yp w70 h30", "Đón&g")
-MyGui.Add("Button", "x420 yp w70 h30", "Reset")
+MyGui.Add("Button", "x260 yp+30 w70 h30", "&OK").OnEvent("Click", Button_OK_Click)
+MyGui.Add("Button", "x340 yp w70 h30", "Đón&g").OnEvent("Click", DongChuongTrinh)
+MyGui.Add("Button", "x420 yp w70 h30", "&Reset").OnEvent("Click", ResetChuongTrinh)
 
 ; ;thời gian
 MyGui.Add("Text", "x12 yp w130 h30", "Giờ chỉ định")
 MyGui.Add("Edit", "Number x150 yp w40 h20")
-MyGui.Add("UpDown", "yp vStartHour Range0-24")
+StartHour := MyGui.Add("UpDown", "yp Range0-24")
 MyGui.Add("Edit", "Number x200 yp w40 h20")
-MyGui.Add("UpDown", "yp vStartMinute Range0-60")
+StartMinute := MyGui.Add("UpDown", "yp Range0-60")
 
 MyGui.Add("Text", "x12 yp+30 w130 h30", "Giờ tường trình")
 MyGui.Add("Edit", "Number x150 yp w40 h20")
-MyGui.Add("UpDown", "yp vGiotuongtrinh Range0-24")
+giotuongtrinh := MyGui.Add("UpDown", "yp Range0-24")
 MyGui.Add("Edit", "Number x200 yp w40 h20")
-MyGui.Add("UpDown", "yp vphuttuongtrinh Range0-60")
+phuttuongtrinh := MyGui.Add("UpDown", "yp Range0-60")
 
-MyGui.Add("Text", "x+250 yp w40 h30", "V.001")
+MyGui.Add("Link","x10 y+10", 'Mở trang tính để nhập giờ tường trình <a href="https://docs.google.com/spreadsheets/d/1eEt6Hl4ag8Vnru0AUcT2NRjp2BGqqf7FdFs77TJ6-EU/edit?pli=1#gid=0">ở đây</a>')
+MyGui.Add("Text", "x+250 yp w40 h30", Format("V.{1}", Version))
 
 MyGui.Show("x1000 y 300 AutoSize")
+
+
+DongChuongTrinh(ctrl, *){
+    ExitApp
+}
+ResetChuongTrinh(ctrl, *){
+    Reload
+}

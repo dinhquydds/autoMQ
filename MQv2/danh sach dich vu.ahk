@@ -1,15 +1,20 @@
 ;Tên dịch vụ, ICD, mã chỉ định, mã tường trình, tên tường trình, vô cảm, thời gian làm thủ thuật
 
 "Bôi SDF", "K02", "PHO010", "T05147", "boisdf", 00,
+
 "Cạo vôi răng ít", "K03.6", "16.43.1", "T05407", "caovoirang", 00,
 "Cạo vôi răng trung bình", "K03.6", "14.43.3", "T05411", "caovoirang", 00,
 "Cạo vôi răng nhiều", "K03.6", "14.43.4", T05443, caovoirang, 00,
+
 "Cắt thắng lưỡi 300K", "Q38.1", 3.2174, P14001, catthangluoi, 03,
 "Cắt thắng lưỡi 500K", "Q38.1", 15.209, P14001, catthangluoi, 03,
 "Cắt thắng lưỡi 2.5M", "Q38.1", 16.216.2, P14001, catthangluoi, 03,
 "Cắt thắng lưỡi 3M", "Q38.1", 16.216.1, P14001, catthangluoi, 03,
+
 "Ghép huyết tương", "K01", "HT01", "T05421", ghephuyettuong, 03,
+
 "Ghép xương", "K08.1", "16.18", "P06055", ghepxuong, 03,
+
 "Implant Dio", "K08.1", "16.6.8", "P06011", implant, 03,
 "Implant Helix", "K08.1", "16.6.6", "P06015", implant, 03,
 "Implant Strauman", "K08.1", "16.6.4", "P06019", implant, 03,
@@ -23,6 +28,7 @@
 "Abutment Strauman Zirconia", "K08.1", "ABU006", "T05145", implant, 03,
 "Abutment ETK", "K08.1", "ABUT02.1", "T05579", implant, 03,
 "Abutment ETK Zirconia", "K08.1", "ABUT02.1", "T05579", implant, 03,
+
 "Nhổ răng khôn hàm trên 500K", "K01", "16.199.1.1", "T05275", nhorangkhontren, 03,
 "Nhổ răng khôn hàm trên 1M", "K01", "16.199.1", "P06239", nhorangkhontren, 03,
 "Nhổ răng khôn hàm trên 1.5M", "K01", "PHAU010", "P06283", nhorangkhontrencatthan, 03,
@@ -37,10 +43,12 @@
 "Nhổ răng khôn hàm dưới 2.5M", "K01", "PHAU901", "P06269", nhorangkhonduoicatthanchiachan, 17,
 "Nhổ răng khôn hàm dưới 3M", "K01", "16.198.1", "T05427", nhorangngam, 17,
 "Nhổ răng khôn hàm dưới 3.5M", "K01", "PHAU901", "P06269", nhorangkhonduoicatthanchiachan, 17,
+"Nhổ răng ngầm", "K01", "16.198.1", "T05427", nhorangngam, 03,
 "Nhổ răng vĩnh viễn", "K02.4", "16.203", "P06281", nhorangvinhvien, 03,
 "Nhổ răng thì 1", "K01", "16.200.1", "P06125", nhorangthi1, 17, 
 "Nhổ răng thì 2", "K01", "16.200.2", "P06123", nhorangthi2, 17, 
 "Nhổ răng thừa", "K00.6", "16.206.2", "T05431", nhorangthua, 03, 
+
 "Nhổ răng lung lay", "K05.3", "16.204", "T05017", nhoranglunglay, 03,
 "Nhổ chân răng", "K02.4", "16.205.2", "T05157", nhochanrang, 03,
 "Nhổ răng sữa", "K00.7", "16.238", "T05009", nhorangsua, 03,
@@ -97,36 +105,37 @@
 "Răng sứ Ceramill Zolid trên Implant", "K02.4", "RAN011", "T05191", rangsutrenimplant, 03
 "Răng sứ Lava 3M trên Implant", "K02.4", "RAN012", "T05195", rangsutrenimplant, 03
 
-"Nền nhựa dẻo bán phần", "K08.1", "16.131", "T05449", nhuadeobanphan, 00
-"Nền nhựa dẻo toàn phần", "K08.1", "16.132", "T05461", nhuadeobanphan, 00
-"Lưới nền hàm", "K08.1", "LUO001", "T05463", luoinenham, 00
 "Răng tháo lắp Nhật", "K08.1", "16.140.1", "T05417", rangthaolap, 00
 "Răng tháo lắp Mỹ", "K08.1", "16.140", "T05417", rangthaolap, 00
 "Răng tháo lắp composite", "K08.1", "16.140.2", "T05417", rangthaolap, 00
+"Nền nhựa dẻo bán phần", "K08.1", "16.131", "T05449", nhuadeobanphan, 00
+"Nền nhựa dẻo toàn phần", "K08.1", "16.132", "T05461", nhuadeobanphan, 00
+"Lưới nền hàm", "K08.1", "LUO001", "T05463", luoinenham, 00
+
 "Tháo cầu răng", "K02.1", "16.137", "T05249", thaocao, 00
 "Tháo mão (chụp)" "K02.1", "16.138", "T05249", thaocao, 00
 
 "Trám răng xoang 1", "K02.1", "16.68.5", "T05113", tramrangxoang1, 00
-"Trám răng xoang 1+2", "K02.1", "16.68.3", "T05117", tramrangxoang12, 00
 "Trám răng xoang 2", "K02.1", "16.68.4", "T05115", tramrangxoang2, 00
+"Trám răng xoang 1+2", "K02.1", "16.68.3", "T05117", tramrangxoang12, 00
 "Trám răng xoang 3", "K02.1", "16.68.2", "T05119", "tramrangxoang3", 00
 "Trám răng xoang 4", "K02.1", "16.68.1", "T05121", "tramrangxoang4", 00
 "Trám răng xoang 5", "K02.1", "16.72", "T05121", tramrangxoang5, 00
-"Trám răng sữa 250K", "K02.1", "16.70", "T05123", tramrangsua, 00
 "Trám răng sữa 150K", "K02.1", "16.236", "T05131", tramrangsua, 00
+"Trám răng sữa 250K", "K02.1", "16.70", "T05123", tramrangsua, 00
 "Che tủy Calci", "K02.5", "16.57", "T05083" chetuycalci, 03
 "Che tủy MTA", "K02.5", "16.56", "T05081", chetuymta, 03
 
 "Trám răng xoang 1 gây mê", "K02.1", "RHM1", "T05113", tramrangxoang1, 00
-"Trám răng xoang 1+2 gây mê", "K02.1", "RHM3", "T05117", tramrangxoang12, 00
 "Trám răng xoang 2 gây mê", "K02.1", "RHM2", "T05115", tramrangxoang2, 00
+"Trám răng xoang 1+2 gây mê", "K02.1", "RHM3", "T05117", tramrangxoang12, 00
 "Trám răng xoang 3 gây mê", "K02.1", "RHM4", "T05119", "tramrangxoang3", 00
 "Trám răng xoang 4 gây mê", "K02.1", "RHM5", "T05121", "tramrangxoang4", 00
 "Trám răng sữa gây mê", "K02.1", "16.236.3", "T05131", tramrangsua, 00
 
 "Trám răng xoang 1 laser", "K02.1", "16.65.7", "T05103", tramrangxoang1laser, 00
-"Trám răng xoang 1+2 laser", "K02.1", "16.65.3", "T05107", tramrangxoang12laser, 00
 "Trám răng xoang 2 laser", "K02.1", "16.65.6", "T05105", tramrangxoang2, 00
+"Trám răng xoang 1+2 laser", "K02.1", "16.65.3", "T05107", tramrangxoang12laser, 00
 "Trám răng xoang 3 laser", "K02.1", "16.65.2", "T05109", "tramrangxoang3", 00
 "Trám răng xoang 4 laser", "K02.1", "16.65.1", "T05111", "tramrangxoang4", 00
 "Trám răng xoang 5 laser", "K02.1", "16.75", "T05243", "tramrangxoang5", 00
@@ -134,5 +143,4 @@
 "Trám tái tạo có chốt 400K", "K02.4", "TRA002", "T05125", "tramtaitaocochotsoi", 00
 "Trám tái tạo không chốt 200K", "K02", "TRA001", "T05127", "tramtaitaokhongchotsoi", 00
 "Trám tái tạo không chốt 400K", "K02", "TRA003", "T05127", "tramtaitaokhongchotsoi", 00
-"Trám tái tạo không chốt 400K"
         
