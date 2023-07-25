@@ -1,4 +1,5 @@
-﻿; ButtonOK:
+﻿
+; ButtonOK:
 ; Gui, Submit, Hide
 ; ;ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 ; IDbacsy := listIDbacsi[bacsi]
