@@ -1,4 +1,4 @@
-﻿
+﻿code block test run file 
 ; ButtonOK:
 ; Gui, Submit, Hide
 ; ;ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
