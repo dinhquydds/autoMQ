@@ -1,4 +1,5 @@
 ;Tên dịch vụ, ICD, mã chỉ định, mã tường trình, tên tường trình, vô cảm, thời gian làm thủ thuật
+KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Chỉnh nha, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm, Ghép xương"
 
 danhmuccaovoirang := ["Cạo vôi răng ít", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều"]
 danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]

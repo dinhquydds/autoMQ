@@ -17,18 +17,16 @@
 	return tmptime
 }
 
-nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
+nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
+{
     ; global User
     SetTitleMatchMode 2
     CoordMode "Mouse", "Screen"
-    if WinWait("Chỉ định dịch vụ")
-        WinActivate
-
+    WinWaitActiveWindow("Chỉ định dịch vụ")
     MouseClick "L", 260, 884
     Send "{Blind}{Alt Down}m{Alt Up}"
     
-    if WinWait("Chỉ định dịch vụ")
-        WinActivate
+    WinWaitActiveWindow("Chỉ định dịch vụ")
 
     if WinExist("MQ Solutions")
         {
@@ -45,11 +43,8 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
     Send "{tab}" ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
     Sleep 100
     Send "!y"
-    if WinWait("Chỉ định dịch vụ")
-        WinActivate
+    WinWaitActiveWindow("Chỉ định dịch vụ")
     ; nhap bac si chi dinh
-    ;Send +{tab 11}
-    Sleep 100
     MouseClick "L", 112, 815
     Sleep 100
     Send "^a"
@@ -74,10 +69,7 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
     Sleep 500
     Send "!y"
 
-    if WinWait("Chỉ định dịch vụ")
-        WinActivate
-
-    Sleep 500
+    WinWaitActiveWindow("Chỉ định dịch vụ")
     ; sửa phần trăm bảo hiểm nếu khác 100
     If (Phantrambaohiem != 100 and Phantrambaohiem != "")
     {
@@ -91,10 +83,7 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
         Send "{down 20}"
         Send "!s"
 
-        if WinWait("Chỉ định dịch vụ")
-            WinActivate
-
-        Sleep 300
+        WinWaitActiveWindow("Chỉ định dịch vụ")
         ;Controlsettext, WindowsForms10.EDIT.app.0.fcf9a4_r7_ad112, %Phantrambaohiem%, ahk_exe MQHIS.exe
         Send "{tab 6}"
         Sleep 200
@@ -104,11 +93,9 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
         Sleep 100
         Send "!l"
         Sleep 500
-            Send "!y"
+        Send "!y"
 
-        if WinWait("Chỉ định dịch vụ")
-            WinActivate
-
+        WinWaitActiveWindow("Chỉ định dịch vụ")
         MouseClick "L", 800, 155
         Sleep 100
         Send "^a"
@@ -131,9 +118,7 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     ; chon chi dinh
     MouseClick "L", 643, 846 ; Click Danh sách
 
-    if WinExist("Danh sách chỉ định")
-        WinActivate
-
+    WinWaitActiveWindow("Danh sách chỉ định")
     ; gui ma benh nhan
     Sleep 1000
     MouseClick "L", 146, 110
@@ -143,9 +128,7 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Send "{Enter}"
     MouseClick "Left" , 65, 130 ; Click chọn thủ thuật
 
-    if WinExist("Thông tin phẫu thủ thuật")
-        WinActivate
-    Sleep 100
+    WinWaitActiveWindow("Thông tin phẫu thủ thuật")
     ; lay ngay gio
     giobatdau := FormatTime(gioNhapTuongTrinh, "HH:mm")
     gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, thoigianthuthuat, "Minutes")
@@ -221,16 +204,13 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Send "!y"
     Sleep 1000
 
-    if WinExist("Thông tin phẫu thủ thuật")
-        WinActivate
+    WinWaitActiveWindow("Thông tin phẫu thủ thuật")
 }
 
 nhanketthuc(){
     Sleep 500
     ControlClick("&Kết thúc", "ahk_exe MQHIS.exe")
-    if WinWait(tenbenhvien)
-        WinActivate
-    Sleep 500
+    WinWaitActiveWindow(tenbenhvien)
 }
 
 isToothNumber(toothNumber){
@@ -258,68 +238,26 @@ isMilkToothNumber(toothNumber){
 laydanhsachrang(info){
     local danhsachrang
     danhsachrang := StrSplit(Trim(info), A_Space)
-    danhsachrang := rmInvalidToothNumber(danhsachrang)
+    if danhsachrang.Length = 0
+        return []
+    for tooth in danhsachrang
+        {
+            if not isToothNumber(tooth)
+                return []
+        }
     return danhsachrang
 }
 
-; laydanhsachrangsua(info){
-;     local danhsachrang
-;     danhsachrang := unique(StrSplit(Trim(info), A_Space)) ; remove duplicated
-;     danhsachrang := rmInvalidMilkToothNumber(danhsachrang)
-;     return danhsachrang
-; }
-
-; unique(arr){
-;     out := []
-; Loop % arr.Length()
-; {
-; value:=arr.RemoveAt(1) ; otherwise Object.Pop() would work from right to left
-; Loop % out.Length()
-; If (value=out[A_Index])
-;     Continue 2 ; jump to the top of the outer loop, we found a duplicate, discard it and move on
-; out.Push(value)
-; }
-; return out
-; }
-
-rmInvalidToothNumber(arr){
-	local temp := [], out := []
-	local k, v
-    for k, v in arr
-        {
-            if (isToothNumber(v))
-               out.push(v)
-        }
-	return out
-}
-
-; rmInvalidMilkToothNumber(arr){
-; 	local temp := [], out := []
-; 	local k, v
-;     for k, v in arr
-;         {
-;             if (isMilkToothNumber(v))
-;                out.push(v)
-;         }
-; 	return out
-; }
-
 mof6(){
-    if WinWait(tenbenhvien)
-        WinActivate
-    Sleep 100
+    WinWaitActiveWindow(tenbenhvien)
     Send "{f6}"
-    
-    if WinWait("Thông tin phẫu thủ thuật")
-        WinActivate
-    Sleep 1000
+    WinWaitActiveWindow("Thông tin phẫu thủ thuật")
 }
 
 mof7()
 {
     Send "{f7}"
-    if  WinWait("Chỉ định dịch vụ")
-        WinActivate
+    WinWaitActiveWindow("Chỉ định dịch vụ")
 }
 
 
@@ -382,9 +320,6 @@ moxquang()
     Sleep 1000
 }
 
-
-
-
 nhapPTV(){
 Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai
 Send IDbacsy
@@ -397,7 +332,6 @@ Send "{tab 2}"
 Send IDvongngoai
 Send "{tab}"
 }
-
 
 ; MatchBetween(Haystack,char1,char2) {
 ;     Matches :=
@@ -449,6 +383,8 @@ ranghamtren := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28"
 ranghamduoi := "38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48"
 rangsuahamtren := " 51 52 53 54 55 61 62 63 64 65"
 rangsuahamduoi := "71 72 73 74 75 81 82 83 84 85"
+rangsua := "51 52 53 54 55 61 62 63 64 65 71 72 73 74 75 81 82 83 84 85"
+rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48"
 ::rang2ham::18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28{enter}38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48
 ::hamtren::Send ranghamtren
 ::hamduoi::Send ranghamduoi

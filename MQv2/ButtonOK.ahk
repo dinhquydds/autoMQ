@@ -66,70 +66,152 @@
     ;     WinActivate
     
     ; Lay thong tin dich vu duoc lam
-    loop 1
+    ;kiem tra thong tin da nhap dung chua
+    out := []
+    loop 7
         {
             index := A_Index
             dichvudaNhap := layChiDinhDichVu(Index)
-            MsgBox dichvudaNhap
-            MyGui.Show()
-            return
             if not dichvudaNhap
+                continue
+            out.Push(dichvudaNhap)
+
+            if not InStr(KhongCanNhapSoRang, dichvudaNhap)
                 {
-                    MyGui.Show()
-                    return
-                }
-                
-                
-                if InStr("Cạo vôi răng, Chỉnh nha, Tẩy trắng răng", Dichvu%index%.Text)
+                    ; kiem tra ten rang nhap dung chua
+                    danhsachrang := laydanhsachrang(Toothlist%index%.Text)
+                    
+                    if danhsachrang.Length = 0
                     {
-                    WinWaitActiveWindow(tenbenhvien)
-                    Send "{F7}"
-                    ghichu := ""
-                    nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"))
-                    Sleep 500
-                    gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
-                    nhanketthuc()
-                    mabenhnhan := laymabenhnhan()
-                    mof6()
-                    Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], ghichu)
-                    nhanketthuc()
-                    continue
-                }
-            
-            if not Toothlist%index%.Text
+                        MsgBox "Kiểm tra lại số răng"
+                        MyGui.Show
+                        return
+                    }
+
+                    ; kiem tra chỉ định có phù hợp với tên răng không
+                    ; Nhổ răng sữa
+                    if dichvudaNhap = "Nhổ răng sữa"
+                        {
+                            for tooth in danhsachrang
+                                if not InStr(rangsua, tooth)
+                                    {
+                                        MsgBox tooth " Không phải răng sữa"
+                                        MyGui.Show
+                                        return
+                                    }
+
+                        }
+                    ; nhổ răng phẫu thuật chỉ nhập 1 răng
+                    if Dichvu%index%.Text = "Nhổ răng phẫu thuật"
+                        if danhsachrang.Length != 1
+                            {
+                                MsgBox "Nhổ răng phẫu thuật chỉ nhập 1 răng"
+                                MyGui.Show
+                                return
+                            }
+                       
+                    ; nhổ răng khôn ham tren 18 28
+                    if InStr("Nhổ răng khôn hàm trên 500K, Nhổ răng khôn hàm trên 1M, Nhổ răng khôn hàm trên 1.5M, Nhổ răng khôn hàm trên 2M, Nhổ răng khôn hàm trên 2.5M, Nhổ răng khôn hàm trên 3M, Nhổ răng khôn hàm trên 3.5M", dichvudaNhap)
+                        if not InStr("18 28", danhsachrang[1])
+                            {
+                                MsgBox "Nhập sai số răng"
+                                MyGui.Show
+                                return
+                            }
+                    ; nhổ răng khôn ham duoi 38 48
+                    if InStr("Nhổ răng khôn hàm dưới 500K, Nhổ răng khôn hàm dưới 1M, Nhổ răng khôn hàm dưới 1.5M, Nhổ răng khôn hàm dưới 2M, Nhổ răng khôn hàm dưới 2.5M, Nhổ răng khôn hàm dưới 3M, Nhổ răng khôn hàm dưới 3.5M ", dichvudaNhap)
+                        if not InStr("38 48", danhsachrang[1])
+                            {
+                                MsgBox "Nhập sai số răng"
+                                MyGui.Show
+                                return
+                            }
+                    ; nho rang vinh vien, rang lung lay, chan rang thi 1 thi 2
+                    if InStr("Nhổ răng vĩnh viễn, Nhổ răng lung lay Nhổ chân răng", dichvudaNhap)
+                        if not InStr(rangvinhvien, danhsachrang[1])
+                            {
+                                MsgBox "Nhập sai số răng"
+                                MyGui.Show
+                                return
+                            }
+                }   
+        }
+
+
+    if not out.Length
+        {
+            MsgBox "Chưa nhập dịch vụ"
+            MyGui.Show
+            return
+        }
+MsgBox out.Length
+    ; Kiểm tra nhập số liệu xong, nhập chỉ định và tường trình
+    loop 7
+        {
+            index := A_Index
+            dichvudaNhap := layChiDinhDichVu(Index)
+            if not dichvudaNhap
+                continue
+                
+            if InStr(KhongCanNhapSoRang, dichvudaNhap)
                 {
-                    MsgBox "Kiểm tra lại số răng"
-                    continue
+                ; test test
+                    MsgBox dichvudaNhap
+                    MsgBox danhMucDichVu[dichvudaNhap][1] danhMucDichVu[dichvudaNhap][3] Random(danhMucDichVu[dichvudaNhap][6] danhMucDichVu[dichvudaNhap][7]) danhMucDichVu[dichvudaNhap][5] danhMucDichVu[dichvudaNhap][4]
+                
+                    ; WinWaitActiveWindow(tenbenhvien)
+                    ; Send "{F7}"
+                    ; ghichu := ""
+                    ; nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"))
+                    ; Sleep 500
+                    ; gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+                    ; nhanketthuc()
+                    ; mabenhnhan := laymabenhnhan()
+                    ; mof6()
+                    ; Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], ghichu)
+                    ; nhanketthuc()
+                    ; continue
                 }
-                danhsachrang := laydanhsachrang(Toothlist%index%.Text)
-            WinWaitActiveWindow(tenbenhvien)
-            Send "{F7}"
-            for k, toothNumber in danhsachrang {
-                ghichu := "Răng " toothNumber
-                nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"), ghichu)
-            }
-            nhanketthuc()
-            mabenhnhan := laymabenhnhan()
-            Sleep 600
-            gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
-            Sleep 400
-            mof6()
-            for k, toothNumber in danhsachrang {
-                Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], toothNumber)
-            } 
-            nhanketthuc()    
+            
+
+            danhsachrang := laydanhsachrang(Toothlist%index%.Text)
+            for tooth in danhsachrang
+                {
+                    MsgBox tooth danhMucDichVu[dichvudaNhap][1] danhMucDichVu[dichvudaNhap][3] Random(danhMucDichVu[dichvudaNhap][6] danhMucDichVu[dichvudaNhap][7]) danhMucDichVu[dichvudaNhap][5] danhMucDichVu[dichvudaNhap][4]
+                }
+               
+            ; WinWaitActiveWindow(tenbenhvien)
+            ; Send "{F7}"
+            ; WinWaitActiveWindow("Chỉ định dịch vụ")
+
+            ; for k, toothNumber in danhsachrang 
+            ;     {
+            ;         ghichu := "Răng " toothNumber
+            ;         nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"), ghichu)
+            ;     }
+            
+            ; nhanketthuc()
+            ; mabenhnhan := laymabenhnhan()
+            ; Sleep 600
+            ; gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+            ; Sleep 400
+            ; mof6()
+            ; for k, toothNumber in danhsachrang {
+            ;     Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], toothNumber)
+            ; } 
+            ; nhanketthuc()    
                 
                 
                 
                 
-            }
+    }
             
             
-            MyGui.Show()
+    MyGui.Show()
 }
 
 layChiDinhDichVu(stt){
-    ;"Cạo vôi răng",,,,,,,,,"Chỉnh nha","Tẩy trắng răng",,,,,"Tháo mão (chụp)",
+    ;"Cạo vôi răng", Chỉnh nha","Tẩy trắng răng,
     ; global Toothlist1, Toothlist2, Toothlist3, Toothlist4, Toothlist5, Toothlist6, Toothlist7
     if Dichvu%stt%.Text = "Bôi SDF"
         return "Bôi SDF"
