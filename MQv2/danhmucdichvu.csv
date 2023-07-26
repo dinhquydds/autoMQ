@@ -1,7 +1,4 @@
-;Tên dịch vụ, ICD, mã chỉ định, mã tường trình, tên tường trình, vô cảm, thời gian làm thủ thuật
-
-"Bôi SDF", "K02", "PHO010", "T05147", "boisdf", 00,
-
+"Bôi SDF", "K02", "PHO010", "T05147", "boisdf", 00, 
 "Cạo vôi răng ít", "K03.6", "16.43.1", "T05407", "caovoirang", 00,
 "Cạo vôi răng trung bình", "K03.6", "14.43.3", "T05411", "caovoirang", 00,
 "Cạo vôi răng nhiều", "K03.6", "14.43.4", T05443, caovoirang, 00,

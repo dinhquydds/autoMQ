@@ -13,7 +13,10 @@
 	catch
 		MsgBox "File does not exist."
 	if WinWait(tenbenhvien, , 30)
-		WinActivate("ĐĂNG NHẬP HỆ THỐNG")
+		{
+			if  WinWait("ĐĂNG NHẬP HỆ THỐNG")
+				WinActivate
+		}
 	else
 		{
 			MsgBox "Không tìm thấy file"

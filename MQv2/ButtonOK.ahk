@@ -1,6 +1,6 @@
 ﻿Button_OK_Click(ctrl, *)
 {
-    Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai, StartHour, StartMinute, giotuongtrinh, phuttuongtrinh
+    Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai, StartHour, StartMinute, giotuongtrinh, phuttuongtrinh, gioNhapTuongTrinh, mabenhnhan
     MyGui.Submit()
     ; kiem tra thong tin nhap du ten chua, nhap trung nguoi nghi khong
     if !(User.Text and phuta.Text and vongngoai.Text and vongtrong.Text) 
@@ -66,18 +66,71 @@
     ;     WinActivate
     
     ; Lay thong tin dich vu duoc lam
-    loop 7
+    loop 1
         {
-
-            MsgBox layChiDinhDichVu(A_Index)
-        }
-
-
-    MyGui.Show()
+            index := A_Index
+            dichvudaNhap := layChiDinhDichVu(Index)
+            MsgBox dichvudaNhap
+            MyGui.Show()
+            return
+            if not dichvudaNhap
+                {
+                    MyGui.Show()
+                    return
+                }
+                
+                
+                if InStr("Cạo vôi răng, Chỉnh nha, Tẩy trắng răng", Dichvu%index%.Text)
+                    {
+                    WinWaitActiveWindow(tenbenhvien)
+                    Send "{F7}"
+                    ghichu := ""
+                    nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"))
+                    Sleep 500
+                    gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+                    nhanketthuc()
+                    mabenhnhan := laymabenhnhan()
+                    mof6()
+                    Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], ghichu)
+                    nhanketthuc()
+                    continue
+                }
+            
+            if not Toothlist%index%.Text
+                {
+                    MsgBox "Kiểm tra lại số răng"
+                    continue
+                }
+                danhsachrang := laydanhsachrang(Toothlist%index%.Text)
+            WinWaitActiveWindow(tenbenhvien)
+            Send "{F7}"
+            for k, toothNumber in danhsachrang {
+                ghichu := "Răng " toothNumber
+                nhapchidinh(danhMucDichVu[dichvudaNhap][2], BaoHiem%A_Index%.Text, FormatTime(giochidinhdichvu, "HH:mm"), ghichu)
+            }
+            nhanketthuc()
+            mabenhnhan := laymabenhnhan()
+            Sleep 600
+            gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+            Sleep 400
+            mof6()
+            for k, toothNumber in danhsachrang {
+                Nhaptuongtrinh(danhMucDichVu[dichvudaNhap][1], danhMucDichVu[dichvudaNhap][3], Random(danhMucDichVu[dichvudaNhap][6], danhMucDichVu[dichvudaNhap][7]), danhMucDichVu[dichvudaNhap][5], danhMucDichVu[dichvudaNhap][4], toothNumber)
+            } 
+            nhanketthuc()    
+                
+                
+                
+                
+            }
+            
+            
+            MyGui.Show()
 }
 
 layChiDinhDichVu(stt){
     ;"Cạo vôi răng",,,,,,,,,"Chỉnh nha","Tẩy trắng răng",,,,,"Tháo mão (chụp)",
+    ; global Toothlist1, Toothlist2, Toothlist3, Toothlist4, Toothlist5, Toothlist6, Toothlist7
     if Dichvu%stt%.Text = "Bôi SDF"
         return "Bôi SDF"
     if Dichvu%stt%.Text = "Cạo vôi răng"
@@ -108,7 +161,56 @@ layChiDinhDichVu(stt){
             return danhMucNhoRangThuThuat[NhoRangThuThuat%stt%.Value]
     
     if Dichvu%stt%.Text = "Nội nha"
-        return
+        {
+            danhsachrang := laydanhsachrang(Toothlist%stt%.Text)
+            if (danhsachrang.Length > 1)
+                {
+                    MsgBox "Nội nha chỉ nhập 1 răng"
+                    MyGui.Show()
+                    return
+                }
+                ; nếu là răng sữa
+                if InStr("54 55 64 65 74 75 84 85", danhsachrang[1])
+                    return "Điều trị tủy răng sữa nhiều chân"
+                if InStr("51 52 53 61 62 63 71 72 73 81 82 83", danhsachrang[1])
+                    return "Điều trị tủy răng sữa một chân"
+                ; nếu là răng vĩnh viễn
+            firstLetter := SubStr(danhsachrang[1], 1, 1)
+            lastLetter := SubStr(danhsachrang[1], 2, 1)
+
+            ; neu dieu tri lan dau
+            if NoiNha%stt%.Value = 1
+                {
+                    if InStr("1 2 3 4 5", lastLetter)
+                        return "Điều trị tủy răng số " lastLetter
+                    if InStr("6 7", lastLetter)
+                        {
+                            if InStr("1 2", firstLetter)
+                                return "Điều trị tủy răng số " lastLetter " hàm trên"
+                            else
+                                return "Điều trị tủy răng số " lastLetter " hàm dưới"
+                        }
+
+                }
+            if NoiNha%stt%.Value = 2 ; noi nha lai
+                return "Điều trị tủy lại răng số " lastLetter
+            if NoiNha%stt%.Value = 3 ; noi nha lan dau gay me
+                {
+                    if InStr("1 2 3 4 5", lastLetter)
+                        out := "Điều trị tủy răng số " lastLetter " gây mê"
+                    if InStr("6 7", lastLetter)
+                        {
+                            if InStr("1 2", firstLetter)
+                                return "Điều trị tủy răng số " lastLetter " hàm trên gây mê"
+                            else
+                                return "Điều trị tủy răng số " lastLetter " hàm dưới gây mê"
+                        }
+                        
+                }
+            if NoiNha%stt%.Value = 4 ; noi nha lai gay me
+                return "Điều trị tủy lại răng số " lastLetter " gây mê"           
+        }
+
     
     if Dichvu%stt%.Text = "Răng sứ"
         if RangSu%stt%.Value
@@ -122,20 +224,11 @@ layChiDinhDichVu(stt){
         return "Tháo mão (chụp)"
     if Dichvu%stt%.Text = "Trám răng"
         if TramRang%stt%.Value
-        return danhMucTramRang[TramRang%stt%.Value] 
+            return danhMucTramRang[TramRang%stt%.Value] 
     
     return
 }
 
-danhmuccaovoirang := ["Cạo vôi răng ít", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều"]
-danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]
-danhMucImplant := ["Implant Dio", "Implant Helix", "Implant Strauman", "Implant ETK"]
-danhMucAbutment := [["Abutment Dio", "Abutment Dio Zirconia"], ["Abutment Helix", "Abutment Helix Zirconia"], ["Abutment Strauman", "Abutment Strauman Zirconia"], ["Abutment ETK",""]]
-danhMucNhoRangPhauThuat := ["Nhổ răng khôn hàm trên 500K", "Nhổ răng khôn hàm trên 1M", "Nhổ răng khôn hàm trên 1.5M", "Nhổ răng khôn hàm trên 2M", "Nhổ răng khôn hàm trên 2.5M", "Nhổ răng khôn hàm trên 3M", "Nhổ răng khôn hàm trên 3.5M", "Nhổ răng khôn hàm dưới 500K", "Nhổ răng khôn hàm dưới 1M", "Nhổ răng khôn hàm dưới 1.5M", "Nhổ răng khôn hàm dưới 2M", "Nhổ răng khôn hàm dưới 2.5M", "Nhổ răng khôn hàm dưới 3M", "Nhổ răng khôn hàm dưới 3.5M", "Nhổ răng ngầm", "Nhổ răng vĩnh viễn", "Nhổ răng thì 1", "Nhổ răng thì 2", "Nhổ răng thừa"]
-danhMucNhoRangThuThuat := ["Nhổ răng sữa", "Nhổ răng lung lay", "Nhổ chân răng"]
-danhMucRangSu := ["Sứ kim loại", "Sứ Titanium", "Sứ Zirconia", "Sứ Ceramil Zolid", "Sứ Emax", "Sứ Lava 3M", "Veneer Ivoclar 6 triệu", "Veneer Lisi Press 8 triệu", "Inlay/Onlay", "Răng sứ Zirconia trên Implant", "Răng sứ Ceramill Zolid trên Implant", "Răng sứ Lava 3M trên Implant"]
-danhMucRangThaoLap := ["Răng tháo lắp Nhật", "Răng tháo lắp Mỹ", "Răng tháo lắp composite","Nền nhựa dẻo bán phần", "Nền nhựa dẻo toàn phần", "Lưới nền hàm"]
-danhMucTramRang := ["Trám răng xoang 1", "Trám răng xoang 2", "Trám răng xoang 1+2", "Trám răng xoang 3", "Trám răng xoang 4", "Trám răng xoang 5", "Trám răng sữa 150K", "Trám răng sữa 250K", "Che tủy Calci", "Che tủy MTA", "Trám răng xoang 1 gây mê", "Trám răng xoang 2 gây mê","Trám răng xoang 1+2 gây mê", "Trám răng xoang 3 gây mê", "Trám răng xoang 4 gây mê", "Trám răng sữa gây mê", "Trám răng xoang 1 laser", "Trám răng xoang 2 laser", "Trám răng xoang 1+2 laser", "Trám răng xoang 3 laser", "Trám răng xoang 4 laser", "Trám răng xoang 5 laser", "Trám tái tạo có chốt 400K", "Trám tái tạo không chốt 200K", "Trám tái tạo không chốt 400K"]
 
 
 

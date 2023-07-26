@@ -17,214 +17,213 @@
 	return tmptime
 }
 
-; nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
-;     global bacsichidinh
-;     SetTitleMatchMode, 2
-;     CoordMode, Mouse, Screen
-;     Winwaitchidinhdichvu()
-;     MouseClick, L, 260, 884
-;     Send, {Blind}{Alt Down}m{Alt Up}
+nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:=""){
+    ; global User
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    if WinWait("Chỉ định dịch vụ")
+        WinActivate
+
+    MouseClick "L", 260, 884
+    Send "{Blind}{Alt Down}m{Alt Up}"
     
-;     Winwaitchidinhdichvu()
-;     if WinExist("MQ Solutions")
-;         {
-;             Gui, Show
-;             Reload
-;         }
+    if WinWait("Chỉ định dịch vụ")
+        WinActivate
 
-;     Sleep 100
-;     Send, {Blind}{Shift Down}{Tab}{Shift Up}
-;     MouseClick, L, 146, 881
-;     Sleep 100
-;     Send %machidinh%
-;     Sleep 100
-;     Send {tab} ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
-;     Sleep 100
-;     Send !y
-;     Winwaitchidinhdichvu()
-;     ; nhap bac si chi dinh
-;     if (bacsichidinh != "")
-;     {
-;     ;Send +{tab 11}
-;     Sleep 100
-;     MouseClick, L, 112, 815
-;     Sleep 100
-;     Send ^a
-;     Sleep, 100
-;     Send {Delete}
-;     Sleep 100
-;     Send %bacsichidinh%
-;     Sleep 100
-;     ;Send {tab 11}
-;     }
+    if WinExist("MQ Solutions")
+        {
+            MyGui.Show()
+            Reload
+        }
 
-;     Sleep 100
-;     ;Send {tab 2}
-;     MouseClick, L, 225, 950
-;     Sleep 100
-;     Send %ghichu%
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 100
-;     Send %giochidinh%
-;     Send !l
-;     Sleep 500
-;     Send !y
+    Sleep 100
+    Send "{Blind}{Shift Down}{Tab}{Shift Up}"
+    MouseClick "L", 146, 881
+    Sleep 100
+    Send machidinh
+    Sleep 100
+    Send "{tab}" ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
+    Sleep 100
+    Send "!y"
+    if WinWait("Chỉ định dịch vụ")
+        WinActivate
+    ; nhap bac si chi dinh
+    ;Send +{tab 11}
+    Sleep 100
+    MouseClick "L", 112, 815
+    Sleep 100
+    Send "^a"
+    Sleep 100
+    Send "{Delete}"
+    Sleep 100
+    Send thongTinNhanSu[user.Text][3]
+    Sleep 100
+    ;Send {tab 11}
+    
 
-;     Winwaitchidinhdichvu()
+    Sleep 100
+    ;Send {tab 2}
+    MouseClick "L", 225, 950
+    Sleep 100
+    Send ghichu
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 100
+    Send giochidinh
+    Send "!l"
+    Sleep 500
+    Send "!y"
 
-;     Sleep 500
-;     ; sửa phần trăm bảo hiểm nếu khác 100
-;     If (Phantrambaohiem != 100 and Phantrambaohiem != "")
-;     {
+    if WinWait("Chỉ định dịch vụ")
+        WinActivate
 
-;         MouseClick, L, 800, 155
-;         Sleep 100
-;         Send ^a
-;         Sleep 300
-;         Send %ghichu%
-;         Sleep 200
-;         Send {down 20}
-;         Send !s
+    Sleep 500
+    ; sửa phần trăm bảo hiểm nếu khác 100
+    If (Phantrambaohiem != 100 and Phantrambaohiem != "")
+    {
 
-;         Winwaitchidinhdichvu()
+        MouseClick "L", 800, 155
+        Sleep 100
+        Send "^a"
+        Sleep 300
+        Send ghichu
+        Sleep 200
+        Send "{down 20}"
+        Send "!s"
 
-;         Sleep 300
-;         ;Controlsettext, WindowsForms10.EDIT.app.0.fcf9a4_r7_ad112, %Phantrambaohiem%, ahk_exe MQHIS.exe
-;         Send {tab 6}
-;         Sleep 200
-;         Send ^a
-;         Sleep 100
-;         Send %Phantrambaohiem%
-;         Sleep 100
-;         Send !l
-;         Sleep 500
-;             Send !y
+        if WinWait("Chỉ định dịch vụ")
+            WinActivate
 
-;         Winwaitchidinhdichvu()
+        Sleep 300
+        ;Controlsettext, WindowsForms10.EDIT.app.0.fcf9a4_r7_ad112, %Phantrambaohiem%, ahk_exe MQHIS.exe
+        Send "{tab 6}"
+        Sleep 200
+        Send "^a"
+        Sleep 100
+        Send Phantrambaohiem
+        Sleep 100
+        Send "!l"
+        Sleep 500
+            Send "!y"
 
-;         MouseClick, L, 800, 155
-;         Sleep 100
-;         Send ^a
-;         Sleep 100
-;         Send {del}
-;     }
+        if WinWait("Chỉ định dịch vụ")
+            WinActivate
 
-;     Winwaitchidinhdichvu()
-; 	Sleep 500
+        MouseClick "L", 800, 155
+        Sleep 100
+        Send "^a"
+        Sleep 100
+        Send "{del}"
+    }
 
-; }
+	Sleep 500
 
-; nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu:="", noidungvocam:=""){
+}
 
-;     CoordMode, Mouse, Screen
+nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu:="", noidungvocam:=""){
 
-;     global time, dichvu1, dichvu2, dichvu3 , dichvu4, dichvu5, dichvu6, dichvu7, mabenhnhan
+    CoordMode "Mouse", "Screen"
+    global gioNhapTuongTrinh, mabenhnhan
+    ; global time, dichvu1, dichvu2, dichvu3 , dichvu4, dichvu5, dichvu6, dichvu7, mabenhnhan
+    Sleep 1000
+    MouseClick "L", 567, 845 ;Click mới
+    Sleep 1000
+    ; chon chi dinh
+    MouseClick "L", 643, 846 ; Click Danh sách
 
-;     Sleep 1000
-;     MouseClick, L, 567, 845 ;Click mới
-;     Sleep 1000
+    if WinExist("Danh sách chỉ định")
+        WinActivate
 
-;     ; chon chi dinh
-;     MouseClick, L, 643, 846 ; Click Danh sách
+    ; gui ma benh nhan
+    Sleep 1000
+    MouseClick "L", 146, 110
+    Sleep 500
+    Send mabenhnhan
+    Sleep 500
+    Send "{Enter}"
+    MouseClick "Left" , 65, 130 ; Click chọn thủ thuật
 
-;     tt = Danh sách chỉ định
-;     WinWait, %tt%
-;     IfWinNotActive, %tt%,, WinActivate, %tt%
+    if WinExist("Thông tin phẫu thủ thuật")
+        WinActivate
+    Sleep 100
+    ; lay ngay gio
+    giobatdau := FormatTime(gioNhapTuongTrinh, "HH:mm")
+    gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, thoigianthuthuat, "Minutes")
+    gioketthuc := FormatTime(gioNhapTuongTrinh, "HH:mm")
+    gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, "1", "Minutes")
+    Sleep 300
 
-;     ; gui ma benh nhan
-;     Sleep 1000
-;     MouseClick, L, 146, 110
-;     Sleep 1000
-;     Send %mabenhnhan%
-;     Sleep 1000
-;     Send {Enter}
-;     MouseClick, Left , 65, 130 ; Click chọn thủ thuật
+; chon rang ham mat
+    MouseClick "L", 1252, 211
+    Sleep 300
+    MouseClick "L", 1207, 293
 
-;     tt = Thông tin phẫu thủ thuật
-;     WinWait, %tt%
-;     IfWinNotActive, %tt%,, WinActivate, %tt%
+; nhap gio thu thuat
+    Send "{tab 2}"
+    Send giobatdau
+    gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, thoigianthuthuat, "Minutes")
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 100
+    Send gioketthuc
+    Sleep 100
+    Send "{tab 2}"
+    Send giobatdau
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 100
+    Send gioketthuc
+    Sleep 100
+    Send "{tab 2}"
+    Send ICD
+    Sleep 100
+    Send "{tab 2}"
+    Send ICD
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 100
+    If isToothNumber(ghichu)
+        Send "Răng " ghichu
 
-;     Sleep 100
-;     ; lay ngay gio
-;     FormatTime, giobatdau, %time%, HH:mm ; format the time
-;     EnvAdd, time, %thoigianthuthuat% ,Minits ; them 30 phut
-;     FormatTime, gioketthuc, %time%, HH:mm ; format the time
-;     EnvAdd, time, 1 ,Minits ; them 30 phut
-;     Sleep 300
+    Send "{tab}"
+    Sleep 100
+    Send mathuthuat
+    Sleep 1000
+    Send "{enter}"
+    Sleep 500
+    Send "{enter}"
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 200
+    Send vocam
+    Sleep 100
+    Send "{tab 2}"
+    Sleep 100
 
-; ; chon rang ham mat
-;     MouseClick, L, 1252, 211
-;     Sleep, 300
-;     MouseClick, L, 1207, 293
+    nhapPTV()
+    Sleep 100
 
-; ; nhap gio thu thuat
-;     Send {tab 2}
-;     Send, %giobatdau%
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 100
-;     Send, %gioketthuc%
-;     Sleep 100
-;     Send {tab 2}
-;     Send, %giobatdau%
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 100
-;     Send, %gioketthuc%
-;     Sleep 100
-;     Send {tab 2}
-;     Send %ICD%
-;     Sleep 100
-;     Send {tab 2}
-;     Send %ICD%
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 100
-;     If isToothNumber(ghichu)
-;         Send Răng %ghichu%
+    ; nhap noi dung tuong trinh
+    Send "!t"
+    Sleep 500
+    MouseClick "Left", 1000, 500
+    Sleep 100
+    Send "^a"
+    Sleep 200
+    Send "{del}"
+    Sleep 200
+    tuongtrinh%noidungtuongtrinh%(ghichu, noidungvocam)
 
-;     Send {tab}
-;     Sleep 100
-;     Send %mathuthuat%
-;     Sleep 1000
-;     Send {enter}
-;     Sleep 500
-;     Send {enter}
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 200
-;     Send %vocam%
-;     Sleep 100
-;     Send {tab 2}
-;     Sleep 100
+    Sleep 500
 
-;     nhapPTV()
-;     Sleep 100
+    Send "{f6}" ;Lưu
+    Sleep 1000
+    Send "!y"
+    Sleep 1000
 
-;     ; nhap noi dung tuong trinh
-;     Send !t
-;     Sleep 500
-;     MouseClick, Left, 1000, 500
-;     Sleep 100
-;     Send ^a
-;     Sleep 200
-;     Send {del}
-;     Sleep 200
-;     tuongtrinh%noidungtuongtrinh%(ghichu, noidungvocam)
-
-;     Sleep 500
-
-;     Send {f6} ;Lưu
-;     Sleep 1000
-;     Send !y
-;     Sleep 1000
-
-
-;     tt = Thông tin phẫu thủ thuật
-;     WinWait, %tt%
-;     IfWinNotActive, %tt%,, WinActivate, %tt%
-; }
+    if WinExist("Thông tin phẫu thủ thuật")
+        WinActivate
+}
 
 nhanketthuc(){
     Sleep 500
@@ -234,60 +233,34 @@ nhanketthuc(){
     Sleep 500
 }
 
-; isToothNumber(toothNumber){
-;     if (isPermanentToothNumber(toothNumber) or isMilkToothNumber(toothNumber))
-;         return True
-;     else return False
-; }
+isToothNumber(toothNumber){
+    if (isPermanentToothNumber(toothNumber) or isMilkToothNumber(toothNumber))
+        return True
+    else return False
+}
 
-; isPermanentToothNumber(toothNumber){
-;     if (Strlen(toothNumber) != 2)
-;         {
-;             return False
-;         }
-;     else
+isPermanentToothNumber(toothNumber){
+    if (Strlen(toothNumber) != 2)
+        return False
+    if InStr(ranghamtren, toothNumber) or InStr(ranghamduoi, toothNumber)
+        return true
+}
 
-;     firstLetter := SubStr(toothNumber, 1, 1)
-;     lastLetter := SubStr(toothNumber, 2, 1)
-;     if (firstLetter <1 ) or (firstLetter > 4)
-;         {
-;             return False
-;         }
-;     if (lastLetter < 1) or (lastLetter > 8)
-;         {
-;             return False
-;         }
-;     return True
-; }
+isMilkToothNumber(toothNumber){
+    if (Strlen(toothNumber) != 2)
+        {
+            return False
+        }
+    if InStr(rangsuahamtren, toothNumber) or InStr(rangsuahamduoi, toothNumber)
+        return true
+}
 
-; isMilkToothNumber(toothNumber){
-;     if (Strlen(toothNumber) != 2)
-;         {
-;             return False
-;         }
-;     else
-
-;     firstLetter := SubStr(toothNumber, 1, 1)
-;     lastLetter := SubStr(toothNumber, 2, 1)
-;     if (firstLetter < 5 ) or (firstLetter > 8)
-;         {
-;             return False
-;         }
-;     if (lastLetter < 1) or (lastLetter > 5)
-;         {
-;             return False
-;         }
-;     return True
-; }
-
-; laydanhsachrang(info){
-;     local danhsachrang
-;     danhsachrang := unique(StrSplit(Trim(info), A_Space)) ; remove duplicated
-;     danhsachrang := rmInvalidToothNumber(danhsachrang)
-;     return danhsachrang
-; }
-
-
+laydanhsachrang(info){
+    local danhsachrang
+    danhsachrang := StrSplit(Trim(info), A_Space)
+    danhsachrang := rmInvalidToothNumber(danhsachrang)
+    return danhsachrang
+}
 
 ; laydanhsachrangsua(info){
 ;     local danhsachrang
@@ -309,16 +282,16 @@ nhanketthuc(){
 ; return out
 ; }
 
-; rmInvalidToothNumber(arr){
-; 	local temp := [], out := []
-; 	local k, v
-;     for k, v in arr
-;         {
-;             if (isToothNumber(v))
-;                out.push(v)
-;         }
-; 	return out
-; }
+rmInvalidToothNumber(arr){
+	local temp := [], out := []
+	local k, v
+    for k, v in arr
+        {
+            if (isToothNumber(v))
+               out.push(v)
+        }
+	return out
+}
 
 ; rmInvalidMilkToothNumber(arr){
 ; 	local temp := [], out := []
@@ -472,9 +445,13 @@ laymabenhnhan(){
     return A_Clipboard
 }
 
+ranghamtren := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28"
+ranghamduoi := "38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48"
+rangsuahamtren := " 51 52 53 54 55 61 62 63 64 65"
+rangsuahamduoi := "71 72 73 74 75 81 82 83 84 85"
 ::rang2ham::18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28{enter}38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48
-::hamtren::17 16 15 14 13 12 11 21 22 23 24 25 26 27
-::hamduoi::37 36 35 34 33 32 31 41 42 43 44 45 46 47
+::hamtren::Send ranghamtren
+::hamduoi::Send ranghamduoi
 ::caorang2ham::Cao răng hai hàm
 
 ; ::dxnrk::
@@ -509,11 +486,11 @@ laymabenhnhan(){
 
 ; Sleep, 890
 
-; Send, {Blind}k01
+; Send {Blind}k01
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -525,11 +502,11 @@ laymabenhnhan(){
 
 ; Sleep, 100
 
-; Send, {Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}
+; Send {Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}
 
 ; Sleep, 500
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -577,11 +554,11 @@ laymabenhnhan(){
 
 ; Sleep, 890
 
-; Send, {Blind}k02
+; Send {Blind}k02
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -593,11 +570,11 @@ laymabenhnhan(){
 
 ; Sleep, 100
 
-; Send, {Blind}{Down}{Down}
+; Send {Blind}{Down}{Down}
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -647,11 +624,11 @@ laymabenhnhan(){
 
 ; Sleep, 890
 
-; Send, {Blind}k02
+; Send {Blind}k02
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -663,11 +640,11 @@ laymabenhnhan(){
 
 ; Sleep, 100
 
-; Send, {Blind}{Down}{Down}{Down}{Down}{Down}
+; Send {Blind}{Down}{Down}{Down}{Down}{Down}
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -715,11 +692,11 @@ laymabenhnhan(){
 
 ; Sleep, 890
 
-; Send, {Blind}k04
+; Send {Blind}k04
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -731,11 +708,11 @@ laymabenhnhan(){
 
 ; Sleep, 100
 
-; Send, {Blind}{Down}{Down}{Down}{Down}{Down}
+; Send {Blind}{Down}{Down}{Down}{Down}{Down}
 
 ; Sleep, 100
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -774,7 +751,7 @@ laymabenhnhan(){
 
 ; Sleep, 500
 
-; Send, {Blind}{Alt Down}{Alt Up}fp
+; Send {Blind}{Alt Down}{Alt Up}fp
 
 ; Sleep, 100
 
@@ -796,7 +773,7 @@ laymabenhnhan(){
 
 ; Sleep, 1500
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ - rp_phieudexuat_dieutri.re ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
 ; WinWait, %tt%
@@ -811,18 +788,18 @@ laymabenhnhan(){
 ; SetTitleMatchMode, 2
 ; CoordMode, Mouse, Screen
 
-; Send, {Blind}{Shift Down}{Home}{Shift Up}
+; Send {Blind}{Shift Down}{Home}{Shift Up}
 
 ; Sleep, 200
 
-; Send, {Blind}{Ctrl Down}x{Ctrl Up}
+; Send {Blind}{Ctrl Down}x{Ctrl Up}
 
 ; Sleep, 200
 
 ; mof7()
 ; Winwaitchidinhdichvu()
 ; MouseClick, L, 260, 884
-; Send, {Blind}{Alt Down}m{Alt Up}
+; Send {Blind}{Alt Down}m{Alt Up}
 ; Winwaitchidinhdichvu()
 ; if WinExist("MQ Solutions")
 ;     {
@@ -830,7 +807,7 @@ laymabenhnhan(){
 ;         Reload
 ;     }
 ; Sleep 100
-; Send, {Blind}{Shift Down}{Tab}{Shift Up}
+; Send {Blind}{Shift Down}{Tab}{Shift Up}
 ; MouseClick, L, 146, 881
 ; Sleep 100
 ; Send 18.81
@@ -863,11 +840,11 @@ laymabenhnhan(){
 
 ; Sleep, 100
 
-; Send, {Blind}{Alt Down}{Alt Up}a{Down}{Down}
+; Send {Blind}{Alt Down}{Alt Up}a{Down}{Down}
 
 ; Sleep, 200
 
-; Send, {Blind}{Enter}
+; Send {Blind}{Enter}
 
 ; Sleep, 100
 
@@ -875,3 +852,10 @@ laymabenhnhan(){
 ; WinWait, %tt%
 ; IfWinNotActive, %tt%,, WinActivate, %tt%
 ; Return
+WinWaitActiveWindow(window){
+    if WinExist(window)
+        {
+            WinActivate
+            Sleep 500
+        }
+}
