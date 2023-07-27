@@ -1,5 +1,6 @@
 ﻿ButtonOK:
 Gui, Submit, Hide
+ExitApp
 ;ShowTip("Đang chạy tự động. Nhấn Ctrl + `` để kết thúc")
 IDbacsy := listIDbacsi[bacsi]
 IDphuta := listIDdieuduong[phuta]
