@@ -144,7 +144,6 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
 ; nhap gio thu thuat
     Send "{tab 2}"
     Send giobatdau
-    gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, thoigianthuthuat, "Minutes")
     Sleep 100
     Send "{tab 2}"
     Sleep 100
@@ -386,8 +385,8 @@ rangsuahamduoi := "71 72 73 74 75 81 82 83 84 85"
 rangsua := "51 52 53 54 55 61 62 63 64 65 71 72 73 74 75 81 82 83 84 85"
 rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48"
 ::rang2ham::18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28{enter}38 37 36 35 34 33 32 31 41 42 43 44 45 46 47 48
-::hamtren::Send ranghamtren
-::hamduoi::Send ranghamduoi
+::hamtren::17 16 15 14 13 12 11 21 22 23 24 25 26 27
+::hamduoi::37 36 35 34 33 32 31 41 42 43 44 45 46 47
 ::caorang2ham::Cao răng hai hàm
 
 ; ::dxnrk::
