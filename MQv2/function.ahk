@@ -34,7 +34,6 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
             Reload
         }
 
-    Sleep 100
     Send "{Blind}{Shift Down}{Tab}{Shift Up}"
     MouseClick "L", 146, 881
     Sleep 100
@@ -107,24 +106,23 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
 
 }
 
-nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu:="", noidungvocam:=""){
+nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu:=""){
 
     CoordMode "Mouse", "Screen"
     global gioNhapTuongTrinh, mabenhnhan
     ; global time, dichvu1, dichvu2, dichvu3 , dichvu4, dichvu5, dichvu6, dichvu7, mabenhnhan
     Sleep 1000
     MouseClick "L", 567, 845 ;Click mới
-    Sleep 1000
+    Sleep 300
     ; chon chi dinh
     MouseClick "L", 643, 846 ; Click Danh sách
 
     WinWaitActiveWindow("Danh sách chỉ định")
     ; gui ma benh nhan
-    Sleep 1000
     MouseClick "L", 146, 110
-    Sleep 500
+    Sleep 200
     Send mabenhnhan
-    Sleep 500
+    Sleep 200
     Send "{Enter}"
     MouseClick "Left" , 65, 130 ; Click chọn thủ thuật
 
@@ -194,7 +192,7 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Sleep 200
     Send "{del}"
     Sleep 200
-    tuongtrinh%noidungtuongtrinh%(ghichu, noidungvocam)
+    tuongtrinh%noidungtuongtrinh%(ghichu)
 
     Sleep 500
 
@@ -257,6 +255,7 @@ mof7()
 {
     Send "{f7}"
     WinWaitActiveWindow("Chỉ định dịch vụ")
+    Sleep 1000
 }
 
 
@@ -283,18 +282,11 @@ moxquang()
                     Run("MQRIS.exe", "D:\MQSOFT\MQRIS\bin\Debug")
                 catch
                     MsgBox "Không tìm thấy file"
-                if WinWait("MQRIS", , 30)
-                    WinActivate("ĐĂNG NHẬP HỆ THỐNG")
-                else
-                    {
-                        MsgBox "Không tìm thấy file"
-                        Reload
-                    }
-                Sleep 100
+                WinWaitActiveWindow("ĐĂNG NHẬP HỆ THỐNG")
                 dangnhapMQ("sonnt", "123456")
                 Sleep 3000
             }
-        WinActivate("MQRIS")
+        WinWaitActiveWindow("MQRIS")
         Sleep 100
         Send "!1"
         Send "{Down 12}"
@@ -788,9 +780,8 @@ rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 
 ; IfWinNotActive, %tt%,, WinActivate, %tt%
 ; Return
 WinWaitActiveWindow(window){
-    if WinExist(window)
-        {
-            WinActivate
-            Sleep 500
-        }
+    if WinWait(window)
+        WinActivate
+    Sleep 500
+        
 }

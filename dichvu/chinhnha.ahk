@@ -17,7 +17,7 @@
     ICD%A_Index% := "K00.6"
     vocam%A_Index% := "00"
     thoigianthuthuat%A_Index% := 1 ;
-    noidung = chinhnha
+    noidung := "chinhnha"
     Loopcount := y - x + 1
 
     ;nhap chi dinh
@@ -60,38 +60,9 @@
     Send %mabenhnhan%
     Sleep 100
     Send {Enter}
-
     Sleep 500
-
-
-    ; mo danh sach may ngay truoc 15 ngay
-    ;MouseClick, Left, 100, 45, 1 ; mo lich
-    ;Sleep 500
-    ;Send {left 15}
-    ;Sleep 400
-    ;Send {enter} 
-    ;Sleep 300 
-    ;MouseClick, Left, 466, 41, 1 ; Click chua nhap
-    ;Sleep 1500 ; mo xong danh sach tuong trinh 15 ngay truoc
-
     MouseClick, Left, 680, 90, 1 ; sap xep theo thoi gian
-    Sleep 300
-
-
-    ;MouseClick, Left, 700 , 140, 1 ; lay ngay gio
-    ;If (A_index = 1){
-    ;Sleep 200
-    ;ControlGetFocus, getFocus, ahk_exe MQHIS.exe
-    ;Sleep 100
-    ;ControlGetText, ngaygio, %getFocus%, ahk_exe MQHIS.exe
-    ; ngay := SubStr(ngaygio, 1, 2)
-    ; thang := SubStr(ngaygio, 4, 2)
-    ; nam := SubStr(ngaygio, 7, 4)
-    ; gio := SubStr(ngaygio, 12, 2)
-    ; phut := SubStr(ngaygio, 15, 2)
-    ; time = %nam%%thang%%ngay%%gio%%phut%00
-    ; }
-    
+    Sleep 300    
     MouseClick, Left, 500 , 133, 1 ; lay chi dinh
     Sleep 200
     Clipboard =
@@ -112,37 +83,6 @@
     Msgbox Da nhap xong tuong trinh
     return
     }
-
-; neu chi dinh chua co hỏi có nhập thủ công không
-    ; FileRead, noidunginfo, info.ini
-    ; text := chidinh
-    ; FoundPos := InStr(noidunginfo, text)
-    ; If (FoundPos = 0){ ; khong tim thay
-	; msgbox, 4,Chưa nhập mã chỉ định, Bạn có muốn nhập thủ công không
-	; IfMsgBox Yes
-	; {
-	; Inputbox, ICD, Nhập mã ICD
-	; Inputbox, thoigianthuthuat, Nhập thời gian làm thủ thuật
-	; Inputbox, mathuthuat, Nhập mã thủ thuật
-	; Inputbox, vocam, Nhập mã vô cảm
-	; noidungtuongtrinh := nhapnoidungtuongtrinh()
-	; noidungtuongtrinh := StrReplace(noidungtuongtrinh, "`n", "@!")
-	; IniWrite, %ICD%, info.ini, %chidinh%, ICD
-	; IniWrite, %thoigianthuthuat%, info.ini, %chidinh%, thoigianthuthuat
-	; IniWrite, %vocam%, info.ini, %chidinh%, vocam
-	; IniWrite, %mathuthuat%, info.ini, %chidinh%, mathuthuat
-	; IniWrite, %noidungtuongtrinh%, info.ini, %chidinh%, noidungtuongtrinh
-	; }
-    ; } 
-
-	; Winactivate, ahk_exe MQHIS.exe
-	; Sleep 500
-	; IniRead, ICD, info.ini, %chidinh%, ICD
-	; IniRead, thoigianthuthuat, info.ini, %chidinh%, thoigianthuthuat
-	; IniRead, mathuthuat, info.ini, %chidinh%, mathuthuat
-	; IniRead, noidungtuongtrinh, info.ini, %chidinh%, noidungtuongtrinh
-	; sleep 200
-	; noidungtuongtrinh := StrReplace(noidungtuongtrinh, "@!", "`n")
 
 
     ; FormatTime, ngaytuongtrinh, %time%, dd/MM/yyyy ; format the time
@@ -228,7 +168,7 @@
 	Sleep 1000
     
 
-        i += 1
+    i += 1
     }
 
     nhanketthuc()

@@ -2,7 +2,7 @@
 KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm"
 danhMucNoiNhaRangSua := "Điều trị tủy răng sữa một chân, Điều trị tủy răng sữa nhiều chân, Điều trị tủy răng sữa một chân gây mê Điều trị tủy răng sữa nhiều chân gây mê"
 
-danhmuccaovoirang := ["Cạo vôi răng ít", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều"]
+danhmuccaovoirang := ["Cạo vôi răng ít","Cạo vôi răng một hàm", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều"]
 danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]
 danhMucImplant := ["Implant Dio", "Implant Helix", "Implant Strauman", "Implant ETK"]
 danhMucAbutment := [["Abutment Dio", "Abutment Dio Zirconia"], ["Abutment Helix", "Abutment Helix Zirconia"], ["Abutment Strauman", "Abutment Strauman Zirconia"], ["Abutment ETK",""]]
@@ -16,8 +16,9 @@ danhMucDichVu := Map()
 danhMucDichVu["Bôi SDF"] := ["K02", "PHO010", "T05147", "boisdf", "00",1,2 ]
 
 danhMucDichVu["Cạo vôi răng ít"] := ["K03.6", "16.43.1", "T05407", "caovoirang", "00", 10, 20]
+danhMucDichVu["Cạo vôi răng một hàm"] := ["K03.6", "16.43.2", "T05409", "caovoirang", "00", 10, 20]
 danhMucDichVu["Cạo vôi răng trung bình"] := ["K03.6", "14.43.3", "T05411", "caovoirang", "00", 15, 25]
-danhMucDichVu["Cạo vôi răng nhiều"] := ["K03.6", "14.43.4", "T05443", "caovoirang", "00", 15, 30]
+danhMucDichVu["Cạo vôi răng nhiều"] := ["K03.6", "16.43.4", "T05443", "caovoirang", "00", 15, 30]
 
 danhMucDichVu["Cắt thắng lưỡi 300K"] := ["Q38.1", "3.2174", "P14001", "catthangluoi", "03", 5, 10]
 danhMucDichVu["Cắt thắng lưỡi 500K"] := ["Q38.1", "15.209", "P14001", "catthangluoi", "03", 5, 10]
