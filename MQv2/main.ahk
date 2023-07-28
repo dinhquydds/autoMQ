@@ -8,6 +8,7 @@ SetKeyDelay 0
 SetTitleMatchMode 2
 tenbenhvien := "BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT"
 #Include danhsachnhansu.ahk
+#Include danhsachdichvu.ahk
 #Include giaodien.ahk
 #Include function.ahk
 #Include tuongtrinh.ahk
@@ -18,7 +19,6 @@ tenbenhvien := "BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT"
 #Include ButtonOK.ahk
 #Include ButtonMo7phongkham.ahk
 #Include ButtonMoXQuang.ahk
-#Include danhsachdichvu.ahk
 
 ; #Include dexuatdieutri.ahk
 

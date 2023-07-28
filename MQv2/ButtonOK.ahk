@@ -115,8 +115,181 @@
                 }
             
             if Dichvu%stt%.Text = "Chỉnh nha"
-                {
-                    MsgBox "Chua viet xong chinh nha"
+                {   
+                    danhsachchinhnha := StrSplit(Trim(toothlist%stt%.text), A_Space)
+                    if (danhsachchinhnha.Length = 1){
+                        x := y := danhsachchinhnha[1]
+                    } else if (danhsachchinhnha.Length = 2) {
+                        x := danhsachchinhnha[1]
+                        y := danhsachchinhnha[2]
+                        if (x<1 or x>y or y>45) {
+                            MsgBox "Bạn nhập sai `n"
+                            return
+                        }
+                    } else {
+                        MsgBox "Bạn nhập sai"
+                        Continue
+                    }
+
+                    ; lay thoi gian
+                    giochidinh := FormatTime(time, "HH:mm")
+
+                    ICDchinhnha := "K00.6"
+                    vocamchinhnha := "00"
+                    thoigianthuthuatchinhnha := 1 ;
+                    noidungtuongtrinhchinhnha := "chinhnha"
+                    Loopcount := y - x + 1
+                    
+
+                    ;nhap chi dinh
+                    i := x
+                    WinWaitActiveWindow(tenbenhvien)
+                    mof7()
+                    While (i<=y) {
+                        z := 13 + i
+                        madichvu := "CHI0" z
+                        nhapchidinh(madichvu, "100", giochidinh)
+                        i++ 
+                        sleep 100
+                    }
+
+                    nhanketthuc()
+                    mabenhnhan := laymabenhnhan()
+    ;nhaptuongtrinh
+
+                    CoordMode "Mouse", "Screen"
+
+                    Sleep 1000
+                    mof6()
+                    i := x
+                    Loop Loopcount 
+                        {
+                    
+                    Sleep 1000
+
+                    MouseClick "L", 567, 845 ;Click mới
+                    Sleep 500
+                    MouseClick "L", 643, 846 ; Click Danh sách
+                            WinWaitActiveWindow("Danh sách chỉ định")
+
+                    ; gui ma benh nhan
+                    Sleep 100
+                    MouseClick "L", 146, 110
+                    Sleep 100
+                    Send mabenhnhan
+                    Sleep 100
+                    Send "{Enter}"
+                    Sleep 500
+                    MouseClick "Left", 680, 90, 1 ; sap xep theo thoi gian
+                    Sleep 300    
+                    MouseClick "Left", 500 , 133, 1 ; lay chi dinh
+                    Sleep 200
+                    A_Clipboard := ""
+                    Send "^a"
+                    Sleep 100
+                    Send "^c"
+                    ClipWait
+                    chidinhchinhnha := A_Clipboard
+                    Sleep 100
+                    ; MsgBox %chidinhchinhnha%
+                    chidinhchinhnha := StrReplace(chidinhchinhnha, "[", "")
+                    chidinhchinhnha := StrReplace(chidinhchinhnha, "]", "")
+
+                ; lay ma chi dinh, phuong phap vo cam va tuong trinh
+
+                    if (!chidinhchinhnha)
+                        { ; neu khong co chi dinh thi ket thuc
+                        MouseClick "Left", 728 , 43, 1 ; nhan ket thuc
+                        Msgbox "Da nhap xong tuong trinh"
+                        return
+                        }
+
+
+                    ; FormatTime, ngaytuongtrinh, %time%, dd/MM/yyyy ; format the time
+                    giobatdau := FormatTime(time, "HH:mm") ; format the time
+                    ; EnvAdd, time, 10 , Minits ; them 30 phut
+                    gioketthuc := FormatTime(time, "HH:mm") ; format the time
+                    time := DateAdd(time, 1, "Minutes")
+
+                    MouseClick "Left", 65, 130 ; Click chọn thủ thuật
+                        WinWaitActiveWindow("Thông tin phẫu thủ thuật")
+
+                ; chon rang ham mat
+                    MouseClick "L", 1252, 211
+                    Sleep 300
+                    MouseClick "L", 1207, 293
+
+                    Send "{tab 2}"
+                    Sleep 100
+                    Send giobatdau
+                    Sleep 100
+                    Send "{tab}"
+                    Sleep 100
+                    ;Send %ngaytuongtrinh%
+                    Sleep 100
+                    Send "{tab}"
+                    Send gioketthuc
+                    Sleep 500
+                    Send "{tab}"
+                    Sleep 100
+                    ;Send %ngaytuongtrinh%
+                    Sleep 100
+                    Send "{tab}"
+                    Sleep 100
+                    Send giobatdau
+                    Sleep 100
+                    Send "{tab}"
+                    Sleep 100
+                    ;Send %ngaytuongtrinh%
+                    Sleep 100
+                    Send "{tab}"
+                    Send gioketthuc
+                    Sleep 100
+                    Send "{tab 2}"
+                    Send "K00.6"
+                    Sleep 100
+                    Send "{tab 2}"
+                    Send "K00.6"
+                    Sleep 100
+                    Send "{tab 3}"
+                    Sleep 100
+                    Send chidinhchinhnha
+                    Sleep 1000
+                    Send "{enter}"
+                    Sleep 100
+                    Send "{enter}"
+                    Sleep 100
+                    Send "{tab 2}"
+                    Sleep 100
+                    Send "00"
+                    Sleep 500
+                    Send "{tab 2}"
+                    Sleep 100
+                    nhapPTV()
+                    Sleep 100
+                    ; nhap noi dung tuong trinh
+                    Send "!t"
+                    Sleep 500
+                    MouseClick "Left", 1000, 500
+                    Sleep 500
+                    Send "^a"
+                    Sleep 100
+                    Send "{del}"
+                    Sleep 100
+                    Send "Gắn mắc cài"
+
+                    Sleep 500
+                    Send "{f6}" ;Lưu
+                    Sleep 500
+                    Send "!y"
+                    Sleep 1000
+                    
+
+                    i += 1
+    }
+
+    nhanketthuc()
+                    MsgBox "Chua viet xong chinh nha co loi nho bao"
                     MyGui.Show
                     return
                 }
@@ -506,7 +679,27 @@
                 MyGui.Show
                 return
             }
-            mabenhnhan := "nguyendinhquy"
+msgbox(savebaohiem.length)
+text := ""
+for phantram in savebaohiem
+    {
+        if savebaohiem[A_Index] = ""
+            savebaohiem[A_Index] := "100"
+    }
+
+if savebaohiem.Length > 1
+    {
+        loop savebaohiem.Length
+            {
+                text .= dichvu[A_Index] A_Space . savebaohiem[A_Index] "%`n"
+            }
+        text .= "Tiếp tục hay dừng lại?"
+        if MsgBox(text,"Kiểm tra phần trăm bảo hiểm","YN") = "No"
+            {
+                MyGui.Show
+                return
+            }
+    }
 
         loop dichvu.Length ; lap qua cac dich vu de nhap chi dinh, tuong trinh
             {
@@ -522,17 +715,20 @@
 
                 if InStr(KhongCanNhapSoRang, dichvu[index])
                     {
+                        MsgBox dichvu[index]
                         WinWaitActiveWindow(tenbenhvien)
-                        mof7
-                        nhapchidinh(Machidinh, phantrambaohiem, giochidinh)   
+                        mof7()
+                        nhapchidinh(Machidinh, phantrambaohiem, giochidinh)  
+                        gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes") 
                         Sleep 1000
-                        nhanketthuc
+                        nhanketthuc()
                         mabenhnhan := laymabenhnhan()
                         mof6()
                         nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh)
                         nhanketthuc()
                         continue
                     }
+
                 if dichvu[index] = "Chỉnh nha" 
                     {
                         MsgBox "chua co chay tu dong duoc o day"
@@ -544,10 +740,13 @@
                         loop toothlist[index]
                             {
                                 WinWaitActiveWindow(tenbenhvien)
+                                mof7()
                                 nhapchidinh(Machidinh, phantrambaohiem, giochidinh)   
                                 Sleep 1000
                                 
                             }
+                        gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+                        nhanketthuc()
                         mabenhnhan := laymabenhnhan()
                         mof6()
                         Sleep 1000
@@ -560,7 +759,7 @@
                     }
                 ; cac dich vu con lai
                 WinWaitActiveWindow(tenbenhvien)
-                mof7
+                mof7()
                 for tooth in toothlist[index]
                     {
                         ghichu := "Răng " tooth
