@@ -15,11 +15,10 @@
     bacsichidinh := thongTinNhanSu[User.Text][3]
  
     ; ;lay thoi gian yyyymmddhhmmss
-
     
-    gioChiDinhDichVu := layGioChiDinh(StartHour.Text, StartMinute.Text) ;yyyymmddhhmmss
+    gioChiDinhDichVu := layGioChiDinh(StartHour.Value, StartMinute.Value) ;yyyymmddhhmmss
     ; gioChiDinhNhapVaoMay := FormatTime(giochidinhdichvu, "HH:mm")
-    gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Text, phuttuongtrinh.Text, gioChiDinhDichVu)
+    gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Value, phuttuongtrinh.Value, gioChiDinhDichVu)
   
     ; Lay thong tin dich vu duoc lam
     ;kiem tra thong tin da nhap dung chua
@@ -600,8 +599,9 @@
                 MyGui.Show
                 return
             }
-msgbox(savebaohiem.length)
-text := ""
+
+
+        text := ""
 for phantram in savebaohiem
     {
         if savebaohiem[A_Index] = ""
