@@ -3,9 +3,8 @@
     Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai, StartHour, StartMinute, giotuongtrinh, phuttuongtrinh, gioNhapTuongTrinh, mabenhnhan
     MyGui.Submit()
     ; kiem tra thong tin nhap du ten chua, nhap trung nguoi nghi khong
-    if !(User.Text and phuta.Text and vongngoai.Text and vongtrong.Text) 
+    if not laythongtinnhansu(User.Text, bacsi.Text, phuta.Text, vongngoai.Text, vongtrong.Text)
         {
-            MsgBox "Chưa nhập đủ nhân sự"
             MyGui.Show()
             return
         }
@@ -14,57 +13,14 @@
     IDvongtrong := thongTinNhanSu[vongtrong.Text][3]
     IDvongngoai := thongTinNhanSu[vongngoai.Text][3]
     bacsichidinh := thongTinNhanSu[User.Text][3]
-    ;lay thong tin nguoi nghi
-    ; doc := "1azSdvq9PYTdy9ez6I63_-Q6WR-VgL6QvVupayG-X9wo"
-    ; sht := "0"
-    ; lst := ""
-    ; Download(Format("https://docs.google.com/spreadsheets/d/{1}/export?format=csv&id={1}&gid={2}", doc, sht), "tmpnew.csv")
-    ; FileEncoding("Utf-8")
-    ; if FileExist("danhsachnghi.csv")
-    ;     FileDelete("danhsachnghi.csv")
-    ; Loop read, "tmpnew.csv", "danhsachnghi.csv"
-    ;     {
-    ;         if InStr(A_LoopReadLine, "TRUE")
-    ;             FileAppend(A_LoopReadLine "`n")
-    ;     }
-    ; if FileExist("tmpnew.csv")
-    ;     FileDelete("tmpnew.csv")
-    ; danhsachnghi := FileRead("danhsachnghi.csv")
-    ; var1 := Format("{1},{2},{3},{4},{5}", User.Text, bacsi.Text, phuta.Text, vongngoai.Text, vongtrong.Text)
-    ; loop parse var1, ","
-    ;     {
-    ;         if InStr(danhsachnghi, A_LoopField)
-    ;             {
-    ;                 MsgBox(Format("Không nhập tên {1}", A_LoopField))
-    ;                 MyGui.Show()
-    ;                 return
-    ;             }
-    ;     }
-    ; kiem tra thong tin nhan su xong
-    ; kiem tra gio chi dinh
+ 
     ; ;lay thoi gian yyyymmddhhmmss
-    if (StartHour.Value = 0) and (StartMinute.Value = 0)
-    	time := A_now
-    else
-    	time := getStartTime(StartHour.Value, StartMinute.Value)
-    
-    gioChiDinhDichVu := time ;yyyymmddhhmmss
-    ; gioChiDinhNhapVaoMay := FormatTime(giochidinhdichvu, "HH:mm")
-    Sleep 100
-    
-    if (giotuongtrinh.Value = 0) and (phuttuongtrinh.Value = 0)
-    	{
-            gioNhapTuongTrinh := DateAdd(time, Random(3,7), "Minutes") ;yyyymmddhhmmss
-            ; EnvAdd, time, %randomtime% ,Minits ; gio tuong trinh sau gio chi dinh 3 - 7 phut
-        }
-        else
-            gioNhapTuongTrinh := getStartTime(giotuongtrinh.Value, phuttuongtrinh.Value)
-        
-    ; gioNhapTuongTrinhVaoMay := FormatTime(gioNhapTuongTrinh, "HH:mm")
 
-    ; if WinWait(tenbenhvien)
-    ;     WinActivate
     
+    gioChiDinhDichVu := layGioChiDinh(StartHour.Text, StartMinute.Text) ;yyyymmddhhmmss
+    ; gioChiDinhNhapVaoMay := FormatTime(giochidinhdichvu, "HH:mm")
+    gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Value, phuttuongtrinh.Value, gioChiDinhDichVu)
+  
     ; Lay thong tin dich vu duoc lam
     ;kiem tra thong tin da nhap dung chua
     dichvu := []
@@ -132,14 +88,9 @@
                     }
 
                     ; lay thoi gian
-                    giochidinh := FormatTime(time, "HH:mm")
+                    giochidinh := FormatTime(gioChiDinhDichVu, "HH:mm")
 
-                    ICDchinhnha := "K00.6"
-                    vocamchinhnha := "00"
-                    thoigianthuthuatchinhnha := 1 ;
-                    noidungtuongtrinhchinhnha := "chinhnha"
                     Loopcount := y - x + 1
-                    
 
                     ;nhap chi dinh
                     i := x
@@ -206,10 +157,10 @@
 
 
                     ; FormatTime, ngaytuongtrinh, %time%, dd/MM/yyyy ; format the time
-                    giobatdau := FormatTime(time, "HH:mm") ; format the time
+                    giobatdau := FormatTime(gioChiDinhDichVu, "HH:mm") ; format the time
                     ; EnvAdd, time, 10 , Minits ; them 30 phut
                     gioketthuc := FormatTime(time, "HH:mm") ; format the time
-                    time := DateAdd(time, 1, "Minutes")
+                    time := DateAdd(gioChiDinhDichVu, 1, "Minutes")
 
                     MouseClick "Left", 65, 130 ; Click chọn thủ thuật
                         WinWaitActiveWindow("Thông tin phẫu thủ thuật")

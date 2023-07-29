@@ -17,6 +17,25 @@
 	return tmptime
 }
 
+layGioChiDinh(StartHour, StartMinute)
+{
+    if (StartHour = 0) and (StartMinute = 0)
+    	return A_now
+    else
+    	return getStartTime(StartHour, StartMinute)
+}
+
+laygioNhapTuongTrinh(giotuongtrinh, phuttuongtrinh, giochidinh)
+{
+    if (giotuongtrinh = 0) and (phuttuongtrinh = 0)
+    	{
+            return DateAdd(giochidinh, Random(3,7), "Minutes") ;yyyymmddhhmmss
+            ; EnvAdd, time, %randomtime% ,Minits ; gio tuong trinh sau gio chi dinh 3 - 7 phut
+        }
+        else
+            return getStartTime(giotuongtrinh, phuttuongtrinh)
+}
+
 nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
 {
     ; global User
@@ -324,39 +343,6 @@ Send IDvongngoai
 Send "{tab}"
 }
 
-; MatchBetween(Haystack,char1,char2) {
-;     Matches :=
-;     pos1 := InStr(Haystack, char1,, 1)
-;     pos2 := InStr(Haystack, char2,, 1)
-;     Matches := SubStr(Haystack,pos1+1,pos2-pos1-1)
-;     return Matches
-; }
-
-; ^+q::
-;     Loop, 3
-; 	{
-; 	If WinExist("BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT")
-; 		WinClose
-; 	Sleep 100
-; 	}
-
-;     Run MQHIS, D:\MQSOFT\MQHIS\bin\Debug
-;     Winwaitdangnhap()
-;     dangnhapMQ("quynd", "1")
-;     Sleep 500
-;     ;dang nhap xquang
-;     moxquang()
-;     Sleep 500
-;     WinwaitMQHIS()
-;     Goto, ButtonMở7phòngkhám
-; Return
-
-
-; ^!i::
-; Clipboard :=
-; ControlGetText, Clipboard, WindowsForms10.EDIT.app.0.fcf9a4_r7_ad124, ahk_exe mqhis.exe ; lay id benh nhan
-; return
-
 laymabenhnhan(){
     A_Clipboard := ""
     Sleep 500
@@ -658,130 +644,144 @@ rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 
 ; ^+p::indexuatdieutri()
 
 
-; indexuatdieutri(){
-;     SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+indexuatdieutri(){
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 100
 
-; Sleep, 100
+MouseClick  "L", 1327, 872
 
-; MouseClick, L, 1327, 872
+Sleep 203
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; Sleep, 203
+Sleep 500
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ - rp_phieudexuat_dieutri.re ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Send "{Blind}{Alt Down}{Alt Up}fp"
 
-; Sleep, 500
+Sleep 100
+WinWaitActiveWindow("Print")
 
-; Send {Blind}{Alt Down}{Alt Up}fp
+Sleep 500
 
-; Sleep, 100
+MouseClick  "L", 904, 511
 
-; tt = Print ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 414
 
-; Sleep, 500
+MouseClick "L", 1078, 747
+WinWaitActiveWindow("Printing")
 
-; MouseClick, L, 904, 511
+Sleep 1500
 
-; Sleep, 414
+Send "{Blind}{Enter}"
 
-; MouseClick, L, 1078, 747
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+}
 
-; tt = Printing ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+;doc phim xq
+; 12 xq
+::xqq::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
 
-; Sleep, 1500
+Send "{Blind}{Shift Down}{Home}{Shift Up}"
 
-; Send {Blind}{Enter}
+Sleep 200
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ - rp_phieudexuat_dieutri.re ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Send "{Blind}{Ctrl Down}x{Ctrl Up}"
 
-; Sleep, 1000
-; }
+Sleep 200
 
-; ;doc phim xq
-; ; 12 xq
-; ::xqq::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+mof7()
+WinWaitActiveWindow("Chỉ định dịch vụ")
+MouseClick "L", 260, 884
+Send "{Blind}{Alt Down}m{Alt Up}"
+WinWaitActiveWindow("Chỉ định dịch vụ")
+if WinExist("MQ Solutions")
+    {
+        MyGui.Show
+        Reload
+    }
+Sleep 100
+Send "{Blind}{Shift Down}{Tab}{Shift Up}"
+MouseClick "L", 146, 881
+Sleep 100
+Send 18.81
+Sleep 100
+    Send "{tab}" ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
+    Sleep 100
+    Send "!y"
+WinWaitActiveWindow("Chỉ định dịch vụ")
+Sleep 100
+;Send {tab 2}
+MouseClick "L", 225, 950
+Sleep 100
+Send Răng%A_Space%
+Send "^v"
+Sleep 100
+Send "!l"
+Sleep 500
+Send "!y"
+}
+; dong tat ca cua so
+^+w::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
 
-; Send {Blind}{Shift Down}{Home}{Shift Up}
+WinWaitActiveWindow(tenbenhvien)
 
-; Sleep, 200
+Sleep 100
 
-; Send {Blind}{Ctrl Down}x{Ctrl Up}
+Send "{Blind}{Alt Down}{Alt Up}a{Down}{Down}"
 
-; Sleep, 200
+Sleep 200
 
-; mof7()
-; Winwaitchidinhdichvu()
-; MouseClick, L, 260, 884
-; Send {Blind}{Alt Down}m{Alt Up}
-; Winwaitchidinhdichvu()
-; if WinExist("MQ Solutions")
-;     {
-;         Gui, Show
-;         Reload
-;     }
-; Sleep 100
-; Send {Blind}{Shift Down}{Tab}{Shift Up}
-; MouseClick, L, 146, 881
-; Sleep 100
-; Send 18.81
-; Sleep 100
-;     Send {tab} ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
-;     Sleep 100
-;     Send !y
-; Winwaitchidinhdichvu()
-; Sleep 100
-; ;Send {tab 2}
-; MouseClick, L, 225, 950
-; Sleep 100
-; Send Răng%A_Space%
-; Send ^v
-; Sleep 100
-; Send !l
-; Sleep 500
-; Send !y
-; Return
+Send "{Blind}{Enter}"
 
-; ; dong tat ca cua so
-; ^+w::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
-
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT - [Khám bện ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+WinWaitActiveWindow(tenbenhvien)
+}
 
 
-; Sleep, 100
-
-; Send {Blind}{Alt Down}{Alt Up}a{Down}{Down}
-
-; Sleep, 200
-
-; Send {Blind}{Enter}
-
-; Sleep, 100
-
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT ahk_class WindowsForms10.Window.8.app.0.fcf9a4_r7_ad1
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
-; Return
 WinWaitActiveWindow(window){
     if WinWait(window)
         WinActivate
     Sleep 500
         
+}
+
+laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
+{
+    if !(User and phuta and vongngoai and vongtrong) 
+        {
+            MsgBox "Chưa nhập đủ nhân sự"
+            return false
+        }
+    doc := "1azSdvq9PYTdy9ez6I63_-Q6WR-VgL6QvVupayG-X9wo"
+    sht := "0"
+    lst := ""
+    Download(Format("https://docs.google.com/spreadsheets/d/{1}/export?format=csv&id={1}&gid={2}", doc, sht), "tmpnew.csv")
+    FileEncoding("Utf-8")
+    if FileExist("danhsachnghi.csv")
+        FileDelete("danhsachnghi.csv")
+    Loop read, "tmpnew.csv", "danhsachnghi.csv"
+        {
+            if InStr(A_LoopReadLine, "TRUE")
+                FileAppend(A_LoopReadLine "`n")
+        }
+    if FileExist("tmpnew.csv")
+        FileDelete("tmpnew.csv")
+    danhsachnghi := FileRead("danhsachnghi.csv")
+    var1 := Format("{1},{2},{3},{4},{5}", User, bacsi, phuta, vongngoai, vongtrong)
+    loop parse var1, ","
+        {
+            if InStr(danhsachnghi, A_LoopField)
+                {
+                    MsgBox(Format("Không nhập tên {1}", A_LoopField))
+                    return false
+                }
+        }
+    return true
 }
