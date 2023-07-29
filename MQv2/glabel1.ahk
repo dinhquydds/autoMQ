@@ -1,5 +1,4 @@
-﻿; show/hide option of dichvu
-Dichvu1.OnEvent("Change", LuaChonDichVu1)
+﻿Dichvu1.OnEvent("Change", LuaChonDichVu1)
 LuaChonDichVu1(ctr,*){
     switch Dichvu1.Text {
         Case "Bôi SDF": 
@@ -8,7 +7,6 @@ LuaChonDichVu1(ctr,*){
             TramRang1.Visible := false
             RangSu1.Visible := false
             RangThaoLap1.Visible := false
-            Abutment1.Visible := false
             Implant1.Visible := false
             CaoVoi1.Visible := false
             NhoRang1.Visible := false
@@ -22,7 +20,6 @@ LuaChonDichVu1(ctr,*){
             TramRang1.Visible := false
             RangSu1.Visible := false
             RangThaoLap1.Visible := false
-            Abutment1.Visible := false
             Implant1.Visible := false
             CaoVoi1.Visible := true
             NhoRang1.Visible := false
@@ -36,7 +33,6 @@ LuaChonDichVu1(ctr,*){
             TramRang1.Visible := true
             RangSu1.Visible := false
             RangThaoLap1.Visible := false
-            Abutment1.Visible := false
             Implant1.Visible := false
             CaoVoi1.Visible := false
             NhoRang1.Visible := false
@@ -50,7 +46,6 @@ LuaChonDichVu1(ctr,*){
             TramRang1.Visible := false
             RangSu1.Visible := false
             RangThaoLap1.Visible := false
-            Abutment1.Visible := false
             Implant1.Visible := false
             CaoVoi1.Visible := false
             NhoRang1.Visible := false
@@ -64,7 +59,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := true
@@ -78,7 +72,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := true
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -92,7 +85,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := true
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -106,7 +98,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := true
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -114,13 +105,11 @@ LuaChonDichVu1(ctr,*){
                 Toothlist1.Visible := true
                 NoiNha1.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem1.Visible := false
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := true
                 Implant1.Visible := true
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -134,7 +123,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -148,7 +136,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -162,7 +149,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -176,7 +162,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -190,7 +175,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -204,7 +188,6 @@ LuaChonDichVu1(ctr,*){
                 TramRang1.Visible := false
                 RangSu1.Visible := false
                 RangThaoLap1.Visible := false
-                Abutment1.Visible := false
                 Implant1.Visible := false
                 CaoVoi1.Visible := false
                 NhoRang1.Visible := false
@@ -223,7 +206,6 @@ LuaChonDichVu2(ctr,*){
             TramRang2.Visible := false
             RangSu2.Visible := false
             RangThaoLap2.Visible := false
-            Abutment2.Visible := false
             Implant2.Visible := false
             CaoVoi2.Visible := false
             NhoRang2.Visible := false
@@ -237,7 +219,6 @@ LuaChonDichVu2(ctr,*){
             TramRang2.Visible := false
             RangSu2.Visible := false
             RangThaoLap2.Visible := false
-            Abutment2.Visible := false
             Implant2.Visible := false
             CaoVoi2.Visible := true
             NhoRang2.Visible := false
@@ -251,7 +232,6 @@ LuaChonDichVu2(ctr,*){
             TramRang2.Visible := true
             RangSu2.Visible := false
             RangThaoLap2.Visible := false
-            Abutment2.Visible := false
             Implant2.Visible := false
             CaoVoi2.Visible := false
             NhoRang2.Visible := false
@@ -265,7 +245,6 @@ LuaChonDichVu2(ctr,*){
             TramRang2.Visible := false
             RangSu2.Visible := false
             RangThaoLap2.Visible := false
-            Abutment2.Visible := false
             Implant2.Visible := false
             CaoVoi2.Visible := false
             NhoRang2.Visible := false
@@ -273,13 +252,12 @@ LuaChonDichVu2(ctr,*){
             Toothlist2.Visible := true
             NoiNha2.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem2.Visible := true
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := true
@@ -293,7 +271,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := true
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -307,7 +284,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := true
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -321,7 +297,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := true
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -329,13 +304,11 @@ LuaChonDichVu2(ctr,*){
                 Toothlist2.Visible := true
                 NoiNha2.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem2.Visible := false
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := true
                 Implant2.Visible := true
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -349,7 +322,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -363,7 +335,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -377,7 +348,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -391,7 +361,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -405,7 +374,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -419,7 +387,6 @@ LuaChonDichVu2(ctr,*){
                 TramRang2.Visible := false
                 RangSu2.Visible := false
                 RangThaoLap2.Visible := false
-                Abutment2.Visible := false
                 Implant2.Visible := false
                 CaoVoi2.Visible := false
                 NhoRang2.Visible := false
@@ -438,7 +405,6 @@ LuaChonDichVu3(ctr,*){
             TramRang3.Visible := false
             RangSu3.Visible := false
             RangThaoLap3.Visible := false
-            Abutment3.Visible := false
             Implant3.Visible := false
             CaoVoi3.Visible := false
             NhoRang3.Visible := false
@@ -452,7 +418,6 @@ LuaChonDichVu3(ctr,*){
             TramRang3.Visible := false
             RangSu3.Visible := false
             RangThaoLap3.Visible := false
-            Abutment3.Visible := false
             Implant3.Visible := false
             CaoVoi3.Visible := true
             NhoRang3.Visible := false
@@ -466,7 +431,6 @@ LuaChonDichVu3(ctr,*){
             TramRang3.Visible := true
             RangSu3.Visible := false
             RangThaoLap3.Visible := false
-            Abutment3.Visible := false
             Implant3.Visible := false
             CaoVoi3.Visible := false
             NhoRang3.Visible := false
@@ -480,7 +444,6 @@ LuaChonDichVu3(ctr,*){
             TramRang3.Visible := false
             RangSu3.Visible := false
             RangThaoLap3.Visible := false
-            Abutment3.Visible := false
             Implant3.Visible := false
             CaoVoi3.Visible := false
             NhoRang3.Visible := false
@@ -488,13 +451,12 @@ LuaChonDichVu3(ctr,*){
             Toothlist3.Visible := true
             NoiNha3.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem3.Visible := true
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := true
@@ -508,7 +470,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := true
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -522,7 +483,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := true
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -536,7 +496,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := true
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -544,13 +503,11 @@ LuaChonDichVu3(ctr,*){
                 Toothlist3.Visible := true
                 NoiNha3.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem3.Visible := false
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := true
                 Implant3.Visible := true
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -564,7 +521,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -578,7 +534,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -592,7 +547,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -606,7 +560,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -620,7 +573,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -634,7 +586,6 @@ LuaChonDichVu3(ctr,*){
                 TramRang3.Visible := false
                 RangSu3.Visible := false
                 RangThaoLap3.Visible := false
-                Abutment3.Visible := false
                 Implant3.Visible := false
                 CaoVoi3.Visible := false
                 NhoRang3.Visible := false
@@ -653,7 +604,6 @@ LuaChonDichVu4(ctr,*){
             TramRang4.Visible := false
             RangSu4.Visible := false
             RangThaoLap4.Visible := false
-            Abutment4.Visible := false
             Implant4.Visible := false
             CaoVoi4.Visible := false
             NhoRang4.Visible := false
@@ -667,7 +617,6 @@ LuaChonDichVu4(ctr,*){
             TramRang4.Visible := false
             RangSu4.Visible := false
             RangThaoLap4.Visible := false
-            Abutment4.Visible := false
             Implant4.Visible := false
             CaoVoi4.Visible := true
             NhoRang4.Visible := false
@@ -681,7 +630,6 @@ LuaChonDichVu4(ctr,*){
             TramRang4.Visible := true
             RangSu4.Visible := false
             RangThaoLap4.Visible := false
-            Abutment4.Visible := false
             Implant4.Visible := false
             CaoVoi4.Visible := false
             NhoRang4.Visible := false
@@ -695,7 +643,6 @@ LuaChonDichVu4(ctr,*){
             TramRang4.Visible := false
             RangSu4.Visible := false
             RangThaoLap4.Visible := false
-            Abutment4.Visible := false
             Implant4.Visible := false
             CaoVoi4.Visible := false
             NhoRang4.Visible := false
@@ -703,13 +650,12 @@ LuaChonDichVu4(ctr,*){
             Toothlist4.Visible := true
             NoiNha4.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem4.Visible := true
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := true
@@ -723,7 +669,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := true
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -737,7 +682,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := true
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -751,7 +695,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := true
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -759,13 +702,11 @@ LuaChonDichVu4(ctr,*){
                 Toothlist4.Visible := true
                 NoiNha4.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem4.Visible := false
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := true
                 Implant4.Visible := true
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -779,7 +720,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -793,7 +733,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -807,7 +746,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -821,7 +759,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -835,7 +772,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -849,7 +785,6 @@ LuaChonDichVu4(ctr,*){
                 TramRang4.Visible := false
                 RangSu4.Visible := false
                 RangThaoLap4.Visible := false
-                Abutment4.Visible := false
                 Implant4.Visible := false
                 CaoVoi4.Visible := false
                 NhoRang4.Visible := false
@@ -868,7 +803,6 @@ LuaChonDichVu5(ctr,*){
             TramRang5.Visible := false
             RangSu5.Visible := false
             RangThaoLap5.Visible := false
-            Abutment5.Visible := false
             Implant5.Visible := false
             CaoVoi5.Visible := false
             NhoRang5.Visible := false
@@ -882,7 +816,6 @@ LuaChonDichVu5(ctr,*){
             TramRang5.Visible := false
             RangSu5.Visible := false
             RangThaoLap5.Visible := false
-            Abutment5.Visible := false
             Implant5.Visible := false
             CaoVoi5.Visible := true
             NhoRang5.Visible := false
@@ -896,7 +829,6 @@ LuaChonDichVu5(ctr,*){
             TramRang5.Visible := true
             RangSu5.Visible := false
             RangThaoLap5.Visible := false
-            Abutment5.Visible := false
             Implant5.Visible := false
             CaoVoi5.Visible := false
             NhoRang5.Visible := false
@@ -910,7 +842,6 @@ LuaChonDichVu5(ctr,*){
             TramRang5.Visible := false
             RangSu5.Visible := false
             RangThaoLap5.Visible := false
-            Abutment5.Visible := false
             Implant5.Visible := false
             CaoVoi5.Visible := false
             NhoRang5.Visible := false
@@ -918,13 +849,12 @@ LuaChonDichVu5(ctr,*){
             Toothlist5.Visible := true
             NoiNha5.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem5.Visible := true
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := true
@@ -938,7 +868,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := true
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -952,7 +881,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := true
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -966,7 +894,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := true
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -974,13 +901,11 @@ LuaChonDichVu5(ctr,*){
                 Toothlist5.Visible := true
                 NoiNha5.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem5.Visible := false
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := true
                 Implant5.Visible := true
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -994,7 +919,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1008,7 +932,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1022,7 +945,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1036,7 +958,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1050,7 +971,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1064,7 +984,6 @@ LuaChonDichVu5(ctr,*){
                 TramRang5.Visible := false
                 RangSu5.Visible := false
                 RangThaoLap5.Visible := false
-                Abutment5.Visible := false
                 Implant5.Visible := false
                 CaoVoi5.Visible := false
                 NhoRang5.Visible := false
@@ -1083,7 +1002,6 @@ LuaChonDichVu6(ctr,*){
             TramRang6.Visible := false
             RangSu6.Visible := false
             RangThaoLap6.Visible := false
-            Abutment6.Visible := false
             Implant6.Visible := false
             CaoVoi6.Visible := false
             NhoRang6.Visible := false
@@ -1097,7 +1015,6 @@ LuaChonDichVu6(ctr,*){
             TramRang6.Visible := false
             RangSu6.Visible := false
             RangThaoLap6.Visible := false
-            Abutment6.Visible := false
             Implant6.Visible := false
             CaoVoi6.Visible := true
             NhoRang6.Visible := false
@@ -1111,7 +1028,6 @@ LuaChonDichVu6(ctr,*){
             TramRang6.Visible := true
             RangSu6.Visible := false
             RangThaoLap6.Visible := false
-            Abutment6.Visible := false
             Implant6.Visible := false
             CaoVoi6.Visible := false
             NhoRang6.Visible := false
@@ -1125,7 +1041,6 @@ LuaChonDichVu6(ctr,*){
             TramRang6.Visible := false
             RangSu6.Visible := false
             RangThaoLap6.Visible := false
-            Abutment6.Visible := false
             Implant6.Visible := false
             CaoVoi6.Visible := false
             NhoRang6.Visible := false
@@ -1133,13 +1048,12 @@ LuaChonDichVu6(ctr,*){
             Toothlist6.Visible := true
             NoiNha6.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem6.Visible := true
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := true
@@ -1153,7 +1067,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := true
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1167,7 +1080,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := true
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1181,7 +1093,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := true
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1189,13 +1100,11 @@ LuaChonDichVu6(ctr,*){
                 Toothlist6.Visible := true
                 NoiNha6.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem6.Visible := false
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := true
                 Implant6.Visible := true
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1209,7 +1118,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1223,7 +1131,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1237,7 +1144,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1251,7 +1157,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1265,7 +1170,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1279,7 +1183,6 @@ LuaChonDichVu6(ctr,*){
                 TramRang6.Visible := false
                 RangSu6.Visible := false
                 RangThaoLap6.Visible := false
-                Abutment6.Visible := false
                 Implant6.Visible := false
                 CaoVoi6.Visible := false
                 NhoRang6.Visible := false
@@ -1298,7 +1201,6 @@ LuaChonDichVu7(ctr,*){
             TramRang7.Visible := false
             RangSu7.Visible := false
             RangThaoLap7.Visible := false
-            Abutment7.Visible := false
             Implant7.Visible := false
             CaoVoi7.Visible := false
             NhoRang7.Visible := false
@@ -1312,7 +1214,6 @@ LuaChonDichVu7(ctr,*){
             TramRang7.Visible := false
             RangSu7.Visible := false
             RangThaoLap7.Visible := false
-            Abutment7.Visible := false
             Implant7.Visible := false
             CaoVoi7.Visible := true
             NhoRang7.Visible := false
@@ -1326,7 +1227,6 @@ LuaChonDichVu7(ctr,*){
             TramRang7.Visible := true
             RangSu7.Visible := false
             RangThaoLap7.Visible := false
-            Abutment7.Visible := false
             Implant7.Visible := false
             CaoVoi7.Visible := false
             NhoRang7.Visible := false
@@ -1340,7 +1240,6 @@ LuaChonDichVu7(ctr,*){
             TramRang7.Visible := false
             RangSu7.Visible := false
             RangThaoLap7.Visible := false
-            Abutment7.Visible := false
             Implant7.Visible := false
             CaoVoi7.Visible := false
             NhoRang7.Visible := false
@@ -1348,13 +1247,12 @@ LuaChonDichVu7(ctr,*){
             Toothlist7.Visible := true
             NoiNha7.Visible := true
         }
-        Case "Nhổ răng phẫu thuật": 
+        Case "Nhổ răng": 
             {
                 BaoHiem7.Visible := true
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := true
@@ -1368,7 +1266,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := true
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1382,7 +1279,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := true
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1396,7 +1292,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := true
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1404,13 +1299,11 @@ LuaChonDichVu7(ctr,*){
                 Toothlist7.Visible := true
                 NoiNha7.Visible := false
             }
-            Case "Implant abutment": 
             {
                 BaoHiem7.Visible := false
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := true
                 Implant7.Visible := true
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1424,7 +1317,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1438,7 +1330,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1452,7 +1343,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1466,7 +1356,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1480,7 +1369,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false
@@ -1494,7 +1382,6 @@ LuaChonDichVu7(ctr,*){
                 TramRang7.Visible := false
                 RangSu7.Visible := false
                 RangThaoLap7.Visible := false
-                Abutment7.Visible := false
                 Implant7.Visible := false
                 CaoVoi7.Visible := false
                 NhoRang7.Visible := false

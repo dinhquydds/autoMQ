@@ -290,7 +290,7 @@ dangnhapMQ(tendangnhap, matkhau)
     ControlClick("Đăng nhập", "ĐĂNG NHẬP HỆ THỐNG")
 }
 
-
+^+x::moxquang
 moxquang()
 {
     if not WinExist("MQRIS - [X QUANG]")
@@ -310,26 +310,19 @@ moxquang()
         Send "!1"
         Send "{Down 12}"
         Send "{Enter}"
-        if WinWait("Chọn thông tin làm việc", , 30)
-            {
-            WinActivate("Chọn thông tin làm việc")
-            Send "0360"
-            Sleep 100
-            Send "{Tab}"
-            Sleep 500
-            ControlClick("Đồng ý", "ahk_exe MQRIS.exe", , "Left", 1)
-            Sleep 2000
-            }
-        else
-            {
-                MsgBox "Không tìm thấy file"
-                Reload
-            }
-        }
-    WinActivate("MQRIS - [X QUANG]")
-    Sleep 1000
+        WinWaitActiveWindow("Chọn thông tin làm việc")
+        
+        Send "0360"
+        Sleep 100
+        Send "{Tab}"
+        Sleep 500
+        ControlClick("Đồng ý", "ahk_exe MQRIS.exe", , "Left", 1)
+        Sleep 2000
+        
+    }
+    WinWaitActiveWindow("MQRIS - [X QUANG]")
+    Sleep 500
 }
-
 nhapPTV(){
 Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai
 Send IDbacsy
@@ -367,283 +360,262 @@ rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 
 ::hamduoi::37 36 35 34 33 32 31 41 42 43 44 45 46 47
 ::caorang2ham::Cao răng hai hàm
 
-; ::dxnrk::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+::dxnrk::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
+WinWaitActiveWindow(tenbenhvien)
 
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 100
 
-; Sleep, 100
+MouseClick "L", 482, 83
 
-; MouseClick, L, 482, 83
+Sleep 500
 
-; Sleep, 500
+MouseClick "L", 563, 349
 
-; MouseClick, L, 563, 349
+Sleep 1000
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; Sleep, 1000
+Sleep 500
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+MouseClick "L", 1053, 873
 
-; Sleep, 500
+Sleep 500
 
-; MouseClick, L, 1053, 873
+MouseClick "L", 867, 401
 
-; Sleep, 500
+Sleep 890
 
-; MouseClick, L, 867, 401
+Send "{Blind}k01"
 
-; Sleep, 890
+Sleep 100
 
-; Send {Blind}k01
+Send "{Blind}{Enter}"
 
-; Sleep, 100
+Sleep 100
 
-; Send {Blind}{Enter}
+MouseClick "L", 903, 490
 
-; Sleep, 100
+Sleep 100
 
-; MouseClick, L, 903, 490
+Send "Phẫu thuật nhổ răng khôn mọc lệch hàm dưới"
 
-; Sleep, 100
+Sleep 100
 
-; Send Phẫu thuật nhổ răng khôn mọc lệch hàm dưới
+Send "{Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}"
 
-; Sleep, 100
+Sleep 500
 
-; Send {Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}
+Send "{Blind}{Enter}"
 
-; Sleep, 500
+Sleep 100
 
-; Send {Blind}{Enter}
+MouseClick "L", 900, 541
 
-; Sleep, 100
+Sleep 100
 
-; MouseClick, L, 900, 541
+Send "Răng 18 28 38 48"
 
-; Sleep, 100
+Sleep 100
 
-; Send Răng 18 28 38 48
+Send "{tab} Do chân răng … nằm sát dây thần kinh, nên sau khi nhổ răng… có thể bị tê môi, lưỡi, cằm trong thời gian ngắn. Sau nhổ răng có thể bị sưng, đau, rỉ máu vài ngày. BN đồng ý nhổ răng ... chi phí ..."
 
-; Sleep, 100
+}
 
-; Send {tab} Do chân răng … nằm sát dây thần kinh, nên sau khi nhổ răng… có thể bị tê môi, lưỡi, cằm trong thời gian ngắn. Sau nhổ răng có thể bị sưng, đau, rỉ máu vài ngày. BN đồng ý nhổ răng ... chi phí ...
+::dxtr::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
+WinWaitActiveWindow(tenbenhvien)
 
-; Return
+Sleep 100
 
-; ::dxtr::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+MouseClick "L", 482, 83
 
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 500
 
-; Sleep, 100
+MouseClick "L", 563, 349
 
-; MouseClick, L, 482, 83
+Sleep 1000
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; Sleep, 500
+Sleep 500
 
-; MouseClick, L, 563, 349
+MouseClick "L", 1053, 873
 
-; Sleep, 1000
+Sleep 500
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+MouseClick "L", 867, 401
 
-; Sleep, 500
+Sleep 890
 
-; MouseClick, L, 1053, 873
+Send "{Blind}k02"
 
-; Sleep, 500
+Sleep 100
 
-; MouseClick, L, 867, 401
+Send "{Blind}{Enter}"
 
-; Sleep, 890
+Sleep 100
 
-; Send {Blind}k02
+MouseClick "L", 903, 490
 
-; Sleep, 100
+Sleep 100
 
-; Send {Blind}{Enter}
+Send "trám răng xoang i kết hợp xoang ii bằng composite"
 
-; Sleep, 100
+Sleep 100
 
-; MouseClick, L, 903, 490
+Send "{Blind}{Down}{Down}"
 
-; Sleep, 100
+Sleep 100
 
-; Send trám răng xoang i kết hợp xoang ii bằng composite
+Send "{Blind}{Enter}"
 
-; Sleep, 100
+Sleep 100
 
-; Send {Blind}{Down}{Down}
+MouseClick "L", 900, 541
 
-; Sleep, 100
+Sleep 100
 
-; Send {Blind}{Enter}
+Send "Răng xxx"
 
-; Sleep, 100
+Sleep 100
 
-; MouseClick, L, 900, 541
+Send "{tab} Do răng … có lỗ sâu lớn nên sau khi trám răng phải theo dõi tình trạng răng, nếu đau nhức thì phải điều trị tủy (chi phí điều trị tủy tính riêng)."
 
-; Sleep, 100
+}
 
-; Send Răng xxx
 
-; Sleep, 100
+::dxrs::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
+WinWaitActiveWindow(tenbenhvien)
 
-; Send {tab} Do răng … có lỗ sâu lớn nên sau khi trám răng phải theo dõi tình trạng răng, nếu đau nhức thì phải điều trị tủy (chi phí điều trị tủy tính riêng).
+Sleep 100
 
-; Return
+MouseClick "L", 482, 83
 
+Sleep 500
 
+MouseClick "L", 563, 349
 
-; ::dxrs::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+Sleep 1000
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 500
 
-; Sleep, 100
+MouseClick "L", 1053, 873
 
-; MouseClick, L, 482, 83
+Sleep 500
 
-; Sleep, 500
+MouseClick "L", 867, 401
 
-; MouseClick, L, 563, 349
+Sleep 890
 
-; Sleep, 1000
+Send "{Blind}k02"
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 100
 
-; Sleep, 500
+Send "{Blind}{Enter}"
 
-; MouseClick, L, 1053, 873
+Sleep 100
 
-; Sleep, 500
+MouseClick "L", 903, 490
 
-; MouseClick, L, 867, 401
+Sleep 100
 
-; Sleep, 890
+Send "răng sứ zirconia"
 
-; Send {Blind}k02
+Sleep 100
 
-; Sleep, 100
+Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
 
-; Send {Blind}{Enter}
+Sleep 100
 
-; Sleep, 100
+Send "{Blind}{Enter}"
 
-; MouseClick, L, 903, 490
+Sleep 100
 
-; Sleep, 100
+MouseClick "L", 900, 541
 
-; Send răng sứ zirconia
+Sleep 100
 
-; Sleep, 100
+Send "Răng xxx"
 
-; Send {Blind}{Down}{Down}{Down}{Down}{Down}
+Sleep 100
 
-; Sleep, 100
+Send "{tab} Răng ... cần bọc sứ, BV chỉ bảo hành răng sứ, không bảo hành chân răng"
 
-; Send {Blind}{Enter}
+}
 
-; Sleep, 100
+::dxnn::
+{
+SetTitleMatchMode 2
+CoordMode "Mouse", "Screen"
+WinWaitActiveWindow(tenbenhvien)
 
-; MouseClick, L, 900, 541
+Sleep 100
 
-; Sleep, 100
+MouseClick "L", 482, 83
 
-; Send Răng xxx
+Sleep 500
 
-; Sleep, 100
+MouseClick "L", 563, 349
 
-; Send {tab} Răng ... cần bọc sứ, BV chỉ bảo hành răng sứ, không bảo hành chân răng
+Sleep 1000
+WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-; Return
+Sleep 500
 
-; ::dxnn::
-; SetTitleMatchMode, 2
-; CoordMode, Mouse, Screen
+MouseClick "L", 1053, 873
 
-; tt = BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 500
 
-; Sleep, 100
+MouseClick "L", 867, 401
 
-; MouseClick, L, 482, 83
+Sleep 890
 
-; Sleep, 500
+Send "{Blind}k04"
 
-; MouseClick, L, 563, 349
+Sleep 100
 
-; Sleep, 1000
+Send "{Blind}{Enter}"
 
-; tt = PHIẾU ĐỀ XUẤT ĐIỀU TRỊ 
-; WinWait, %tt%
-; IfWinNotActive, %tt%,, WinActivate, %tt%
+Sleep 100
 
-; Sleep, 500
+MouseClick "L", 903, 490
 
-; MouseClick, L, 1053, 873
+Sleep 100
 
-; Sleep, 500
+Send "điều trị tủy răng số 1"
 
-; MouseClick, L, 867, 401
+Sleep 100
 
-; Sleep, 890
+Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
 
-; Send {Blind}k04
+Sleep 100
 
-; Sleep, 100
+Send "{Blind}{Enter}"
 
-; Send {Blind}{Enter}
+Sleep 100
 
-; Sleep, 100
+MouseClick "L", 900, 541
 
-; MouseClick, L, 903, 490
+Sleep 100
 
-; Sleep, 100
+Send "Răng xxx"
 
-; Send điều trị tủy răng số 1
+Sleep 100
 
-; Sleep, 100
+Send "{tab} Do tình trạng giải phẫu phức tạp của ống tủy nên trong quá trình điều trị có thể thất bại trong thời gian ngắn hạn hoặc lâu dài. Trong trường hợp đó, phải nhổ bỏ và không hoàn lại chi phí điều trị tủy."
 
-; Send {Blind}{Down}{Down}{Down}{Down}{Down}
+}
 
-; Sleep, 100
 
-; Send {Blind}{Enter}
 
-; Sleep, 100
-
-; MouseClick, L, 900, 541
-
-; Sleep, 100
-
-; Send Răng xxx
-
-; Sleep, 100
-
-; Send {tab} Do tình trạng giải phẫu phức tạp của ống tủy nên trong quá trình điều trị có thể thất bại trong thời gian ngắn hạn hoặc lâu dài. Trong trường hợp đó, phải nhổ bỏ và không hoàn lại chi phí điều trị tủy.
-
-; Return
-
-; ^+p::indexuatdieutri()
-
-
+^+p::indexuatdieutri
 indexuatdieutri(){
 SetTitleMatchMode 2
 CoordMode "Mouse", "Screen"
@@ -708,7 +680,7 @@ Sleep 100
 Send "{Blind}{Shift Down}{Tab}{Shift Up}"
 MouseClick "L", 146, 881
 Sleep 100
-Send 18.81
+Send "18.81"
 Sleep 100
     Send "{tab}" ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
     Sleep 100
@@ -718,7 +690,7 @@ Sleep 100
 ;Send {tab 2}
 MouseClick "L", 225, 950
 Sleep 100
-Send Răng%A_Space%
+Send "Răng "
 Send "^v"
 Sleep 100
 Send "!l"
