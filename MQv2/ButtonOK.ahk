@@ -158,8 +158,8 @@
                     ; FormatTime, ngaytuongtrinh, %time%, dd/MM/yyyy ; format the time
                     giobatdau := FormatTime(gioChiDinhDichVu, "HH:mm") ; format the time
                     ; EnvAdd, time, 10 , Minits ; them 30 phut
-                    gioketthuc := FormatTime(time, "HH:mm") ; format the time
-                    time := DateAdd(gioChiDinhDichVu, 1, "Minutes")
+                    gioketthuc := FormatTime(gioChiDinhDichVu, "HH:mm") ; format the time
+                    gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes")
 
                     MouseClick "Left", 65, 130 ; Click chọn thủ thuật
                         WinWaitActiveWindow("Thông tin phẫu thủ thuật")

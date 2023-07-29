@@ -753,7 +753,7 @@ WinWaitActiveWindow(window){
             MsgBox "Không mở được " window
             MyGui.Show
         }
-    Sleep 500
+    Sleep 100
 }
 
 laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
