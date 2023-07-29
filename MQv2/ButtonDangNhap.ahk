@@ -1,6 +1,11 @@
 ﻿button_dangnhap_click(ctrl, *){
-	tendangnhap := thongTinNhanSu[User.Text][1]
-	matkhau := thongTinNhanSu[User.Text][2]
+	try {
+		tendangnhap := thongTinNhanSu[User.Text][1]
+		matkhau := thongTinNhanSu[User.Text][2]
+	} catch Error as e {
+		MyGui.Show
+		return	
+	}
 	; Đóng cửa sổ có sẵn
 	Loop 3
 		{
@@ -12,18 +17,8 @@
 		Run("MQHIS.exe", "D:\MQSOFT\MQHIS\bin\Debug")
 	catch
 		MsgBox "File does not exist."
-	if WinWait(tenbenhvien, , 30)
-		{
-			if  WinWait("ĐĂNG NHẬP HỆ THỐNG")
-				WinActivate
-		}
-	else
-		{
-			MsgBox "Không tìm thấy file"
-			Reload
-		}
-	Sleep 100
+	WinWaitActiveWindow("ĐĂNG NHẬP HỆ THỐNG")
 	dangnhapMQ(tendangnhap, matkhau)
-	WinActivate(tenbenhvien)
+	WinWaitActiveWindow(tenbenhvien)
 }
 

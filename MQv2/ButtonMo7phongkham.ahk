@@ -61,8 +61,5 @@ mophongkham(id){
         MouseClick "L", 734, 287 ; chọn phòng
         Sleep 100
         MouseClick "L",  690, 806 ; nhan chon
-        WinWaitActiveWindow(tenbenhvien)
-        Sleep 500
-
     }
 }

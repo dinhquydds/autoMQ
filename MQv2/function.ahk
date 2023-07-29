@@ -746,10 +746,14 @@ WinWaitActiveWindow(tenbenhvien)
 
 
 WinWaitActiveWindow(window){
-    if WinWait(window)
+    if WinWait(window, , 50)
         WinActivate
+    else
+        {
+            MsgBox "Không mở được " window
+            MyGui.Show
+        }
     Sleep 500
-        
 }
 
 laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)

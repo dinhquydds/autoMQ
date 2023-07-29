@@ -19,7 +19,7 @@
     
     gioChiDinhDichVu := layGioChiDinh(StartHour.Text, StartMinute.Text) ;yyyymmddhhmmss
     ; gioChiDinhNhapVaoMay := FormatTime(giochidinhdichvu, "HH:mm")
-    gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Value, phuttuongtrinh.Value, gioChiDinhDichVu)
+    gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Text, phuttuongtrinh.Text, gioChiDinhDichVu)
   
     ; Lay thong tin dich vu duoc lam
     ;kiem tra thong tin da nhap dung chua
@@ -234,8 +234,6 @@
                     Sleep 500
                     Send "!y"
                     Sleep 1000
-                    
-
                     i += 1
     }
 
@@ -321,9 +319,9 @@
                     toothlist.Push(danhsachrang)
                 }
 
-            if Dichvu%stt%.Text = "Nhổ răng phẫu thuật"
+            if Dichvu%stt%.Text = "Nhổ răng"
                 {
-                    if not NhoRangPhauThuat%stt%.Value
+                    if not NhoRang%stt%.Value
                         {
                             MsgBox "Chưa nhập dịch vụ nhổ răng"
                             MyGui.Show
@@ -336,58 +334,15 @@
                             MyGui.Show
                             return
                         }
-                    if danhsachrang.Length != 1
+                    
+                    if (danhsachrang.Length > 1 and  NhoRang%stt%.Value < 20)
                         {
                             MsgBox "Nhổ răng phẫu thuật chỉ nhập 1 răng"
                             MyGui.Show
                             return
                         }
-                    ;kiem tra so rang khon ham tren
-                    if (NhoRangPhauThuat%stt%.Value > 0) and (NhoRangPhauThuat%stt%.Value <= 7)
-                        if not InStr("18 28", danhsachrang[1])
-                            {
-                                MsgBox "Nhập sai số răng khôn hàm trên"
-                                MyGui.Show
-                                return
-                            }
-                    if (NhoRangPhauThuat%stt%.Value >= 8) and (NhoRangPhauThuat%stt%.Value <= 14)
-                        if not InStr("38 48", danhsachrang[1])
-                            {
-                                MsgBox "Nhập sai số răng khôn hàm dưới"
-                                MyGui.Show
-                                return
-                            }
-                    ; nho rang vinh vien
-                    if NhoRangPhauThuat%stt%.Value = 16
-                        if not InStr(rangvinhvien, danhsachrang[1])
-                            {
-                                MsgBox "Chỉ nhập răng vĩnh viễn"
-                                mygui.Show
-                                return
-                            }
-                    dichvu.Push(danhMucNhoRangPhauThuat[NhoRangPhauThuat%stt%.Value])
-                    savebaohiem.Push(baohiem%stt%.Text)
-                    toothlist.Push(danhsachrang)
-                }
-
-            if Dichvu%stt%.Text = "Nhổ răng thủ thuật"
-                {
-                    if not NhoRangThuThuat%stt%.Value
-                        {
-                            MsgBox "Chưa nhập dịch vụ nhổ răng"
-                            MyGui.Show
-                            return
-                        }
-                    
-                    danhsachrang := laydanhsachrang(Toothlist%stt%.Text)
-                    if danhsachrang.Length = 0
-                        {
-                            MsgBox "Nhổ răng thủ thuật`nKiểm tra lại số răng" 
-                            MyGui.Show
-                            return
-                        }
-                    ;nho rang sua
-                    if NhoRangThuThuat%stt%.Value = 1
+                    ; nho rang sua
+                    if NhoRang%stt%.Value = 20
                         for tooth in danhsachrang
                             if not InStr(rangsua, tooth)
                                 {
@@ -395,20 +350,35 @@
                                     MyGui.Show
                                     return
                                 }
-                    ;nho rang vinh vien
-                    if NhoRangThuThuat%stt%.Value != 1
-                        for tooth in danhsachrang
-                            if not InStr(rangvinhvien, tooth)
-                                {
-                                    MsgBox "Chỉ nhập răng vĩnh viễn"
-                                    MyGui.Show
-                                    return
-                                }
-                    dichvu.Push(danhMucNhoRangThuThuat[NhoRangThuThuat%stt%.Value])
+                    ;kiem tra so rang khon ham tren
+                    if (NhoRang%stt%.Value > 0) and (NhoRang%stt%.Value <= 7)
+                        if not InStr("18 28", danhsachrang[1])
+                            {
+                                MsgBox "Nhập sai số răng khôn hàm trên"
+                                MyGui.Show
+                                return
+                            }
+                    if (NhoRang%stt%.Value >= 8) and (NhoRang%stt%.Value <= 14)
+                        if not InStr("38 48", danhsachrang[1])
+                            {
+                                MsgBox "Nhập sai số răng khôn hàm dưới"
+                                MyGui.Show
+                                return
+                            }
+                    ; nho rang vinh vien
+                    if NhoRang%stt%.Value = 16
+                        if not InStr(rangvinhvien, danhsachrang[1])
+                            {
+                                MsgBox "Chỉ nhập răng vĩnh viễn"
+                                mygui.Show
+                                return
+                            }
+                    dichvu.Push(danhMucNhoRang[NhoRang%stt%.Value])
                     savebaohiem.Push(baohiem%stt%.Text)
                     toothlist.Push(danhsachrang)
                 }
-            
+
+                       
             if Dichvu%stt%.Text = "Nội nha"
                 {
                     if not NoiNha%stt%.Value
