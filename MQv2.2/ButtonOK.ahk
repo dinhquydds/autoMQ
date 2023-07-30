@@ -20,18 +20,22 @@
                     MyGui.Show
                     return
                 }
-            temp := layChiDinh(Dichvu%rowNum%.Text, Chidinh%rowNum%.Text, Toothlist%rowNum%.Text)
+
+            temp := layChiDinh(Dichvu%rowNum%.Text, Chidinh%rowNum%.Text, BaoHiem%rowNum%.Value, Toothlist%rowNum%.Text)
             if temp[1] = "Fail"
                 {
                     MsgBox "Kiểm tra lại"
                     MyGui.Show
                     return
                 }
-            listChidinh.Push([temp[2], temp[3]])
+            listChidinh.Push([temp[2], temp[3], temp[4]])
         }
     for i in listChidinh
-        MsgBox i[1]
+        MsgBox i[2]
     
+    MyGui.Show
+    return
+
     IDbacsy := thongTinNhanSu[bacsi.Text][3]
     IDphuta := thongTinNhanSu[phuta.Text][3]
     IDvongtrong := thongTinNhanSu[vongtrong.Text][3]
@@ -46,8 +50,9 @@
     
     
     
-    MyGui.Show
-    return
+   
+
+
     dichvu := []
     toothlist := []
     savebaohiem := []
@@ -727,56 +732,61 @@ testnhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, 
     Send "{Enter 3}"
 }
 
-layChiDinh(dichvu, chidinh, toothlist){
+layChiDinh(dichvu, chidinh, baohiem, toothlist){
+    if baohiem := ""
+        baohiem := "100"
+    MsgBox baohiem
     if InStr(KhongCanNhapSoRang, chidinh)
-        return ["OK", chidinh, []]
+        return ["OK", chidinh, baohiem, []]
+    danhsachrang := laydanhsachrang(toothlist)
     if dichvu = "Nội nha"
         {
-            danhsachrang := laydanhsachrang(toothlist)
             if danhsachrang.Length != 1 ; nhap sai ten rang
-                return ["Fail", , ]
+                return ["Fail", , baohiem, []]
             firstLetter := SubStr(danhsachrang[1], 1, 1)
             lastLetter := SubStr(danhsachrang[1], 2, 1)
             if chidinh = "Nội nha lần đầu"
                 {
                     if InStr("54 55 64 65 74 75 84 85", danhsachrang[1])
-                        return ["OK", "Điều trị tủy răng sữa nhiều chân", danhsachrang]
-                    if InStr("51 52 53 61 62 63 71 72 73 81 82 83", danhsachrang[1])
-                        return ["OK", "Điều trị tủy răng sữa một chân", danhsachrang]
+                        return ["OK", "Điều trị tủy răng sữa nhiều chân",baohiem, danhsachrang]
+                    if InStr("51 52 53 61 62 63 71 72 73 81 82 83", baohiem, danhsachrang[1])
+                        return ["OK", "Điều trị tủy răng sữa một chân", baohiem, danhsachrang]
                     if InStr("1 2 3 4 5", lastLetter)
-                        return ["OK", "Điều trị tủy răng số " lastLetter, danhsachrang]
+                        return ["OK", "Điều trị tủy răng số " lastLetter, baohiem,  danhsachrang]
                     if InStr("6 7", lastLetter)
                         {
                             if InStr("1 2", firstLetter)
-                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên", danhsachrang]
+                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên", baohiem, danhsachrang]
                             else
-                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới", danhsachrang]
+                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới", baohiem, danhsachrang]
                         }
                 }
             if chidinh = "Nội nha lại"
                 {
                     if not InStr(rangvinhvien, danhsachrang[1])
-                        return ["Fail", , ]
-                    return ["OK", "Điều trị tủy lại răng số " lastLetter, danhsachrang]
+                        return ["Fail", , baohiem, []]
+                    return ["OK", "Điều trị tủy lại răng số " lastLetter, baohiem, danhsachrang]
                 }
             if chidinh = "Nội nha lần đầu (gây mê)"
                 {
                     if InStr("1 2 3 4 5", lastLetter)
-                        return ["OK", "Điều trị tủy răng số " lastLetter " gây mê", danhsachrang]
+                        return ["OK", "Điều trị tủy răng số " lastLetter " gây mê", baohiem, danhsachrang]
 
                     if InStr("6 7", lastLetter)
                         {
                             if InStr("1 2", firstLetter)
-                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên gây mê", danhsachrang]
+                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên gây mê", baohiem, danhsachrang]
                             else
-                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới gây mê", danhsachrang]
+                                return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới gây mê", baohiem, danhsachrang]
                         }
                 }
             if chidinh = "Nội nha lại (gây mê)"
                 {
-                    return ["OK", "Điều trị tủy lại răng số " lastLetter " gây mê", danhsachrang]
+                    return ["OK", "Điều trị tủy lại răng số " lastLetter " gây mê", baohiem, danhsachrang]
                 }
         }
-    
+    if danhsachrang.Length > 0
+        return ["OK", chidinh, baohiem, danhsachrang]
+    return ["Fail", , baohiem, []]
 
 }

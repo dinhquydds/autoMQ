@@ -31,7 +31,7 @@ MyGui.Add("Button", "x+10 yp", "Phòng khám").OnEvent("Click", button_mo7phongk
 ; dich vu 1
 Dichvu1 := MyGui.Add("DropDownList", "x10 yp+35 R20 Sort", TatCaDichVu)
 Dichvu1.OnEvent("Change", chondichvu1)
-BaoHiem1 := MyGui.Add("DropDownList", "x+10 yp w50 R10 ", baohiem)
+BaoHiem1 := MyGui.Add("DropDownList", "x+10 yp w50 R10", baohiem)
 Chidinh1 := MyGui.Add("DropDownList", "x230 yp w200 R30")
 Toothlist1 := MyGui.Add("Edit", "x440 yp w200") ;toothlist
 
