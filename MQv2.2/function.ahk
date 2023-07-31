@@ -36,7 +36,7 @@ laygioNhapTuongTrinh(giotuongtrinh, phuttuongtrinh, giochidinh)
             return getStartTime(giotuongtrinh, phuttuongtrinh)
 }
 
-nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
+nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
 {
     ; global User
     SetTitleMatchMode 2
@@ -69,7 +69,7 @@ nhapchidinh(Machidinh, phantrambaohiem, giochidinh, ghichu:="")
     Sleep 100
     Send "{Delete}"
     Sleep 100
-    Send thongTinNhanSu[user.Text][3]
+    Send bacsichidinh
     Sleep 100
     ;Send {tab 11}
     
@@ -761,3 +761,5 @@ laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
         }
     return true
 }
+
+^+!v::MsgBox Version

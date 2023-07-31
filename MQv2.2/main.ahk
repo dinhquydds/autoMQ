@@ -13,10 +13,10 @@ tenbenhvien := "BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT"
 #Include function.ahk
 #Include tuongtrinh.ahk
 #Include glabel1.ahk
-; #Include labelbacsi.ahk
 #Include ButtonCTMTQTCK.ahk
 #Include ButtonDangNhap.ahk
 #Include ButtonOK.ahk
+#Include ButtonChinhNha.ahk
 #Include ButtonMo7phongkham.ahk
 #Include ButtonMoXQuang.ahk
 

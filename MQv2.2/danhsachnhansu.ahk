@@ -1,4 +1,9 @@
 ﻿; thong tin nhan su: ten, 1 ma dang nhap, 2 mat khau, 3 masoID
+danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV"]
+danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV"]
+danhsachdieuduong := ["Lan DTQ","Thảo DTT","Minh DTN","Lý DT","Tình HTH","Trang LTT","Hòa LT","Vân LTT","Nam MM","Sơn NT","Sương NT","Thắm NT","Hằng NTT","Vui NT","Lực NV","Linh PTT","Luyến VT","Quỳnh VTN","Ý VTN","Hạnh NTM"]
+
+
 thongTinNhanSu := Map()
 
 thongTinNhanSu["Quý ND"] := ["quynd", "1", "0168"] ; "Nguyễn Đình Quý"
@@ -38,3 +43,6 @@ thongTinNhanSu["Ý VTN"] := ["yvtn","123456",  "0088"] ; "Võ Trường Như Ý"
 thongTinNhanSu["Trâm HT"] := ["tramht","123456", "0435"] ; "Trâm HT"
 thongTinNhanSu["Hạnh NTM"] := ["hanhntm","123456", "0087"] ; "Ngô Thị Mỹ Hạnh"
 
+; kiem tra thong tin
+; for user in danhsachdieuduong
+;     MsgBox user thongTinNhanSu[user][1] " mat khau " thongTinNhanSu[user][2] " ma so " thongTinNhanSu[user][3]
