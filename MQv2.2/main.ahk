@@ -20,11 +20,6 @@ tenbenhvien := "BỆNH VIỆN ĐẠI HỌC Y DƯỢC BUÔN MA THUỘT"
 #Include ButtonMo7phongkham.ahk
 #Include ButtonMoXQuang.ahk
 
-; #Include dexuatdieutri.ahk
-
-
-
-
 ^`::Reload
 ^Esc::ExitApp
 

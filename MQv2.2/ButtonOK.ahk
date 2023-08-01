@@ -29,6 +29,20 @@
         listChidinh.Push([temp[2], temp[3], temp[4]]) ; chi dinh, bao hiem danh sach rang
     }
 
+    canhbaoBaohiem := ""
+
+    if listChidinh.Length > 1
+    {
+        for i in listChidinh
+        {
+            canhbaoBaohiem .= i[1] ": " i[2] " `n"
+        }
+        if MsgBox(canhbaoBaohiem "`n Nhấn Yes để tiếp tục, No để sửa lại phần trăm", "Kiểm tra phần trăm bảo hiểm", "YesNo") = "No"
+        {
+            MyGui.Show
+            return
+        }
+    }
 
     gioChiDinhDichVu := layGioChiDinh(StartHour.Value, StartMinute.Value) ;yyyymmddhhmmss
     gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Value, phuttuongtrinh.Value, gioChiDinhDichVu)
@@ -37,6 +51,7 @@
     IDvongtrong := thongTinNhanSu[vongtrong.Text][3]
     IDvongngoai := thongTinNhanSu[vongngoai.Text][3]
     bacsichidinh := thongTinNhanSu[User.Text][3]
+
     for i in listChidinh ; vong lap qua danh sach chi dinh
     {
 
@@ -66,29 +81,31 @@
         phantrambaohiem := i[2]
         giochidinh := FormatTime(giochidinhdichvu, "HH:mm")
 
-        ; WinWaitActiveWindow(tenbenhvien)
-        ; mof7()
+        WinWaitActiveWindow(tenbenhvien)
+        mof7()
+
+
         loop SolanChidinh ; nhap chi dinh
         {
             if isToothNumber(ghichu[A_Index])
                 note := "Răng " ghichu[A_Index]
             else
                 note := " "
-            testnhapchidinh(bacsichidinh, machidinh, phantrambaohiem, giochidinh, note)
+            nhapchidinh(bacsichidinh, machidinh, phantrambaohiem, giochidinh, note)
             Sleep 1000
             note := " "
         }
 
-        ; nhanketthuc()
-        ; mabenhnhan := laymabenhnhan()
-        ; mof6()
+        nhanketthuc()
+        mabenhnhan := laymabenhnhan()
+        mof6()
 
         loop SolanChidinh ; nhap tuong trinh
         {
-            testnhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, vocam, noidungtuongtrinh, ghichu[A_Index])
+            nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, vocam, noidungtuongtrinh, ghichu[A_Index])
             Sleep 500
         }
-        ; nhanketthuc()
+        nhanketthuc()
 
         gioChiDinhDichVu := DateAdd(gioChiDinhDichVu, 1, "Minutes") ; them 1 phut vao gio chi dinh
     }

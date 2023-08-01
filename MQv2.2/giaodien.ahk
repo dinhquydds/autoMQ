@@ -74,7 +74,7 @@ vongngoai := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieud
 MyGui.Add("Button", "x260 yp+30 w70 h30", "&OK").OnEvent("Click", Button_OK_Click)
 MyGui.Add("Button", "x340 yp w70 h30", "Đón&g").OnEvent("Click", DongChuongTrinh)
 MyGui.Add("Button", "x420 yp w70 h30", "&Reset").OnEvent("Click", ResetChuongTrinh)
-MyGui.Add("Button", "x+10 yp w70 h30", "&Chỉnh nha").OnEvent("Click", chinhNha)
+MyGui.Add("Button", "x+10 yp w70 h30", "&Chỉnh nha").OnEvent("Click", ButtonChinhNha)
 
 ; ;thời gian
 MyGui.Add("Text", "x12 yp w130 h30", "Giờ chỉ định")
@@ -114,11 +114,28 @@ chinhnhaGui.Add("Text","x+10 yp","đến lần")
 lanketthuc := chinhnhaGui.Add("Edit", "x+10 yp w50")
 chinhnhaGui.Add("Text", "x10 yp+30", "So tien le")
 
+chinhnhaGui.Add("Text", "x10" , "500K")
+namtramK := chinhnhaGui.Add("Edit", "x+10 yp w50")
 
-bacsichinhnha := chinhnhaGui.Add("DropDownList", "x10 yp+30 Sort r50 choose1", danhsachbacsi)
-phutachinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
-vongtrongchinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
-vongngoaichinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
+chinhnhaGui.Add("Text", "x10", "250K")
+haitramruoiK:= chinhnhaGui.Add("Edit", "x+10 yp w50")
+
+chinhnhaGui.Add("Text", "x10", "100K")
+mottramK := chinhnhaGui.Add("Edit", "x+10 yp w50")
+
+chinhnhaGui.Add("Text", "x10", "20K")
+haimuoiK := chinhnhaGui.Add("Edit", "x+10 yp w50")
+
+chinhnhaGui.Add("Text", "x10", "10K")
+muoiK := chinhnhaGui.Add("Edit", "x+10 yp w50")
+
+chinhnhaGui.Add("Text", "x10", "5K")
+namK := chinhnhaGui.Add("Edit", "x+10 yp w50")
+
+bacsichinhnha := chinhnhaGui.Add("DropDownList", "x10 yp+30 Sort r50", danhsachbacsi)
+phutachinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
+vongtrongchinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
+vongngoaichinhnha := chinhnhaGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
 
 chinhnhaGui.Add("Text", "x12 yp+30 w130 h30", "Giờ chỉ định")
 chinhnhaGui.Add("Edit", "Number x150 yp w50 h20")
@@ -126,11 +143,11 @@ StartHourchinhnha := chinhnhaGui.Add("UpDown", "yp Range0-24")
 chinhnhaGui.Add("Edit", "Number x200 yp w50 h20")
 StartMinutechinhnha := chinhnhaGui.Add("UpDown", "yp Range0-60")
 
-; chinhnhaGui.Add("Text", "x12 yp+30 w130 h30", "Giờ tường trình")
-; chinhnhaGui.Add("Edit", "Number x150 yp w40 h20")
-; giotuongtrinhchinhnha := chinhnhaGui.Add("UpDown", "yp Range0-24")
-; chinhnhaGui.Add("Edit", "Number x200 yp w40 h20")
-; phuttuongtrinhchinhnha := chinhnhaGui.Add("UpDown", "yp Range0-60")
+chinhnhaGui.Add("Text", "x12 yp+30 w130 h30", "Giờ tường trình")
+chinhnhaGui.Add("Edit", "Number x150 yp w40 h20")
+giotuongtrinhchinhnha := chinhnhaGui.Add("UpDown", "yp Range0-24")
+chinhnhaGui.Add("Edit", "Number x200 yp w40 h20")
+phuttuongtrinhchinhnha := chinhnhaGui.Add("UpDown", "yp Range0-60")
 
 chinhnhaGui.Add("Button", "x260 yp w70 h30", "&OK").OnEvent("Click", OK_chinhnha)
 
@@ -138,7 +155,7 @@ chinhnhaGui.Add("Link","x10 y+10", 'Mở trang tính để nhập giờ tường
 ; chinhnhaGui.Add("Text", "x+250 yp w40 h30", Format("V.{1}", Version))
 
 
-chinhnha(ctrl, *){
+Buttonchinhnha(ctrl, *){
     MyGui.Hide
     chinhnhaGui.Show
 }
