@@ -174,7 +174,7 @@
             }
         }
 
-
+        giochidinh := FormatTime(gioChiDinhDichVu, "HH:mm")
         WinWaitActiveWindow(tenbenhvien)
         mof7()
         loop loopcount {

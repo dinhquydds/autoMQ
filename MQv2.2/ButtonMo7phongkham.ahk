@@ -1,52 +1,47 @@
 ﻿CoordMode("Mouse", "Screen")
-button_mo7phongkham_click(ctrl, *){
-    mophongkham("011,039,040,041,042,043,120")
+button_mo7phongkham_click(ctrl, *) {
+    mophongkham(listPhongKham)
 }
+
+listPhongKham := ["011", "039", "040", "041", "042", "043", "120"]
 
 ^+1::
 {
-mophongkham("011")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+2::
 {
-mophongkham("039")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+3::
 {
-mophongkham("040")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+4::
 {
-mophongkham("041")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+5::
 {
-mophongkham("042")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+6::
 {
-mophongkham("043")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
-
 
 ^+7::
 {
-mophongkham("120")
+    mophongkham([listPhongKham[SubStr(A_ThisHotkey, -1)]])
 }
 
-
-mophongkham(id){
-    Loop parse, id, ","
+mophongkham(listPhongkham) {
+    for phongkham in listPhongkham
     {
         WinWaitActiveWindow(tenbenhvien)
         Sleep 100
@@ -56,10 +51,10 @@ mophongkham(id){
         Sleep 100
         Send "^a"
         Sleep 100
-        Send A_LoopField  ;ma phong
+        Send phongkham  ;ma phong
         Sleep 100
         MouseClick "L", 734, 287 ; chọn phòng
         Sleep 100
-        MouseClick "L",  690, 806 ; nhan chon
+        MouseClick "L", 690, 806 ; nhan chon
     }
 }

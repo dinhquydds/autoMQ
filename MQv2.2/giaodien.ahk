@@ -8,7 +8,7 @@ danhmucNoiNha := ["Nội nha lần đầu","Nội nha lại","Nội nha lần đ
 Version := FileRead("Version.txt")
 
 ; ;Đăng nhập tự động
-User := MyGui.Add("DropDownList", "X10 Y10  h10 R50 Sort choose1", danhsachUser)
+User := MyGui.Add("DropDownList", "X10 Y10  h10 R50 Sort", danhsachUser)
 
 MyGui.Add("Button", "x+10 yp", "Đăng Nhập").OnEvent("Click", button_dangnhap_click)
 MyGui.Add("Button", "x+10 yp", "X-quang").OnEvent("Click", button_moxquang_click)
@@ -64,10 +64,10 @@ BaoHiem7 := MyGui.Add("DropDownList", "x+10 yp w50 R10", baohiem)
 Chidinh7 := MyGui.Add("DropDownList", "x230 yp w200 R30")
 Toothlist7 := MyGui.Add("Edit", "x440 yp w200") ;toothlist
 
-bacsi := MyGui.Add("DropDownList", "x10 yp+30 Sort r50 choose1", danhsachbacsi)
-phuta := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
-vongtrong := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
-vongngoai := MyGui.Add("DropDownList", "x+10 yp Sort r50 choose1", danhsachdieuduong)
+bacsi := MyGui.Add("DropDownList", "x10 yp+30 Sort r50", danhsachbacsi)
+phuta := MyGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
+vongtrong := MyGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
+vongngoai := MyGui.Add("DropDownList", "x+10 yp Sort r50", danhsachdieuduong)
 
 
 ; ;button
@@ -90,7 +90,7 @@ MyGui.Add("Edit", "Number x200 yp w40 h20")
 phuttuongtrinh := MyGui.Add("UpDown", "yp Range0-60")
 
 MyGui.Add("Link","x10 y+10", 'Mở trang tính để nhập giờ tường trình <a href="https://docs.google.com/spreadsheets/d/1eEt6Hl4ag8Vnru0AUcT2NRjp2BGqqf7FdFs77TJ6-EU/edit?pli=1#gid=0">ở đây</a>')
-MyGui.Add("Text", "x+250 yp w40 h30", Format("V.{1}", Version))
+; MyGui.Add("Text", "x+250 yp w40 h30", Format("V.{1}", Version))
 
 MyGui.Show("x1000 y 300 AutoSize")
 
@@ -106,7 +106,7 @@ chinhnhaGui := Gui(,"Nhap tuong trinh chinh nha")
 chinhnhaGui.SetFont("s10", "Arial")
 chinhnhaGui.OnEvent("Close", closeChinhNhaGui)
 
-Userchinhnha := chinhnhaGui.Add("DropDownList", "X10 Y10  h10 R50 Sort choose1", danhsachUser)
+Userchinhnha := chinhnhaGui.Add("DropDownList", "X10 Y10  h10 R50 Sort", danhsachUser)
 
 chinhnhaGui.Add("Text","x10","Chỉnh nha lần")
 lanbatdau := chinhnhaGui.Add("Edit", "x+10 yp w50")

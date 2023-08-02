@@ -30,7 +30,7 @@
                 Chidinh1.Delete()
                 Chidinh1.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh1.Delete()
@@ -85,7 +85,7 @@ chondichvu2(ctrl, *) {
                 Chidinh2.Delete()
                 Chidinh2.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh2.Delete()
@@ -140,7 +140,7 @@ chondichvu3(ctrl, *) {
                 Chidinh3.Delete()
                 Chidinh3.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh3.Delete()
@@ -195,7 +195,7 @@ chondichvu4(ctrl, *) {
                 Chidinh4.Delete()
                 Chidinh4.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh4.Delete()
@@ -250,7 +250,7 @@ chondichvu5(ctrl, *) {
                 Chidinh5.Delete()
                 Chidinh5.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh5.Delete()
@@ -305,7 +305,7 @@ chondichvu6(ctrl, *) {
                 Chidinh6.Delete()
                 Chidinh6.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh6.Delete()
@@ -360,7 +360,7 @@ chondichvu7(ctrl, *) {
                 Chidinh7.Delete()
                 Chidinh7.Add(danhmucNoiNha)
             }
-        
+
         Case "Răng sứ":
             {
                 Chidinh7.Delete()

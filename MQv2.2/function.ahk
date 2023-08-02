@@ -1,58 +1,142 @@
 ﻿getStartTime(StartHour, StartMinute) {
-    tmptime := FormatTime(A_Now, "yyyyMMdd") 
-	if (StartHour < 0) or (StartHour > 24)
-		{
-			MsgBox "Bạn nhập sai giờ"
-		}
-	if (StartMinute < 0) or (StartMinute > 60)
-		{
-			MsgBox "Bạn nhập sai giờ"
-		}
+    tmptime := FormatTime(A_Now, "yyyyMMdd")
+    if (StartHour < 0) or (StartHour > 24)
+    {
+        MsgBox "Bạn nhập sai giờ"
+    }
+    if (StartMinute < 0) or (StartMinute > 60)
+    {
+        MsgBox "Bạn nhập sai giờ"
+    }
 
-	if (StartHour < 10)
-		StartHour := Format("0{1}", StartHour)
-	if (StartMinute < 10)
-		StartMinute := Format("0{1}", StartMinute)
-	tmptime := Format("{1}{2}{3}00", tmptime, StartHour,StartMinute)
-	return tmptime
+    if (StartHour < 10)
+        StartHour := Format("0{1}", StartHour)
+    if (StartMinute < 10)
+        StartMinute := Format("0{1}", StartMinute)
+    tmptime := Format("{1}{2}{3}00", tmptime, StartHour, StartMinute)
+    return tmptime
 }
 
 layGioChiDinh(StartHour, StartMinute)
 {
     if (StartHour = 0) and (StartMinute = 0)
-    	return A_now
+        return A_now
     else
-    	return getStartTime(StartHour, StartMinute)
+        return getStartTime(StartHour, StartMinute)
 }
 
 laygioNhapTuongTrinh(giotuongtrinh, phuttuongtrinh, giochidinh)
 {
     if (giotuongtrinh = 0) and (phuttuongtrinh = 0)
-    	{
-            return DateAdd(giochidinh, Random(3,7), "Minutes") ;yyyymmddhhmmss
-            ; EnvAdd, time, %randomtime% ,Minits ; gio tuong trinh sau gio chi dinh 3 - 7 phut
-        }
-        else
-            return getStartTime(giotuongtrinh, phuttuongtrinh)
+    {
+        return DateAdd(giochidinh, Random(3, 7), "Minutes") ;yyyymmddhhmmss
+        ; EnvAdd, time, %randomtime% ,Minits ; gio tuong trinh sau gio chi dinh 3 - 7 phut
+    }
+    else
+        return getStartTime(giotuongtrinh, phuttuongtrinh)
 }
 
-nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
+layChiDinh(dichvu, chidinh, baohiem, toothlist) {
+    if baohiem = ""
+        baohiem := 100
+    if InStr(KhongCanNhapSoRang, chidinh)
+        return ["OK", chidinh, baohiem, []]
+    danhsachrang := laydanhsachrang(toothlist)
+    if dichvu = "Nội nha"
+    {
+        if danhsachrang.Length != 1 ; nhap sai ten rang
+            return ["Fail Nội nha chỉ nhập 1 răng", , baohiem, []]
+        firstLetter := SubStr(danhsachrang[1], 1, 1)
+        lastLetter := SubStr(danhsachrang[1], 2, 1)
+        if chidinh = "Nội nha lần đầu"
+        {
+            if InStr("54 55 64 65 74 75 84 85", danhsachrang[1])
+                return ["OK", "Điều trị tủy răng sữa nhiều chân", baohiem, danhsachrang]
+            if InStr("51 52 53 61 62 63 71 72 73 81 82 83", danhsachrang[1])
+                return ["OK", "Điều trị tủy răng sữa một chân", baohiem, danhsachrang]
+            if InStr("1 2 3 4 5", lastLetter)
+                return ["OK", "Điều trị tủy răng số " lastLetter, baohiem, danhsachrang]
+            if InStr("6 7", lastLetter)
+            {
+                if InStr("1 2", firstLetter)
+                    return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên", baohiem, danhsachrang]
+                else
+                    return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới", baohiem, danhsachrang]
+            }
+        }
+        if chidinh = "Nội nha lại"
+        {
+            if not InStr(rangvinhvien, danhsachrang[1])
+                return ["Fail chỉ nhập nội nha lại răng vĩnh viễn", , baohiem, []]
+            return ["OK", "Điều trị tủy lại răng số " lastLetter, baohiem, danhsachrang]
+        }
+        if chidinh = "Nội nha lần đầu (gây mê)"
+        {
+            if InStr("54 55 64 65 74 75 84 85", danhsachrang[1])
+                return ["OK", "Điều trị tủy răng sữa nhiều chân gây mê", baohiem, danhsachrang]
+            if InStr("51 52 53 61 62 63 71 72 73 81 82 83", danhsachrang[1])
+                return ["OK", "Điều trị tủy răng sữa một chân gây mê", baohiem, danhsachrang]
+            if InStr("1 2 3 4 5", lastLetter)
+                return ["OK", "Điều trị tủy răng số " lastLetter " gây mê", baohiem, danhsachrang]
+
+            if InStr("6 7", lastLetter)
+            {
+                if InStr("1 2", firstLetter)
+                    return ["OK", "Điều trị tủy răng số " lastLetter " hàm trên gây mê", baohiem, danhsachrang]
+                else
+                    return ["OK", "Điều trị tủy răng số " lastLetter " hàm dưới gây mê", baohiem, danhsachrang]
+            }
+        }
+        if chidinh = "Nội nha lại (gây mê)"
+        {
+            return ["OK", "Điều trị tủy lại răng số " lastLetter " gây mê", baohiem, danhsachrang]
+        }
+    }
+    ; nho rang phẫu thuật chỉ nhập 1 răng
+    if dichvu = "Nhổ răng" {
+        if InStr(danhmucNhoRangPhauthuat, chidinh) {
+            if danhsachrang.Length != 1
+                return ["Fail Chỉ nhổ 1 răng phẫu thuật", , baohiem, []]
+        }
+
+        if InStr("Nhổ răng khôn hàm trên 500K, Nhổ răng khôn hàm trên 1M, Nhổ răng khôn hàm trên 1.5M, Nhổ răng khôn hàm trên 2M, Nhổ răng khôn hàm trên 2.5M, Nhổ răng khôn hàm trên 3M, Nhổ răng khôn hàm trên 3.5M", chidinh)
+            if not InStr("18 28", danhsachrang[1])
+                return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
+        if InStr("Nhổ răng khôn hàm dưới 500K, Nhổ răng khôn hàm dưới 1M, Nhổ răng khôn hàm dưới 1.5M, Nhổ răng khôn hàm dưới 2M, Nhổ răng khôn hàm dưới 2.5M, Nhổ răng khôn hàm dưới 3M, Nhổ răng khôn hàm dưới 3.5M", chidinh)
+            if not InStr("38 48", danhsachrang[1])
+                return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
+        if chidinh = "Nhổ răng sữa" ; nhap duoc nhieu rang
+            for tooth in danhsachrang {
+                if not InStr(rangsua, tooth)
+                    return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
+            }
+        if InStr("Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2, Nhổ răng thừa, Nhổ răng sữa, Nhổ răng lung lay, Nhổ chân răng,Ghép huyết tương", chidinh)
+            for tooth in danhsachrang {
+                if not InStr(rangvinhvien, tooth)
+                    return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
+            }
+        return ["OK", chidinh, baohiem, danhsachrang]
+    }
+
+    if danhsachrang.Length > 0
+        return ["OK", chidinh, baohiem, danhsachrang]
+
+    return ["Fail kiểm tra lại, lỗi không xác định", , baohiem, []]
+}
+
+nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu := "")
 {
-    ; global User
     SetTitleMatchMode 2
     CoordMode "Mouse", "Screen"
     WinWaitActiveWindow("Chỉ định dịch vụ")
     MouseClick "L", 260, 884
     Send "{Blind}{Alt Down}m{Alt Up}"
-    
     WinWaitActiveWindow("Chỉ định dịch vụ")
-
     if WinExist("MQ Solutions")
-        {
-            MyGui.Show()
-            Reload
-        }
-
+    {
+        MyGui.Show()
+        Reload
+    }
     Send "{Blind}{Shift Down}{Tab}{Shift Up}"
     MouseClick "L", 146, 881
     Sleep 100
@@ -71,11 +155,6 @@ nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
     Sleep 100
     Send bacsichidinh
     Sleep 100
-    ;Send {tab 11}
-    
-
-    Sleep 100
-    ;Send {tab 2}
     MouseClick "L", 225, 950
     Sleep 100
     Send ghichu
@@ -86,12 +165,10 @@ nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
     Send "!l"
     Sleep 500
     Send "!y"
-
     WinWaitActiveWindow("Chỉ định dịch vụ")
     ; sửa phần trăm bảo hiểm nếu khác 100
-    If (Phantrambaohiem != 100 and Phantrambaohiem != "")
+    If (Phantrambaohiem != 100)
     {
-
         MouseClick "L", 800, 155
         Sleep 100
         Send "^a"
@@ -100,9 +177,7 @@ nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
         Sleep 200
         Send "{down 20}"
         Send "!s"
-
         WinWaitActiveWindow("Chỉ định dịch vụ")
-        ;Controlsettext, WindowsForms10.EDIT.app.0.fcf9a4_r7_ad112, %Phantrambaohiem%, ahk_exe MQHIS.exe
         Send "{tab 6}"
         Sleep 200
         Send "^a"
@@ -112,7 +187,6 @@ nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
         Send "!l"
         Sleep 500
         Send "!y"
-
         WinWaitActiveWindow("Chỉ định dịch vụ")
         MouseClick "L", 800, 155
         Sleep 100
@@ -120,22 +194,18 @@ nhapchidinh(bacsichidinh, Machidinh, phantrambaohiem, giochidinh, ghichu:="")
         Sleep 100
         Send "{del}"
     }
-
-	Sleep 500
-
+    Sleep 500
 }
 
-nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu:=""){
+nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghichu := "") {
 
     CoordMode "Mouse", "Screen"
     global gioNhapTuongTrinh, mabenhnhan
-    ; global time, dichvu1, dichvu2, dichvu3 , dichvu4, dichvu5, dichvu6, dichvu7, mabenhnhan
     Sleep 1000
     MouseClick "L", 567, 845 ;Click mới
     Sleep 300
     ; chon chi dinh
     MouseClick "L", 643, 846 ; Click Danh sách
-
     WinWaitActiveWindow("Danh sách chỉ định")
     ; gui ma benh nhan
     MouseClick "L", 146, 110
@@ -143,8 +213,7 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Send mabenhnhan
     Sleep 200
     Send "{Enter}"
-    MouseClick "Left" , 65, 130 ; Click chọn thủ thuật
-
+    MouseClick "Left", 65, 130 ; Click chọn thủ thuật
     WinWaitActiveWindow("Thông tin phẫu thủ thuật")
     ; lay ngay gio
     giobatdau := FormatTime(gioNhapTuongTrinh, "HH:mm")
@@ -152,13 +221,11 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     gioketthuc := FormatTime(gioNhapTuongTrinh, "HH:mm")
     gioNhapTuongTrinh := DateAdd(gioNhapTuongTrinh, "1", "Minutes")
     Sleep 300
-
-; chon rang ham mat
+    ; chon rang ham mat
     MouseClick "L", 1252, 211
     Sleep 300
     MouseClick "L", 1207, 293
-
-; nhap gio thu thuat
+    ; nhap gio thu thuat
     Send "{tab 2}"
     Send giobatdau
     Sleep 100
@@ -198,10 +265,8 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Sleep 100
     Send "{tab 2}"
     Sleep 100
-
     nhapPTV()
     Sleep 100
-
     ; nhap noi dung tuong trinh
     Send "!t"
     Sleep 500
@@ -212,59 +277,56 @@ nhaptuongtrinh(ICD, Mathuthuat, thoigianthuthuat, Vocam, noidungtuongtrinh, ghic
     Send "{del}"
     Sleep 200
     tuongtrinh%noidungtuongtrinh%(ghichu)
-
     Sleep 500
-
     Send "{f6}" ;Lưu
     Sleep 1000
     Send "!y"
     Sleep 1000
-
     WinWaitActiveWindow("Thông tin phẫu thủ thuật")
 }
 
-nhanketthuc(){
+nhanketthuc() {
     Sleep 500
     ControlClick("&Kết thúc", "ahk_exe MQHIS.exe")
     WinWaitActiveWindow(tenbenhvien)
 }
 
-isToothNumber(toothNumber){
+isToothNumber(toothNumber) {
     if (isPermanentToothNumber(toothNumber) or isMilkToothNumber(toothNumber))
         return True
     else return False
 }
 
-isPermanentToothNumber(toothNumber){
+isPermanentToothNumber(toothNumber) {
     if (Strlen(toothNumber) != 2)
         return False
     if InStr(ranghamtren, toothNumber) or InStr(ranghamduoi, toothNumber)
         return true
 }
 
-isMilkToothNumber(toothNumber){
+isMilkToothNumber(toothNumber) {
     if (Strlen(toothNumber) != 2)
-        {
-            return False
-        }
+    {
+        return False
+    }
     if InStr(rangsuahamtren, toothNumber) or InStr(rangsuahamduoi, toothNumber)
         return true
 }
 
-laydanhsachrang(info){
+laydanhsachrang(info) {
     local danhsachrang
     danhsachrang := StrSplit(Trim(info), A_Space)
     if danhsachrang.Length = 0
         return []
     for tooth in danhsachrang
-        {
-            if not isToothNumber(tooth)
-                return []
-        }
+    {
+        if not isToothNumber(tooth)
+            return []
+    }
     return danhsachrang
 }
 
-mof6(){
+mof6() {
     WinWaitActiveWindow(tenbenhvien)
     Send "{f6}"
     WinWaitActiveWindow("Thông tin phẫu thủ thuật")
@@ -276,7 +338,6 @@ mof7()
     WinWaitActiveWindow("Chỉ định dịch vụ")
     Sleep 1000
 }
-
 
 dangnhapMQ(tendangnhap, matkhau)
 {
@@ -290,53 +351,54 @@ dangnhapMQ(tendangnhap, matkhau)
     ControlClick("Đăng nhập", "ĐĂNG NHẬP HỆ THỐNG")
 }
 
-^+x::moxquang
+^+x:: moxquang
 moxquang()
 {
     if not WinExist("MQRIS - [X QUANG]")
-        {
+    {
         if not WinExist("MQRIS")
-            {
-                try
-                    Run("MQRIS.exe", "D:\MQSOFT\MQRIS\bin\Debug")
-                catch
-                    MsgBox "Không tìm thấy file"
-                WinWaitActiveWindow("ĐĂNG NHẬP HỆ THỐNG")
-                dangnhapMQ("sonnt", "123456")
-                Sleep 3000
-            }
+        {
+            try
+                Run("MQRIS.exe", "D:\MQSOFT\MQRIS\bin\Debug")
+            catch
+                MsgBox "Không tìm thấy file"
+            WinWaitActiveWindow("ĐĂNG NHẬP HỆ THỐNG")
+            dangnhapMQ("sonnt", "123456")
+            Sleep 3000
+        }
         WinWaitActiveWindow("MQRIS")
         Sleep 100
         Send "!1"
         Send "{Down 12}"
         Send "{Enter}"
         WinWaitActiveWindow("Chọn thông tin làm việc")
-        
+
         Send "0360"
         Sleep 100
         Send "{Tab}"
         Sleep 500
         ControlClick("Đồng ý", "ahk_exe MQRIS.exe", , "Left", 1)
         Sleep 2000
-        
+
     }
     WinWaitActiveWindow("MQRIS - [X QUANG]")
     Sleep 500
 }
-nhapPTV(){
-Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai
-Send IDbacsy
-Send "{tab 2}"
-Send IDphuta
-Send "{tab 2}"
-Send "{tab 8}"
-Send IDvongtrong
-Send "{tab 2}"
-Send IDvongngoai
-Send "{tab}"
+
+nhapPTV() {
+    Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai
+    Send IDbacsy
+    Send "{tab 2}"
+    Send IDphuta
+    Send "{tab 2}"
+    Send "{tab 8}"
+    Send IDvongtrong
+    Send "{tab 2}"
+    Send IDvongngoai
+    Send "{tab}"
 }
 
-laymabenhnhan(){
+laymabenhnhan() {
     A_Clipboard := ""
     Sleep 500
     MouseClick("L", 109, 128)
@@ -362,379 +424,379 @@ rangvinhvien := "18 17 16 15 14 13 12 11 21 22 23 24 25 26 27 28 38 37 36 35 34 
 
 ::dxnrk::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
-WinWaitActiveWindow(tenbenhvien)
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    WinWaitActiveWindow(tenbenhvien)
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 482, 83
+    MouseClick "L", 482, 83
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 563, 349
+    MouseClick "L", 563, 349
 
-Sleep 1000
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 1000
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 1053, 873
+    MouseClick "L", 1053, 873
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 867, 401
+    MouseClick "L", 867, 401
 
-Sleep 890
+    Sleep 890
 
-Send "{Blind}k01"
+    Send "{Blind}k01"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 903, 490
+    MouseClick "L", 903, 490
 
-Sleep 100
+    Sleep 100
 
-Send "Phẫu thuật nhổ răng khôn mọc lệch hàm dưới"
+    Send "Phẫu thuật nhổ răng khôn mọc lệch hàm dưới"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}"
+    Send "{Blind}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}"
 
-Sleep 500
+    Sleep 500
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 900, 541
+    MouseClick "L", 900, 541
 
-Sleep 100
+    Sleep 100
 
-Send "Răng 18 28 38 48"
+    Send "Răng 18 28 38 48"
 
-Sleep 100
+    Sleep 100
 
-Send "{tab} Do chân răng … nằm sát dây thần kinh, nên sau khi nhổ răng… có thể bị tê môi, lưỡi, cằm trong thời gian ngắn. Sau nhổ răng có thể bị sưng, đau, rỉ máu vài ngày. BN đồng ý nhổ răng ... chi phí ..."
+    Send "{tab} Do chân răng … nằm sát dây thần kinh, nên sau khi nhổ răng… có thể bị tê môi, lưỡi, cằm trong thời gian ngắn. Sau nhổ răng có thể bị sưng, đau, rỉ máu vài ngày. BN đồng ý nhổ răng ... chi phí ..."
 
 }
 
 ::dxtr::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
-WinWaitActiveWindow(tenbenhvien)
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    WinWaitActiveWindow(tenbenhvien)
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 482, 83
+    MouseClick "L", 482, 83
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 563, 349
+    MouseClick "L", 563, 349
 
-Sleep 1000
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 1000
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 1053, 873
+    MouseClick "L", 1053, 873
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 867, 401
+    MouseClick "L", 867, 401
 
-Sleep 890
+    Sleep 890
 
-Send "{Blind}k02"
+    Send "{Blind}k02"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 903, 490
+    MouseClick "L", 903, 490
 
-Sleep 100
+    Sleep 100
 
-Send "trám răng xoang i kết hợp xoang ii bằng composite"
+    Send "trám răng xoang i kết hợp xoang ii bằng composite"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Down}{Down}"
+    Send "{Blind}{Down}{Down}"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 900, 541
+    MouseClick "L", 900, 541
 
-Sleep 100
+    Sleep 100
 
-Send "Răng xxx"
+    Send "Răng xxx"
 
-Sleep 100
+    Sleep 100
 
-Send "{tab} Do răng … có lỗ sâu lớn nên sau khi trám răng phải theo dõi tình trạng răng, nếu đau nhức thì phải điều trị tủy (chi phí điều trị tủy tính riêng)."
+    Send "{tab} Do răng … có lỗ sâu lớn nên sau khi trám răng phải theo dõi tình trạng răng, nếu đau nhức thì phải điều trị tủy (chi phí điều trị tủy tính riêng)."
 
 }
 
 
 ::dxrs::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
-WinWaitActiveWindow(tenbenhvien)
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    WinWaitActiveWindow(tenbenhvien)
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 482, 83
+    MouseClick "L", 482, 83
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 563, 349
+    MouseClick "L", 563, 349
 
-Sleep 1000
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 1000
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 1053, 873
+    MouseClick "L", 1053, 873
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 867, 401
+    MouseClick "L", 867, 401
 
-Sleep 890
+    Sleep 890
 
-Send "{Blind}k02"
+    Send "{Blind}k02"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 903, 490
+    MouseClick "L", 903, 490
 
-Sleep 100
+    Sleep 100
 
-Send "răng sứ zirconia"
+    Send "răng sứ zirconia"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
+    Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 900, 541
+    MouseClick "L", 900, 541
 
-Sleep 100
+    Sleep 100
 
-Send "Răng xxx"
+    Send "Răng xxx"
 
-Sleep 100
+    Sleep 100
 
-Send "{tab} Răng ... cần bọc sứ, BV chỉ bảo hành răng sứ, không bảo hành chân răng"
+    Send "{tab} Răng ... cần bọc sứ, BV chỉ bảo hành răng sứ, không bảo hành chân răng"
 
 }
 
 ::dxnn::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
-WinWaitActiveWindow(tenbenhvien)
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    WinWaitActiveWindow(tenbenhvien)
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 482, 83
+    MouseClick "L", 482, 83
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 563, 349
+    MouseClick "L", 563, 349
 
-Sleep 1000
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 1000
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 1053, 873
+    MouseClick "L", 1053, 873
 
-Sleep 500
+    Sleep 500
 
-MouseClick "L", 867, 401
+    MouseClick "L", 867, 401
 
-Sleep 890
+    Sleep 890
 
-Send "{Blind}k04"
+    Send "{Blind}k04"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 903, 490
+    MouseClick "L", 903, 490
 
-Sleep 100
+    Sleep 100
 
-Send "điều trị tủy răng số 1"
+    Send "điều trị tủy răng số 1"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
+    Send "{Blind}{Down}{Down}{Down}{Down}{Down}"
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-Sleep 100
+    Sleep 100
 
-MouseClick "L", 900, 541
+    MouseClick "L", 900, 541
 
-Sleep 100
+    Sleep 100
 
-Send "Răng xxx"
+    Send "Răng xxx"
 
-Sleep 100
+    Sleep 100
 
-Send "{tab} Do tình trạng giải phẫu phức tạp của ống tủy nên trong quá trình điều trị có thể thất bại trong thời gian ngắn hạn hoặc lâu dài. Trong trường hợp đó, phải nhổ bỏ và không hoàn lại chi phí điều trị tủy."
+    Send "{tab} Do tình trạng giải phẫu phức tạp của ống tủy nên trong quá trình điều trị có thể thất bại trong thời gian ngắn hạn hoặc lâu dài. Trong trường hợp đó, phải nhổ bỏ và không hoàn lại chi phí điều trị tủy."
 
 }
 
 
+^+p:: indexuatdieutri
+indexuatdieutri() {
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-^+p::indexuatdieutri
-indexuatdieutri(){
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 100
 
-Sleep 100
+    MouseClick "L", 1327, 872
 
-MouseClick  "L", 1327, 872
+    Sleep 203
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 
-Sleep 203
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    Sleep 500
 
-Sleep 500
+    Send "{Blind}{Alt Down}{Alt Up}fp"
 
-Send "{Blind}{Alt Down}{Alt Up}fp"
+    Sleep 100
+    WinWaitActiveWindow("Print")
 
-Sleep 100
-WinWaitActiveWindow("Print")
+    Sleep 500
 
-Sleep 500
+    MouseClick "L", 904, 511
 
-MouseClick  "L", 904, 511
+    Sleep 414
 
-Sleep 414
+    MouseClick "L", 1078, 747
+    WinWaitActiveWindow("Printing")
 
-MouseClick "L", 1078, 747
-WinWaitActiveWindow("Printing")
+    Sleep 1500
 
-Sleep 1500
+    Send "{Blind}{Enter}"
 
-Send "{Blind}{Enter}"
-
-WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
+    WinWaitActiveWindow("PHIẾU ĐỀ XUẤT ĐIỀU TRỊ")
 }
 
 ;doc phim xq
 ; 12 xq
 ::xqq::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
 
-Send "{Blind}{Shift Down}{Home}{Shift Up}"
+    Send "{Blind}{Shift Down}{Home}{Shift Up}"
 
-Sleep 200
+    Sleep 200
 
-Send "{Blind}{Ctrl Down}x{Ctrl Up}"
+    Send "{Blind}{Ctrl Down}x{Ctrl Up}"
 
-Sleep 200
+    Sleep 200
 
-mof7()
-WinWaitActiveWindow("Chỉ định dịch vụ")
-MouseClick "L", 260, 884
-Send "{Blind}{Alt Down}m{Alt Up}"
-WinWaitActiveWindow("Chỉ định dịch vụ")
-if WinExist("MQ Solutions")
+    mof7()
+    WinWaitActiveWindow("Chỉ định dịch vụ")
+    MouseClick "L", 260, 884
+    Send "{Blind}{Alt Down}m{Alt Up}"
+    WinWaitActiveWindow("Chỉ định dịch vụ")
+    if WinExist("MQ Solutions")
     {
         MyGui.Show
         Reload
     }
-Sleep 100
-Send "{Blind}{Shift Down}{Tab}{Shift Up}"
-MouseClick "L", 146, 881
-Sleep 100
-Send "18.81"
-Sleep 100
+    Sleep 100
+    Send "{Blind}{Shift Down}{Tab}{Shift Up}"
+    MouseClick "L", 146, 881
+    Sleep 100
+    Send "18.81"
+    Sleep 100
     Send "{tab}" ; Sửa thành 1 tab, hỏi có đồng ý dịch vụ, click chuột...
     Sleep 100
     Send "!y"
-WinWaitActiveWindow("Chỉ định dịch vụ")
-Sleep 100
-;Send {tab 2}
-MouseClick "L", 225, 950
-Sleep 100
-Send "Răng "
-Send "^v"
-Sleep 100
-Send "!l"
-Sleep 500
-Send "!y"
+    WinWaitActiveWindow("Chỉ định dịch vụ")
+    Sleep 100
+    ;Send {tab 2}
+    MouseClick "L", 225, 950
+    Sleep 100
+    Send "Răng "
+    Send "^v"
+    Sleep 100
+    Send "!l"
+    Sleep 500
+    Send "!y"
 }
 ; dong tat ca cua so
+
 ^+w::
 {
-SetTitleMatchMode 2
-CoordMode "Mouse", "Screen"
+    SetTitleMatchMode 2
+    CoordMode "Mouse", "Screen"
 
-WinWaitActiveWindow(tenbenhvien)
+    WinWaitActiveWindow(tenbenhvien)
 
-Sleep 100
+    Sleep 100
 
-Send "{Blind}{Alt Down}{Alt Up}a{Down}{Down}"
+    Send "{Blind}{Alt Down}{Alt Up}a{Down}{Down}"
 
-Sleep 200
+    Sleep 200
 
-Send "{Blind}{Enter}"
+    Send "{Blind}{Enter}"
 
-WinWaitActiveWindow(tenbenhvien)
+    WinWaitActiveWindow(tenbenhvien)
 }
 
 
-WinWaitActiveWindow(window){
+WinWaitActiveWindow(window) {
     if WinWait(window, , 50)
         WinActivate
     else
-        {
-            MsgBox "Không mở được " window
-            MyGui.Show
-        }
+    {
+        MsgBox "Không mở được " window
+        MyGui.Show
+    }
     Sleep 100
 }
 
 laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
 {
-    if !(User and phuta and vongngoai and vongtrong) 
-        {
-            MsgBox "Chưa nhập đủ nhân sự"
-            return false
-        }
+    if !(User and phuta and vongngoai and vongtrong)
+    {
+        MsgBox "Chưa nhập đủ nhân sự"
+        return false
+    }
     doc := "1azSdvq9PYTdy9ez6I63_-Q6WR-VgL6QvVupayG-X9wo"
     sht := "0"
     lst := ""
@@ -743,23 +805,23 @@ laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
     if FileExist("danhsachnghi.csv")
         FileDelete("danhsachnghi.csv")
     Loop read, "tmpnew.csv", "danhsachnghi.csv"
-        {
-            if InStr(A_LoopReadLine, "TRUE")
-                FileAppend(A_LoopReadLine "`n")
-        }
+    {
+        if InStr(A_LoopReadLine, "TRUE")
+            FileAppend(A_LoopReadLine "`n")
+    }
     if FileExist("tmpnew.csv")
         FileDelete("tmpnew.csv")
     danhsachnghi := FileRead("danhsachnghi.csv")
     var1 := Format("{1},{2},{3},{4},{5}", User, bacsi, phuta, vongngoai, vongtrong)
     loop parse var1, ","
+    {
+        if InStr(danhsachnghi, A_LoopField)
         {
-            if InStr(danhsachnghi, A_LoopField)
-                {
-                    MsgBox(Format("Không nhập tên {1}", A_LoopField))
-                    return false
-                }
+            MsgBox(Format("Không nhập tên {1}", A_LoopField))
+            return false
         }
+    }
     return true
 }
 
-^+!v::MsgBox Version
+^+!v:: MsgBox Version

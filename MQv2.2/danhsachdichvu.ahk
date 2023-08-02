@@ -1,7 +1,6 @@
 ;Tên dịch vụ, ICD, mã chỉ định, mã tường trình, tên tường trình, vô cảm, thời gian làm thủ thuật
 Tatcadichvu := ["", "Cạo vôi răng","Trám răng","Nội nha","Nhổ răng","Răng sứ","Răng tháo lắp","Implant","Cắt thắng lưỡi"]
 KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng một hàm, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm"
-danhMucNoiNhaRangSua := "Điều trị tủy răng sữa một chân, Điều trị tủy răng sữa nhiều chân, Điều trị tủy răng sữa một chân gây mê Điều trị tủy răng sữa nhiều chân gây mê"
 danhMucNhoRangPhauThuat := "Nhổ răng khôn hàm trên 500K, Nhổ răng khôn hàm trên 1M, Nhổ răng khôn hàm trên 1.5M, Nhổ răng khôn hàm trên 2M, Nhổ răng khôn hàm trên 2.5M, Nhổ răng khôn hàm trên 3M, Nhổ răng khôn hàm trên 3.5M, Nhổ răng khôn hàm dưới 500K, Nhổ răng khôn hàm dưới 1M, Nhổ răng khôn hàm dưới 1.5M, Nhổ răng khôn hàm dưới 2M, Nhổ răng khôn hàm dưới 2.5M, Nhổ răng khôn hàm dưới 3M, Nhổ răng khôn hàm dưới 3.5M, Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2"
 danhmuccaovoirang := ["Cạo vôi răng ít","Cạo vôi răng một hàm", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều","Tẩy trắng răng"]
 danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]
