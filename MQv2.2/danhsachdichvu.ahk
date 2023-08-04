@@ -137,7 +137,7 @@ danhMucDichVu["Trám răng xoang 4"] := ["K02.1", "16.68.1", "T05121", "tramrang
 danhMucDichVu["Trám răng xoang 5"] := ["K02.1", "16.72", "T05121", "tramrangxoang5", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 150K"] := ["K02.1", "16.236", "T05131", "tramrangsua", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 250K"] := ["K02.1", "16.70", "T05123", "tramrangsua", "00", 5, 12]
-danhMucDichVu["Che tủy Calci"] := ["K02.5", "16.57", "T05083" "chetuycalci", "03", 5, 12]
+danhMucDichVu["Che tủy Calci"] := ["K02.5", "16.57", "T05083", "chetuycalci", "03", 5, 12]
 danhMucDichVu["Che tủy MTA"] := ["K02.5", "16.56", "T05081", "chetuymta", "03", 5, 12]
 
 danhMucDichVu["Trám răng xoang 1 gây mê"] := ["K02.1", "RHM1", "T05113", "tramrangxoang1", "00", 5, 10]
