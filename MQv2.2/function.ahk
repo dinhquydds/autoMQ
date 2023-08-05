@@ -110,7 +110,7 @@ layChiDinh(dichvu, chidinh, baohiem, toothlist) {
                 if not InStr(rangsua, tooth)
                     return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
             }
-        if InStr("Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2, Nhổ răng thừa, Nhổ răng sữa, Nhổ răng lung lay, Nhổ chân răng,Ghép huyết tương", chidinh)
+       if InStr("Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2, Nhổ răng thừa, Nhổ răng lung lay, Nhổ chân răng,Ghép huyết tương", chidinh)
             for tooth in danhsachrang {
                 if not InStr(rangvinhvien, tooth)
                     return ["Fail Nhổ răng không phù hợp chỉ định", , baohiem, []]
