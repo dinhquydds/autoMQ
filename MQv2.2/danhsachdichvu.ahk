@@ -2,7 +2,7 @@
 Tatcadichvu := ["", "Cạo vôi răng","Trám răng","Nội nha","Nhổ răng","Răng sứ","Răng tháo lắp","Implant","Cắt thắng lưỡi"]
 KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng một hàm, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm"
 danhMucNhoRangPhauThuat := "Nhổ răng khôn hàm trên 500K, Nhổ răng khôn hàm trên 1M, Nhổ răng khôn hàm trên 1.5M, Nhổ răng khôn hàm trên 2M, Nhổ răng khôn hàm trên 2.5M, Nhổ răng khôn hàm trên 3M, Nhổ răng khôn hàm trên 3.5M, Nhổ răng khôn hàm dưới 500K, Nhổ răng khôn hàm dưới 1M, Nhổ răng khôn hàm dưới 1.5M, Nhổ răng khôn hàm dưới 2M, Nhổ răng khôn hàm dưới 2.5M, Nhổ răng khôn hàm dưới 3M, Nhổ răng khôn hàm dưới 3.5M, Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2"
-danhmuccaovoirang := ["Cạo vôi răng ít","Cạo vôi răng một hàm", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều","Tẩy trắng răng"]
+danhmuccaovoirang := ["Cạo vôi răng ít","Cạo vôi răng một hàm", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều","Phẫu thuật nạo túi lợi", "Cắt lợi xơ cho răng mọc", "Cắt lợi trùm răng khôn hàm dưới", "Phẫu thuật làm dài thân răng lâm sàng", "Tẩy trắng răng"]
 danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]
 danhMucImplant := ["Implant Dio", "Implant Helix", "Implant Strauman", "Implant ETK", "Abutment Dio", "Abutment Dio Zirconia", "Abutment Helix", "Abutment Helix Zirconia", "Abutment Strauman", "Abutment Strauman Zirconia", "Abutment ETK", "Ghép xương"]
 danhMucRangSu := ["Sứ kim loại", "Sứ Titanium", "Sứ Zirconia", "Sứ Ceramil Zolid", "Sứ Emax", "Sứ Lava 3M", "Veneer Ivoclar 6 triệu", "Veneer Lisi Press 8 triệu", "Inlay/Onlay", "Răng sứ Zirconia trên Implant", "Răng sứ Ceramill Zolid trên Implant", "Răng sứ Lava 3M trên Implant", "Tháo cầu răng", "Tháo mão (chụp)"]
@@ -17,6 +17,12 @@ danhMucDichVu["Cạo vôi răng ít"] := ["K03.6", "16.43.1", "T05407", "caovoir
 danhMucDichVu["Cạo vôi răng một hàm"] := ["K03.6", "16.43.2", "T05409", "caovoirang", "00", 10, 20]
 danhMucDichVu["Cạo vôi răng trung bình"] := ["K03.6", "14.43.3", "T05411", "caovoirang", "00", 15, 25]
 danhMucDichVu["Cạo vôi răng nhiều"] := ["K03.6", "16.43.4", "T05443", "caovoirang", "00", 15, 25]
+danhMucDichVu["Phẫu thuật nạo túi lợi"] := ["K05.2", "16.35", "P06089", "naotuiloi", "03", 5, 15]
+danhMucDichVu["Cắt lợi xơ cho răng mọc"] := ["K00.7", "16.213", "T05445", "catloixo", "03", 5, 7]
+danhMucDichVu["Cắt lợi trùm răng khôn hàm dưới"] := ["K01", "16.214", "T05219", "catloitrum", "03", 5, 7]
+danhMucDichVu["Phẫu thuật làm dài thân răng lâm sàng"] := ["K00.7", "16.168.1", "P45077", "lamdaithanrang", "03", 5, 7]
+
+
 danhMucDichVu["Tẩy trắng răng"] := ["K03.8", "16.79", "T05129", "taytrangrang", "00", 15, 30]
 
 danhMucDichVu["Cắt thắng lưỡi 300K"] := ["Q38.1", "3.2174", "P14001", "catthangluoi", "03", 5, 10]
@@ -134,7 +140,7 @@ danhMucDichVu["Trám răng xoang 2"] := ["K02.1", "16.68.4", "T05115", "tramrang
 danhMucDichVu["Trám răng xoang 1+2"] := ["K02.1", "16.68.3", "T05117", "tramrangxoang12", "00", 5, 12]
 danhMucDichVu["Trám răng xoang 3"] := ["K02.1", "16.68.2", "T05119", "tramrangxoang3", "00", 5, 12]
 danhMucDichVu["Trám răng xoang 4"] := ["K02.1", "16.68.1", "T05121", "tramrangxoang4", "00", 5, 12]
-danhMucDichVu["Trám răng xoang 5"] := ["K02.1", "16.72", "T05121", "tramrangxoang5", "00", 5, 12]
+danhMucDichVu["Trám răng xoang 5"] := ["K02.1", "16.72", "T21655273", "tramrangxoang5", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 150K"] := ["K02.1", "16.236", "T05131", "tramrangsua", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 250K"] := ["K02.1", "16.70", "T05123", "tramrangsua", "00", 5, 12]
 danhMucDichVu["Che tủy Calci"] := ["K02.5", "16.57", "T05083", "chetuycalci", "03", 5, 12]

@@ -2,10 +2,10 @@
 ;Tường trình
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-tuongtrinhtramrangxoang1(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhtramrangxoang1(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang I
 - Sát khuẩn.
@@ -20,15 +20,15 @@ Răng {1} sâu xoang I
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang2(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang2(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang II
 - Sát khuẩn.
@@ -44,15 +44,15 @@ Răng {1} sâu xoang II
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang12(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang12(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang I kết hợp xoang II
 - Sát khuẩn.
@@ -67,15 +67,15 @@ Răng {1} sâu xoang I kết hợp xoang II
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang3(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang3(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang III
 - Sát khuẩn.
@@ -91,15 +91,15 @@ Răng {1} sâu xoang III
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang4(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang4(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang IV
 - Sát khuẩn.
@@ -115,15 +115,15 @@ Răng {1} sâu xoang IV
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang5(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang5(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mòn cổ răng
 - Sát khuẩn.
@@ -139,15 +139,15 @@ Răng {1} mòn cổ răng
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang1laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang1laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang I
 - Sát khuẩn.
@@ -162,15 +162,15 @@ Răng {1} sâu xoang I
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang2laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang2laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang II
 - Sát khuẩn.
@@ -186,15 +186,15 @@ Răng {1} sâu xoang II
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang12laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang12laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang I kết hợp xoang II
 - Sát khuẩn.
@@ -209,15 +209,15 @@ Răng {1} sâu xoang I kết hợp xoang II
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang3laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang3laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang III
 - Sát khuẩn.
@@ -233,15 +233,15 @@ Răng {1} sâu xoang III
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang4laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang4laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu xoang IV
 - Sát khuẩn.
@@ -257,15 +257,15 @@ Răng {1} sâu xoang IV
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangxoang5laser(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangxoang5laser(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mòn cổ răng
 - Sát khuẩn.
@@ -281,15 +281,15 @@ Răng {1} mòn cổ răng
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhchetuycalci(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhchetuycalci(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu lớn sát tủy răng
 - Sát khuẩn.
@@ -305,15 +305,15 @@ Răng {1} sâu lớn sát tủy răng
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhchetuymta(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhchetuymta(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu lớn sát tủy răng
 - Sát khuẩn.
@@ -329,15 +329,15 @@ Răng {1} sâu lớn sát tủy răng
 + Chiếu đèn quang trùng hợp theo từng lớp Composite với thời gian từ 20-40 giây.
 - Hoàn thiện: Dùng bộ hoàn thiện để làm nhẵn và tạo hình phần phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhcaovoirang(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-A_Clipboard := " 
+tuongtrinhcaovoirang(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
 (LTrim Join`r`n
 - Sát khuẩn.
 - Dùng các đầu lấy cao siêu âm làm rung và bật các mảnh cao răng ra khỏi bề mặt răng.
@@ -348,14 +348,34 @@ A_Clipboard := "
 - Đánh bóng bề mặt các răng và chân răng.
 
 )"
-Clipwait
-Send "^v"
-} 
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnhorangvinhvien(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnaotuiloi(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
+(LTrim Join`r`n
+- Sát khuẩn.
+- Gây tê tại chỗ
+- Rạch khe nướu răng {1}
+- Bóc tách khe nướu, bộc lộ túi nha chu
+- Dùng cây cạo vôi siêu âm cạo sạch vôi răng trên và dưới nướu
+- Dùng các cây lấy cao răng cầm tay lấy các phần cao răng còn lại mà đầu siêu âm không lấy được.
+- Bơm rửa bề mặt chân răng 
+- Khâu đóng vết mổ
+
+)"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
+
+tuongtrinhnhorangvinhvien(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} sâu vỡ lớn
 - Sát khuẩn.
@@ -366,16 +386,16 @@ Răng {1} sâu vỡ lớn
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 
-} 
+}
 
-tuongtrinhnhorangthua(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-A_Clipboard := " 
+tuongtrinhnhorangthua(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
 (LTrim Join`r`n
 Răng thừa kẽ giữa
 - Sát khuẩn.
@@ -386,15 +406,15 @@ Răng thừa kẽ giữa
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-Clipwait
-Send "^v"
+    Clipwait
+    Send "^v"
 
-} 
+}
 
-tuongtrinhnhoranglunglay(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhoranglunglay(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} lung lay
 - Sát khuẩn.
@@ -405,16 +425,69 @@ Răng {1} lung lay
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 
 }
 
-tuongtrinhnhorangkhontren(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhcatloixo(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
+    (LTrim Join`r`n
+    Răng {1} chậm mọc, nướu xơ, dày
+    - Sát khuẩn.
+    - Gây tê tại chỗ răng {1}
+    - Rạch nướu, bóc tách bộc lộ răng {1}
+    - Cắn gòn cầm máu
+    )"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+
+}
+
+tuongtrinhcatloitrum(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
+        (LTrim Join`r`n
+        Răng {1} lợi trùm, viêm tấy đỏ, đau
+        - Sát khuẩn.
+        - Gây tê tại chỗ răng {1}
+        - Cắt lợi trùm
+        - Cắn gòn cầm máu
+        )"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+
+}
+
+tuongtrinhlamdaithanrang(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
+            (LTrim Join`r`n
+            Răng {1} thân răng ngắn
+            - Sát khuẩn.
+            - Gây tê tại chỗ răng {1}
+            - Rạch khe nướu răng {1}
+            - Bóc tách, bộc lộ xương ổ răng
+            - Mài chỉnh xương ổ răng
+            - Khâu cố định nướu răng về phía chóp r
+            )"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+
+}
+
+tuongtrinhnhorangkhontren(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch
 - Sát khuẩn.
@@ -425,15 +498,15 @@ Răng {1} mọc lệch
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnhorangkhontrencatthan(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangkhontrencatthan(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch
 - Sát khuẩn.
@@ -449,15 +522,15 @@ Răng {1} mọc lệch
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhorangkhontrencatthanchiachan(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangkhontrencatthanchiachan(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch ngầm
 - Sát khuẩn.
@@ -475,15 +548,15 @@ Răng {1} mọc lệch ngầm
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhorangkhonduoi(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangkhonduoi(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch gần
 - Sát khuẩn.
@@ -499,15 +572,15 @@ Răng {1} mọc lệch gần
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnhorangkhonduoicatthanchiachan(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangkhonduoicatthanchiachan(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch gần
 - Sát khuẩn.
@@ -525,15 +598,15 @@ Răng {1} mọc lệch gần
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhorangthi1(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangthi1(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc lệch gần, chân răng sát ống thần kinh răng dưới
 - Sát khuẩn.
@@ -549,15 +622,15 @@ Răng {1} mọc lệch gần, chân răng sát ống thần kinh răng dưới
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhorangthi2(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangthi2(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} còn chân răng, đã được phẫu thuật cắt thân răng trước đây
 - Sát khuẩn.
@@ -572,15 +645,15 @@ Răng {1} còn chân răng, đã được phẫu thuật cắt thân răng trư�
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhorangngam(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangngam(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mọc ngầm
 - Sát khuẩn.
@@ -596,15 +669,15 @@ Răng {1} mọc ngầm
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnoinha(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnoinha(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n 
 1. Gây tê tại chỗ răng {1} bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
@@ -627,15 +700,15 @@ text := "
 Sau khi nội nha răng {1} bệnh nhân đỡ đau, cho ra viện
 )"
 
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnoinhagaytevung(toothNumber){
+tuongtrinhnoinhagaytevung(toothNumber) {
     A_Clipboard := ""
     Sleep 100
-    text := " 
+    text := "
     (LTrim Join`r`n 
     1. Gây tê vùng và tại chỗ răng {1} bằng lidocain 2`%.
     2. Cách ly răng sử dụng đê cao su.
@@ -657,16 +730,16 @@ tuongtrinhnoinhagaytevung(toothNumber){
     6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
     Sau khi nội nha răng {1} bệnh nhân đỡ đau, cho ra viện
     )"
-    
+
     A_Clipboard := Format(text, toothNumber)
     Clipwait
     Send "^v"
-    } 
+}
 
-tuongtrinhnoinhagayme(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnoinhagayme(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Bệnh nhân mê NKQ 
 1. Gây tê tại chỗ răng răng {1} bằng lidocain 2`%.
@@ -689,15 +762,15 @@ Bệnh nhân mê NKQ
 6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng {1} bệnh nhân đỡ đau, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnoinhalai(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnoinhalai(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 1. Gây tê tại chỗ răng răng {1} bằng lidocain 2`%.
 2. Cách ly răng sử dụng đê cao su.
@@ -719,15 +792,15 @@ text := "
 6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng {1} bệnh nhân đỡ đau, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnoinhalaigayme(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnoinhalaigayme(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Bệnh nhân mê NKQ
 1. Gây tê tại chỗ răng răng {1} bằng lidocain 2`%.
@@ -750,15 +823,15 @@ Bệnh nhân mê NKQ
 6. Hàn kín buồng tuỷ và phục hồi thân răng bằng composite
 Sau khi nội nha răng {1} bệnh nhân hồi tỉnh, đỡ đau, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnoinharangsua(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnoinharangsua(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Gây tê tại chỗ răng {1}
 Sử dụng đam cao su ( Rubber dam ) để cách ly, cô lập răng.
@@ -777,30 +850,30 @@ Hàn kín hệ thống ống tủy
 - Dùng bông lau khô phần paste thừa trên miệng ống tủy.
 Hàn kín buồng tủy và phục hồi thân răng bằng GIC
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhnhorangsua(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhnhorangsua(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 - Sát khuẩn
 - Bôi tê tại chỗ răng {1}
 - Dùng kìm thích hợp lấy răng ra khỏi ổ răng.
 - Cắn gạc cầm máu.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
-tuongtrinhtramrangsua(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramrangsua(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 -Sửa soạn xoang hàn răng {1}:
 + Dùng mũi khoan thích hợp mở rộng bờ men bộc lộ xoang sâu.
@@ -816,31 +889,31 @@ text := "
 - Kiểm tra và điều chỉnh khớp cắn.
 - Phủ vaseline cách ly lên bề mặt khối phục hồi.
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
-} 
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
+}
 
 
-tuongtrinhtramtaitaokhongchotsoi(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramtaitaokhongchotsoi(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} đã nội nha
 Dùng mũi khoan lấy sạch chất trám tạm
 Sửa soạn xoang trám
 Trám tái tạo răng bằng composite
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhtramtaitaocochotsoi(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtramtaitaocochotsoi(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} đã nội nha
 Dùng mũi khoan lấy sạch chất trám tạm
@@ -849,144 +922,143 @@ Dùng dụng cụ đưa xi măng vào ống tủy
 Đặt chốt
 Trám tái tạo răng bằng composite
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhghephuyettuong(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhghephuyettuong(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} đã nhổ
 Ghép PRF vào ổ răng
 Khâu đóng mô mềm
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhrangsu(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhrangsu(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} mài cùi răng, lấy dấu làm răng sứ
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhrangsutrenimplant(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhrangsutrenimplant(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng {1} làm răng sứ trên implant
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
 
-
-tuongtrinhrangthaolap(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhrangthaolap(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Răng giả cho hàm tháo lắp {1}
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhtaytrangrang(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := " 
+tuongtrinhtaytrangrang(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Tẩy trắng răng 2 hàm dùng đèn Plasma
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhchinhnha(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhchinhnha(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Gắn mắc cài
 Gắn thun 2 hàm
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhboisdf(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhboisdf(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Làm sạch răng {1}
 Bôi SDF lên răng
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhimplant(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhimplant(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Gây tê tại vùng răng {1}
 Rạch nướu, bóc tách bộc lộ xương
 Dùng mũi khoan thích hợp tạo lỗ cấy implant
 Đặt implant vào vị trí đã khoan
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhabutment(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhabutment(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Gắn abutment vào implant vị trí răng {1}
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhghepxuong(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhghepxuong(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Ghép xương đông khô vào ổ răng
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhochanrang(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhnhochanrang(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Còn chân răng {1}
 - Sát khuẩn.
@@ -997,85 +1069,85 @@ Còn chân răng {1}
 - Cắn gòn cầm máu
 - Sau nhổ răng bệnh nhân tạm ổn, cho ra viện
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhthaocau(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhthaocau(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Dùng mũi khoan cắt răng sứ {1}
 Tháo răng sứ
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhthaomao(toothNumber){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhthaomao(toothNumber) {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Dùng mũi khoan cắt răng sứ {1}
 Tháo răng sứ
 )"
-A_Clipboard := Format(text, toothNumber)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text, toothNumber)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhuadeobanphan(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhnhuadeobanphan(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Nền nhựa dẻo bán phần cho hàm giả tháo lắp
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhnhuadeotoanphan(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhnhuadeotoanphan(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Nền nhựa dẻo toàn phần cho hàm giả tháo lắp
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
 
-tuongtrinhluoinenham(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhluoinenham(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Lưới kim loại cho nền hàm giả tháo lắp
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }
 
-tuongtrinhcatthangluoi(ghichu := ""){
-A_Clipboard := ""
-Sleep 100
-text := "
+tuongtrinhcatthangluoi(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    text := "
 (LTrim Join`r`n
 Sát trùng vùng phẫu thuật
 Gây tê tại chỗ thắng lưỡi
 Dùng laser cắt thắng lưỡi, cầm máu
 Sau thủ thuật bệnh nhân an toàn
 )"
-A_Clipboard := Format(text)
-Clipwait
-Send "^v"
+    A_Clipboard := Format(text)
+    Clipwait
+    Send "^v"
 }

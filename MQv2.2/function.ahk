@@ -314,16 +314,36 @@ isMilkToothNumber(toothNumber) {
 }
 
 laydanhsachrang(info) {
-    local danhsachrang
+    ; danh sách hợp lệ phải là số răng fdi, cách nhau bởi dấu cách, không trùng nhau
+    ; không hợp lệ trả về []
+    local danhsachrang := [], out := [] 
     danhsachrang := StrSplit(Trim(info), A_Space)
     if danhsachrang.Length = 0
         return []
+    ;kiem tra co phai so rang không
     for tooth in danhsachrang
     {
         if not isToothNumber(tooth)
             return []
     }
-    return danhsachrang
+    ; kiem tra co nhap trung ten rang, neu co trung tra ve danh sach rong
+    out.Push(danhsachrang[1])
+	danhsachrang.RemoveAt(1)
+    	while  danhsachrang.Length > 0
+		{
+			for v in out
+				if v = danhsachrang[1] ; Nếu trùng trả về danh sách trống
+					{
+						return [] 
+						; continue 2
+					}
+
+			out.Push(danhsachrang[1])
+			danhsachrang.RemoveAt(1)
+		}
+
+	return out
+    ; return danhsachrang
 }
 
 mof6() {
