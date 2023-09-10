@@ -1,6 +1,6 @@
 ﻿; thong tin nhan su: ten, 1 ma dang nhap, 2 mat khau, 3 masoID
-danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV"]
-danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV"]
+danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV", "Hạnh HTH"]
+danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV", "Hạnh HTH"]
 danhsachdieuduong := ["Lan DTQ","Thảo DTT","Minh DTN","Lý DT","Tình HTH","Trang LTT","Hòa LT","Vân LTT","Nam MM","Sơn NT","Sương NT","Thắm NT","Hằng NTT","Vui NT","Lực NV","Linh PTT","Luyến VT","Quỳnh VTN","Ý VTN","Hạnh NTM"]
 
 
@@ -18,6 +18,7 @@ thongTinNhanSu["Phương NT"] := ["phuongnt", "123456", "0425"] ; "Nguyễn Thù
 thongTinNhanSu["Nguyên HT"] := ["nguyenht", "123456", "0433"] ; "Huỳnh Thế Nguyên"
 thongTinNhanSu["Vinh TD"] := ["vinhtd", "123456", "0437"] ; "Trần Đăng Vinh"
 thongTinNhanSu["Pẹc NV"] := ["pecnv", "123456", "0435"] ; "Nông Văn Pẹc"
+thongTinNhanSu["Hạnh HTH"] := ["hanhhth", "123456", "0481"] ; "Nông Văn Pẹc"
 
 ;dieu duong 
 thongTinNhanSu["Lan DTQ"] := ["landtq","123456", "0077"] ; "Đỗ Thị Quỳnh Lan"

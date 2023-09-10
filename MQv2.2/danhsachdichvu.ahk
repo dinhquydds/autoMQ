@@ -10,6 +10,7 @@ danhMucRangThaoLap := ["Răng tháo lắp Nhật", "Răng tháo lắp Mỹ", "R�
 danhMucTramRang := ["Trám răng xoang 1", "Trám răng xoang 2", "Trám răng xoang 1+2", "Trám răng xoang 3", "Trám răng xoang 4", "Trám răng xoang 5", "Trám răng sữa 150K", "Trám răng sữa 250K", "Che tủy Calci", "Che tủy MTA", "Trám răng xoang 1 gây mê", "Trám răng xoang 2 gây mê","Trám răng xoang 1+2 gây mê", "Trám răng xoang 3 gây mê", "Trám răng xoang 4 gây mê", "Trám răng sữa gây mê", "Trám răng xoang 1 laser", "Trám răng xoang 2 laser", "Trám răng xoang 1+2 laser", "Trám răng xoang 3 laser", "Trám răng xoang 4 laser", "Trám răng xoang 5 laser", "Trám tái tạo có chốt 400K", "Trám tái tạo không chốt 200K", "Trám tái tạo không chốt 400K", "Bôi SDF"]
 danhMucNhoRang := ["Nhổ răng khôn hàm trên 500K", "Nhổ răng khôn hàm trên 1M", "Nhổ răng khôn hàm trên 1.5M", "Nhổ răng khôn hàm trên 2M", "Nhổ răng khôn hàm trên 2.5M", "Nhổ răng khôn hàm trên 3M", "Nhổ răng khôn hàm trên 3.5M", "Nhổ răng khôn hàm dưới 500K", "Nhổ răng khôn hàm dưới 1M", "Nhổ răng khôn hàm dưới 1.5M", "Nhổ răng khôn hàm dưới 2M", "Nhổ răng khôn hàm dưới 2.5M", "Nhổ răng khôn hàm dưới 3M", "Nhổ răng khôn hàm dưới 3.5M", "Nhổ răng ngầm", "Nhổ răng vĩnh viễn", "Nhổ răng thì 1", "Nhổ răng thì 2", "Nhổ răng thừa", "Nhổ răng sữa", "Nhổ răng lung lay", "Nhổ chân răng","Ghép huyết tương"]
 
+
 danhMucDichVu := Map()
 danhMucDichVu["Bôi SDF"] := ["K02", "PHO010", "T05147", "boisdf", "00",1,2 ]
 
@@ -140,7 +141,7 @@ danhMucDichVu["Trám răng xoang 2"] := ["K02.1", "16.68.4", "T05115", "tramrang
 danhMucDichVu["Trám răng xoang 1+2"] := ["K02.1", "16.68.3", "T05117", "tramrangxoang12", "00", 5, 12]
 danhMucDichVu["Trám răng xoang 3"] := ["K02.1", "16.68.2", "T05119", "tramrangxoang3", "00", 5, 12]
 danhMucDichVu["Trám răng xoang 4"] := ["K02.1", "16.68.1", "T05121", "tramrangxoang4", "00", 5, 12]
-danhMucDichVu["Trám răng xoang 5"] := ["K02.1", "16.72", "T21655273", "tramrangxoang5", "00", 5, 12]
+danhMucDichVu["Trám răng xoang 5"] := ["K03.1", "16.72", "T21655273", "tramrangxoang5", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 150K"] := ["K02.1", "16.236", "T05131", "tramrangsua", "00", 5, 12]
 danhMucDichVu["Trám răng sữa 250K"] := ["K02.1", "16.70", "T05123", "tramrangsua", "00", 5, 12]
 danhMucDichVu["Che tủy Calci"] := ["K02.5", "16.57", "T05083", "chetuycalci", "03", 5, 12]
@@ -158,7 +159,7 @@ danhMucDichVu["Trám răng xoang 2 laser"] := ["K02.1", "16.65.6", "T05105", "tr
 danhMucDichVu["Trám răng xoang 1+2 laser"] := ["K02.1", "16.65.3", "T05107", "tramrangxoang12laser", "00", 5, 10]
 danhMucDichVu["Trám răng xoang 3 laser"] := ["K02.1", "16.65.2", "T05109", "tramrangxoang3", "00", 5, 10]
 danhMucDichVu["Trám răng xoang 4 laser"] := ["K02.1", "16.65.1", "T05111", "tramrangxoang4", "00", 5, 10]
-danhMucDichVu["Trám răng xoang 5 laser"] := ["K02.1", "16.75", "T05243", "tramrangxoang5", "00", 5, 10]
+danhMucDichVu["Trám răng xoang 5 laser"] := ["K03.1", "16.75", "T05243", "tramrangxoang5", "00", 5, 10]
 
 danhMucDichVu["Trám tái tạo có chốt 400K"] := ["K02.4", "TRA002", "T05125", "tramtaitaocochotsoi", "00", 5, 10]
 danhMucDichVu["Trám tái tạo không chốt 200K"] := ["K02", "TRA001", "T05127", "tramtaitaokhongchotsoi", "00", 5, 10]
