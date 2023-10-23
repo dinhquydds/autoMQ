@@ -46,6 +46,11 @@
                 Chidinh1.Delete()
                 Chidinh1.Add(danhMucTramRang)
             }
+        Case "Mổ sứt môi":
+            {
+                Chidinh1.Delete()
+                Chidinh1.Add(danhmucMoSutMoi)
+            }
         Case "":
             {
                 Chidinh1.Delete()
@@ -101,6 +106,11 @@ chondichvu2(ctrl, *) {
                 Chidinh2.Delete()
                 Chidinh2.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh2.Delete()
+                    Chidinh2.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh2.Delete()
@@ -156,6 +166,11 @@ chondichvu3(ctrl, *) {
                 Chidinh3.Delete()
                 Chidinh3.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh3.Delete()
+                    Chidinh3.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh3.Delete()
@@ -211,6 +226,11 @@ chondichvu4(ctrl, *) {
                 Chidinh4.Delete()
                 Chidinh4.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh4.Delete()
+                    Chidinh4.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh4.Delete()
@@ -266,6 +286,11 @@ chondichvu5(ctrl, *) {
                 Chidinh5.Delete()
                 Chidinh5.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh5.Delete()
+                    Chidinh5.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh5.Delete()
@@ -321,6 +346,11 @@ chondichvu6(ctrl, *) {
                 Chidinh6.Delete()
                 Chidinh6.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh6.Delete()
+                    Chidinh6.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh6.Delete()
@@ -376,6 +406,11 @@ chondichvu7(ctrl, *) {
                 Chidinh7.Delete()
                 Chidinh7.Add(danhMucTramRang)
             }
+            Case "Mổ sứt môi":
+                {
+                    Chidinh7.Delete()
+                    Chidinh7.Add(danhmucMoSutMoi)
+                }
         Case "":
             {
                 Chidinh7.Delete()

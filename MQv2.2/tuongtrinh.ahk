@@ -2,6 +2,82 @@
 ;Tường trình
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+tuongtrinhkhehomoimotben(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân có khe hở môi trên bên trái
+BN mê NKQ
+Dùng bút đánh dấu các điểm mốc giải phẫu trên môi
+Gây tê tại chỗ môi trên bên trái
+Dùng dao rạch theo đường đã vẽ trên khe hở
+Bóc tách, tạo hình môi
+Khâu đóng khe hở môi theo từng lớp giải phẫu
+Băng ép môi trên
+
+)"
+    Clipwait
+    Send "^v"
+}
+
+tuongtrinhkhehomoihaiben(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân có khe hở môi trên hai bên
+BN mê NKQ
+Dùng bút đánh dấu các điểm mốc giải phẫu trên môi
+Gây tê tại chỗ môi trên 
+Dùng dao rạch theo đường đã vẽ trên khe hở
+Bóc tách, tạo hình môi
+Khâu đóng khe hở môi theo từng lớp giải phẫu
+Băng ép môi trên
+
+)"
+    Clipwait
+    Send "^v"
+}
+
+tuongtrinhkhehovommiengtoanbo(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân có khe hở vòm miệng toàn bộ
+BN mê NKQ
+Dùng bút đánh dấu các điểm mốc giải phẫu trên khẩu cái
+Gây tê tại chỗ khẩu cái 
+Dùng dao rạch theo đường đã vẽ 
+Bóc tách, tạo hình
+Khâu đóng khe hở vòm miệng theo từng lớp giải phẫu
+
+)"
+    Clipwait
+    Send "^v"
+}
+
+tuongtrinhkhehovommiengkhongtoanbo(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân có khe hở vòm miệng không toàn bộ
+BN mê NKQ
+Dùng bút đánh dấu các điểm mốc giải phẫu trên khẩu cái
+Gây tê tại chỗ khẩu cái 
+Dùng dao rạch theo đường đã vẽ 
+Bóc tách, tạo hình
+Khâu đóng khe hở vòm miệng theo từng lớp giải phẫu
+
+)"
+    Clipwait
+    Send "^v"
+}
+
+
+
 tuongtrinhtramrangxoang1(toothNumber) {
     A_Clipboard := ""
     Sleep 100
