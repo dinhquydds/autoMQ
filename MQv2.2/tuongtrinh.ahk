@@ -2,6 +2,25 @@
 ;Tường trình
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+tuongtrinhsuaseomoi(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân sẹo xấu môi trên T 
+BN mê NKQ
+Dùng bút đánh dấu các điểm mốc giải phẫu trên môi
+Gây tê tại chỗ môi trên bên trái
+Dùng dao cắt mô sẹo xơ
+Bóc tách, tạo hình môi
+Khâu đóng khe hở môi theo từng lớp giải phẫu
+Băng ép môi trên
+
+)"
+    Clipwait
+    Send "^v"
+}
+
 tuongtrinhkhehomoimotben(ghichu := "") {
     A_Clipboard := ""
     Sleep 100
