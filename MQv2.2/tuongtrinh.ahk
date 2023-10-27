@@ -2,6 +2,24 @@
 ;Tường trình
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+tuongtrinhthuangontay(ghichu := "") {
+    A_Clipboard := ""
+    Sleep 100
+    A_Clipboard := "
+(LTrim Join`r`n
+Bệnh nhân thừa ngón tay P
+BN mê NKQ
+Gây tê tại chỗ ngón tay thừa
+Dùng dao cắt quanh gốc ngón tay
+Bóc tách, cắt bỏ ngón tay thừa
+Khâu đóng vết mổ
+
+
+)"
+    Clipwait
+    Send "^v"
+}
+
 tuongtrinhsuaseomoi(ghichu := "") {
     A_Clipboard := ""
     Sleep 100

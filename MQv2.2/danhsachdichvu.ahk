@@ -1,6 +1,6 @@
 ;Tên dịch vụ, ICD, mã chỉ định, mã tường trình, tên tường trình, vô cảm, thời gian làm thủ thuật
 Tatcadichvu := ["", "Cạo vôi răng","Trám răng","Nội nha","Nhổ răng","Răng sứ","Răng tháo lắp","Implant","Cắt thắng lưỡi", "Mổ sứt môi"]
-KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng một hàm, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm, Khe hở môi một bên, Khe hở môi hai bên, Khe hở vòm miệng toàn bộ, Khe hở vòm miệng không toàn bộ, Chỉnh sửa sẹo môi toàn bộ"
+KhongCanNhapSoRang := "Cạo vôi răng ít, Cạo vôi răng một hàm, Cạo vôi răng trung bình, Cạo vôi răng nhiều, Cắt thắng lưỡi 300K, Cắt thắng lưỡi 500K, Cắt thắng lưỡi 2.5M, Cắt thắng lưỡi 3M, Tẩy trắng răng, Nền nhựa dẻo bán phần, Nền nhựa dẻo toàn phần, Lưới nền hàm, Khe hở môi một bên, Khe hở môi hai bên, Khe hở vòm miệng toàn bộ, Khe hở vòm miệng không toàn bộ, Chỉnh sửa sẹo môi toàn bộ, Phẫu thuật cắt bỏ ngón tay thừa"
 danhMucNhoRangPhauThuat := "Nhổ răng khôn hàm trên 500K, Nhổ răng khôn hàm trên 1M, Nhổ răng khôn hàm trên 1.5M, Nhổ răng khôn hàm trên 2M, Nhổ răng khôn hàm trên 2.5M, Nhổ răng khôn hàm trên 3M, Nhổ răng khôn hàm trên 3.5M, Nhổ răng khôn hàm dưới 500K, Nhổ răng khôn hàm dưới 1M, Nhổ răng khôn hàm dưới 1.5M, Nhổ răng khôn hàm dưới 2M, Nhổ răng khôn hàm dưới 2.5M, Nhổ răng khôn hàm dưới 3M, Nhổ răng khôn hàm dưới 3.5M, Nhổ răng ngầm, Nhổ răng vĩnh viễn, Nhổ răng thì 1, Nhổ răng thì 2"
 danhmuccaovoirang := ["Cạo vôi răng ít","Cạo vôi răng một hàm", "Cạo vôi răng trung bình", "Cạo vôi răng nhiều","Phẫu thuật nạo túi lợi", "Cắt lợi xơ cho răng mọc", "Cắt lợi trùm răng khôn hàm dưới", "Phẫu thuật làm dài thân răng lâm sàng", "Tẩy trắng răng"]
 danhMucCatThangLuoi := ["Cắt thắng lưỡi 300K", "Cắt thắng lưỡi 500K", "Cắt thắng lưỡi 2.5M", "Cắt thắng lưỡi 3M"]
@@ -9,7 +9,7 @@ danhMucRangSu := ["Sứ kim loại", "Sứ Titanium", "Sứ Zirconia", "Sứ Cer
 danhMucRangThaoLap := ["Răng tháo lắp Nhật", "Răng tháo lắp Mỹ", "Răng tháo lắp composite","Nền nhựa dẻo bán phần", "Nền nhựa dẻo toàn phần", "Lưới nền hàm"]
 danhMucTramRang := ["Trám răng xoang 1", "Trám răng xoang 2", "Trám răng xoang 1+2", "Trám răng xoang 3", "Trám răng xoang 4", "Trám răng xoang 5", "Trám răng sữa 150K", "Trám răng sữa 250K", "Che tủy Calci", "Che tủy MTA", "Trám răng xoang 1 gây mê", "Trám răng xoang 2 gây mê","Trám răng xoang 1+2 gây mê", "Trám răng xoang 3 gây mê", "Trám răng xoang 4 gây mê", "Trám răng sữa gây mê", "Trám răng xoang 1 laser", "Trám răng xoang 2 laser", "Trám răng xoang 1+2 laser", "Trám răng xoang 3 laser", "Trám răng xoang 4 laser", "Trám răng xoang 5 laser", "Trám tái tạo có chốt 400K", "Trám tái tạo không chốt 200K", "Trám tái tạo không chốt 400K", "Bôi SDF"]
 danhMucNhoRang := ["Nhổ răng khôn hàm trên 500K", "Nhổ răng khôn hàm trên 1M", "Nhổ răng khôn hàm trên 1.5M", "Nhổ răng khôn hàm trên 2M", "Nhổ răng khôn hàm trên 2.5M", "Nhổ răng khôn hàm trên 3M", "Nhổ răng khôn hàm trên 3.5M", "Nhổ răng khôn hàm dưới 500K", "Nhổ răng khôn hàm dưới 1M", "Nhổ răng khôn hàm dưới 1.5M", "Nhổ răng khôn hàm dưới 2M", "Nhổ răng khôn hàm dưới 2.5M", "Nhổ răng khôn hàm dưới 3M", "Nhổ răng khôn hàm dưới 3.5M", "Nhổ răng ngầm", "Nhổ răng vĩnh viễn", "Nhổ răng thì 1", "Nhổ răng thì 2", "Nhổ răng thừa", "Nhổ răng sữa", "Nhổ răng lung lay", "Nhổ chân răng","Ghép huyết tương"]
-danhmucMoSutMoi := ["Khe hở môi một bên", "Khe hở môi hai bên", "Khe hở vòm miệng toàn bộ", "Khe hở vòm miệng không toàn bộ", "Chỉnh sửa sẹo môi toàn bộ"]
+danhmucMoSutMoi := ["Khe hở môi một bên", "Khe hở môi hai bên", "Khe hở vòm miệng toàn bộ", "Khe hở vòm miệng không toàn bộ", "Chỉnh sửa sẹo môi toàn bộ", "Phẫu thuật cắt bỏ ngón tay thừa"]
 
 danhMucDichVu := Map()
 danhMucDichVu["Bôi SDF"] := ["K02", "PHO010", "T05147", "boisdf", "00",1,2 ]
@@ -19,6 +19,7 @@ danhmucDichVu["Khe hở môi hai bên"] := ["Q36.0", "16.342", "P06149", "khehom
 danhmucDichVu["Khe hở vòm miệng toàn bộ"] := ["Q35.5", "16.346", "P06145", "khehovommiengtoanbo", "02", 20, 30]
 danhmucDichVu["Khe hở vòm miệng không toàn bộ"] := ["Q35.1", "16.345", "P06147", "khehovommiengkhongtoanbo", "02", 20, 30]
 danhmucDichVu["Chỉnh sửa sẹo môi toàn bộ"] := ["L90.5", "28.116", "P12854960", "suaseomoi", "02", 20, 30]
+danhmucDichVu["Phẫu thuật cắt bỏ ngón tay thừa"] := ["Q69.1", "3.3710", "P11053292", "thuangontay", "02", 20, 30]
 
 danhMucDichVu["Cạo vôi răng ít"] := ["K03.6", "16.43.1", "T05407", "caovoirang", "00", 10, 20]
 danhMucDichVu["Cạo vôi răng một hàm"] := ["K03.6", "16.43.2", "T05409", "caovoirang", "00", 10, 20]
