@@ -1,7 +1,7 @@
 ﻿; thong tin nhan su: ten, 1 ma dang nhap, 2 mat khau, 3 masoID
-danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV", "Luyến VT"]
-danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV"]
-danhsachdieuduong := ["Lan DTQ","Thảo DTT","Minh DTN","Lý DT","Trang LTT","Hòa LT","Vân LTT","Nam MM","Sơn NT","Sương NT","Thắm NT","Hằng NTT","Vui NT","Lực NV","Linh PTT","Luyến VT","Quỳnh VTN","Ý VTN","Hạnh NTM"]
+danhsachUser := ["Quý ND","Hoàng N", "Vi HT", "Tâm NTH","Phương NT","Sâm LT","Nguyên HT","Vinh TD","Pẹc NV", "Luyến VT", "Loan HT"]
+danhsachbacsi := ["Vi HT","Sâm LT","Quý ND","Hoàng N","Tâm NTH","Phương NT","Nguyên HT","Vinh TD","Pẹc NV", "Loan HT"]
+danhsachdieuduong := ["Lan DTQ","Thảo DTT","Minh DTN","Lý DT","Trang LTT","Hòa LT","Vân LTT","Nam MM","Sơn NT","Sương NT","Thắm NT","Hằng NTT","Vui NT","Lực NV","Linh PTT","Luyến VT","Quỳnh VTN","Ý VTN","Hạnh NTM", "Ngân NTK"]
 
 
 thongTinNhanSu := Map()
@@ -10,9 +10,9 @@ thongTinNhanSu["Quý ND"] := ["quynd", "1", "0168"] ; "Nguyễn Đình Quý"
 thongTinNhanSu["Hoàng N"] := ["hoangn", "1", "0070"] ; "Nguyễn Hoàng"
 thongTinNhanSu["Vi HT"] := ["viht", "123456", "0377"] ; "Hoàng Tường Vi"
 thongTinNhanSu["Tâm NTH"] := ["tamnth", "123456", "0398"] ; "Nguyễn Thị Huyền Tâm"
-; thongTinNhanSu["Hứa Thị Loan"] := ["0071"] ; "Hứa Thị Loan"
+thongTinNhanSu["Loan HT"] := ["loanht", "123456", "0071"] ; "Hứa Thị Loan"
 thongTinNhanSu["Sâm LT"] := ["samlt", "1","0413"] ; "Lưu Thị Sâm"
-; thongTinNhanSu["Toàn NM"] := ["0158"] ; "Nguyễn Mạnh Toàn"
+thongTinNhanSu["Toàn NM"] := ["toannm", "123456", "0158"] ; "Nguyễn Mạnh Toàn"
 ; thongTinNhanSu["Phước VPM"] := ["0158"] ; "Văn Phú Minh Phước"
 thongTinNhanSu["Phương NT"] := ["phuongnt", "123456", "0425"] ; "Nguyễn Thùy Phương"
 thongTinNhanSu["Nguyên HT"] := ["nguyenht", "123456", "0433"] ; "Huỳnh Thế Nguyên"
@@ -43,6 +43,7 @@ thongTinNhanSu["Quỳnh VTN"] := ["quynhvtn","123456", "0402"] ; "Vũ Thị Ng�
 thongTinNhanSu["Ý VTN"] := ["yvtn","123456",  "0088"] ; "Võ Trường Như Ý"
 thongTinNhanSu["Trâm HT"] := ["tramht","123456", "0435"] ; "Trâm HT"
 thongTinNhanSu["Hạnh NTM"] := ["hanhntm","123456", "0087"] ; "Ngô Thị Mỹ Hạnh"
+thongTinNhanSu["Ngân NTK"] := ["nganntk","123456", "0232"] ; "Ngô Thị Mỹ Hạnh"
 
 ; kiem tra thong tin
 ; for user in danhsachdieuduong
