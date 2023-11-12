@@ -1,5 +1,12 @@
 ﻿Button_OK_Click(ctrl, *)
 {
+    
+        if FileExist("d:\version.txt")
+            FileDelete("d:\version.txt")
+    
+        if FileExist("d:\latestVersion.txt")
+            FileDelete("d:\latestVersion.txt")
+        
     Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai, StartHour, StartMinute, giotuongtrinh, phuttuongtrinh, gioNhapTuongTrinh, mabenhnhan
     ; kiểm tra nhập dữ liệu
     if not laythongtinnhansu(User.Text, bacsi.Text, phuta.Text, vongngoai.Text, vongtrong.Text)
@@ -7,6 +14,7 @@
         MyGui.Show()
         return
     }
+
     rowNum := 7
     listChidinh := [] ; chidnh, bao hiem danhsachrang
     loop rowNum
