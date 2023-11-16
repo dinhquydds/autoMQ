@@ -844,4 +844,4 @@ laythongtinnhansu(user, bacsi, phuta, vongngoai, vongtrong)
     return true
 }
 
-^+!v:: MsgBox Version
+; ^+!v:: MsgBox Version

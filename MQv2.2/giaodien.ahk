@@ -5,7 +5,7 @@ MyGui.SetFont("s10", "Arial")
 
 baohiem := ["100","80","50"]
 danhmucNoiNha := ["Nội nha lần đầu","Nội nha lại","Nội nha lần đầu (gây mê)","Nội nha lại (gây mê)"]
-Version := FileRead("Version.txt")
+; Version := FileRead("Version.txt")
 
 ; ;Đăng nhập tự động
 User := MyGui.Add("DropDownList", "X10 Y10  h10 R50 Sort", danhsachUser)
