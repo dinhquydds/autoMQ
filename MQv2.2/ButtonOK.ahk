@@ -35,22 +35,23 @@
             return
         }
         listChidinh.Push([temp[2], temp[3], temp[4]]) ; chi dinh, bao hiem danh sach rang
+        ; ten dich vu, phan tram bao hiem, so rang
     }
 
-    ; canhbaoBaohiem := ""
+    canhbaoBaohiem := ""
 
-    ; if listChidinh.Length > 1
-    ; {
-    ;     for i in listChidinh
-    ;     {
-    ;         canhbaoBaohiem .= i[1] ": " i[2] " `n"
-    ;     }
-    ;     if MsgBox(canhbaoBaohiem "`n Nhấn Yes để tiếp tục, No để sửa lại phần trăm", "Kiểm tra phần trăm bảo hiểm", "YesNo") = "No"
-    ;     {
-    ;         MyGui.Show
-    ;         return
-    ;     }
-    ; }
+    if listChidinh.Length > 1
+    {
+        for i in listChidinh
+        {
+            canhbaoBaohiem .= i[1] ": " i[2] " `n"
+        }
+        if MsgBox(canhbaoBaohiem "`n Nhấn Yes để tiếp tục, No để sửa lại phần trăm", "Kiểm tra phần trăm bảo hiểm", "YesNo") = "No"
+        {
+            MyGui.Show
+            return
+        }
+    }
 
     gioChiDinhDichVu := layGioChiDinh(StartHour.Value, StartMinute.Value) ;yyyymmddhhmmss
     gioNhapTuongTrinh := laygioNhapTuongTrinh(giotuongtrinh.Value, phuttuongtrinh.Value, gioChiDinhDichVu)
