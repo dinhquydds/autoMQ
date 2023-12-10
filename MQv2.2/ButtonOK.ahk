@@ -6,7 +6,9 @@
     
         if FileExist("d:\latestVersion.txt")
             FileDelete("d:\latestVersion.txt")
-; return
+return
+
+
     Global IDbacsy, IDphuta, IDvongtrong, IDvongngoai, StartHour, StartMinute, giotuongtrinh, phuttuongtrinh, gioNhapTuongTrinh, mabenhnhan
     ; kiểm tra nhập dữ liệu
     if not laythongtinnhansu(User.Text, bacsi.Text, phuta.Text, vongngoai.Text, vongtrong.Text)
